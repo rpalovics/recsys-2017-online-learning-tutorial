@@ -1,0 +1,173 @@
+{
+  "paragraphs": [
+    {
+      "text": "import pandas as pd\nfrom sklearn.model_selection import train_test_split",
+      "user": "anonymous",
+      "dateUpdated": "Jun 29, 2017 12:00:01 PM",
+      "config": {
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1498219672502_1900026401",
+      "id": "20170623-092635_1347264733",
+      "dateCreated": "Jun 23, 2017 2:07:52 PM",
+      "dateStarted": "Jun 29, 2017 12:00:01 PM",
+      "dateFinished": "Jun 29, 2017 12:00:28 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "data \u003d pd.read_csv(\u0027ratings.dat\u0027, delimiter\u003d\u0027::\u0027, header\u003dNone)[[0,1,2]]",
+      "user": "anonymous",
+      "dateUpdated": "Jun 29, 2017 12:03:41 PM",
+      "config": {
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "__main__:1: ParserWarning: Falling back to the \u0027python\u0027 engine because the \u0027c\u0027 engine does not support regex separators (separators \u003e 1 char and different from \u0027\\s+\u0027 are interpreted as regex); you can avoid this warning by specifying engine\u003d\u0027python\u0027.\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1498219672503_1899641652",
+      "id": "20170623-092803_990355466",
+      "dateCreated": "Jun 23, 2017 2:07:52 PM",
+      "dateStarted": "Jun 29, 2017 12:03:41 PM",
+      "dateFinished": "Jun 29, 2017 12:03:46 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "train, test \u003d train_test_split(data, test_size\u003d0.1, random_state\u003d42)",
+      "user": "anonymous",
+      "dateUpdated": "Jun 29, 2017 12:03:44 PM",
+      "config": {
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1498219672503_1899641652",
+      "id": "20170623-093121_1572714144",
+      "dateCreated": "Jun 23, 2017 2:07:52 PM",
+      "dateStarted": "Jun 29, 2017 12:03:44 PM",
+      "dateFinished": "Jun 29, 2017 12:03:46 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "train.to_csv(\u0027ratings_train.dat\u0027, header\u003dNone, index\u003dFalse)\ntest.to_csv(\u0027ratings_test.dat\u0027, header\u003dNone, index\u003dFalse)",
+      "user": "anonymous",
+      "dateUpdated": "Jun 29, 2017 12:03:48 PM",
+      "config": {
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1498219672504_1897717907",
+      "id": "20170623-093715_1649813791",
+      "dateCreated": "Jun 23, 2017 2:07:52 PM",
+      "dateStarted": "Jun 29, 2017 12:03:48 PM",
+      "dateFinished": "Jun 29, 2017 12:03:51 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "dateUpdated": "Jun 23, 2017 2:07:52 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1498219672504_1897717907",
+      "id": "20170623-093934_387007220",
+      "dateCreated": "Jun 23, 2017 2:07:52 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "DataManipulation",
+  "id": "2CMSG3ERH",
+  "angularObjects": {
+    "2CK72QMC5:shared_process": [],
+    "2CKXYZ6CN:shared_process": [],
+    "2CMTWB74R:shared_process": [],
+    "2CKS4TJTK:shared_process": [],
+    "2CMHDPRT3:shared_process": [],
+    "2CJZ774GG:shared_process": [],
+    "2CJTTF25Z:shared_process": [],
+    "2CKM3CRYB:shared_process": [],
+    "2CN17ZKCE:shared_process": [],
+    "2CNBPAE22:shared_process": [],
+    "2CKHHD5Y3:shared_process": [],
+    "2CPGBTGZR:shared_process": [],
+    "2CMMTM4MK:shared_process": [],
+    "2CMASUG7B:shared_process": [],
+    "2CKKGRVGB:shared_process": [],
+    "2CNNQKFTP:shared_process": [],
+    "2CMK1BN3B:shared_process": [],
+    "2CPQCC3MT:shared_process": [],
+    "2CKFWAW5R:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
