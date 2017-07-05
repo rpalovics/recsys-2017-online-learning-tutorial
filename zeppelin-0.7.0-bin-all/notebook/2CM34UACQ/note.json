@@ -3,7 +3,7 @@
     {
       "text": "import pandas as pd     \nimport numpy as np\nimport heapq    \nimport glob\nimport os   \n\nimport math \nfrom collections import defaultdict\n\nimport pyarrow.parquet as pq",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:38:40 PM",
+      "dateUpdated": "Jul 5, 2017 6:12:10 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -27,8 +27,8 @@
       "jobName": "paragraph_1498733730225_-394490617",
       "id": "20170629-125530_1695150477",
       "dateCreated": "Jun 29, 2017 12:55:30 PM",
-      "dateStarted": "Jul 5, 2017 5:38:40 PM",
-      "dateFinished": "Jul 5, 2017 5:38:44 PM",
+      "dateStarted": "Jul 5, 2017 6:12:10 PM",
+      "dateFinished": "Jul 5, 2017 6:12:10 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -36,7 +36,7 @@
       "title": "Flink evaluation part",
       "text": "userVec \u003d pd.read_csv(\u0027userVector.map\u0027, delimiter \u003d \u0027;\u0027, header \u003d None)\n\ntemp \u003d userVec.groupby([0,1])[0].agg({\u0027Frequency\u0027:\u0027count\u0027})\nuserVectors \u003d {k:list(temp.ix[k].index) for k in temp.index.levels[0]}",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:55:55 PM",
+      "dateUpdated": "Jul 5, 2017 6:12:13 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -69,15 +69,15 @@
       "jobName": "paragraph_1498733737470_-461421601",
       "id": "20170629-125537_745128020",
       "dateCreated": "Jun 29, 2017 12:55:37 PM",
-      "dateStarted": "Jul 5, 2017 5:55:55 PM",
-      "dateFinished": "Jul 5, 2017 5:56:00 PM",
+      "dateStarted": "Jul 5, 2017 6:12:13 PM",
+      "dateFinished": "Jul 5, 2017 6:12:17 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "itemVec \u003d pd.read_csv(\u0027itemVector.map\u0027, delimiter \u003d \u0027;\u0027, header \u003d None)\n\ntemp \u003d itemVec.groupby([0,1])[0].agg({\u0027Frequency\u0027:\u0027count\u0027})\nitemVectors \u003d {k:list(temp.ix[k].index) for k in temp.index.levels[0]}",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:55:56 PM",
+      "dateUpdated": "Jul 5, 2017 6:12:23 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -101,15 +101,15 @@
       "jobName": "paragraph_1498733883561_640685307",
       "id": "20170629-125803_567860690",
       "dateCreated": "Jun 29, 2017 12:58:03 PM",
-      "dateStarted": "Jul 5, 2017 5:55:56 PM",
-      "dateFinished": "Jul 5, 2017 5:56:17 PM",
+      "dateStarted": "Jul 5, 2017 6:12:23 PM",
+      "dateFinished": "Jul 5, 2017 6:12:41 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "userItemTests \u003d pd.read_csv(\u0027data_session_test\u0027, delimiter \u003d \u0027 \u0027, header \u003d None)\n\ntemp \u003d userItemTests.groupby([1,2])[1].agg({\u0027Frequency\u0027:\u0027count\u0027})\nuserItemTest \u003d {k:list(temp.ix[k].index) for k in temp.index.levels[0]}",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:55:57 PM",
+      "dateUpdated": "Jul 5, 2017 6:12:26 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -133,8 +133,8 @@
       "jobName": "paragraph_1498734346294_722359343",
       "id": "20170629-130546_1802189169",
       "dateCreated": "Jun 29, 2017 1:05:46 PM",
-      "dateStarted": "Jul 5, 2017 5:56:01 PM",
-      "dateFinished": "Jul 5, 2017 5:56:19 PM",
+      "dateStarted": "Jul 5, 2017 6:12:26 PM",
+      "dateFinished": "Jul 5, 2017 6:12:44 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
