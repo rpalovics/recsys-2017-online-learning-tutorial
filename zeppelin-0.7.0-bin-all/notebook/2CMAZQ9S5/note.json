@@ -3,7 +3,7 @@
     {
       "text": "import java.io.File\n\nimport scala.io.Source\n\nimport org.apache.spark.SparkConf\nimport org.apache.spark.SparkContext\nimport org.apache.spark.SparkContext._\nimport org.apache.spark.rdd._\nimport org.apache.spark.mllib.recommendation.{ALS, Rating, MatrixFactorizationModel}",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:15:13 PM",
+      "dateUpdated": "Jul 5, 2017 3:02:30 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -30,15 +30,15 @@
       "jobName": "paragraph_1498731944855_-1201448622",
       "id": "20170629-122544_1893183764",
       "dateCreated": "Jun 29, 2017 12:25:44 PM",
-      "dateStarted": "Jun 30, 2017 4:15:13 PM",
-      "dateFinished": "Jun 30, 2017 4:15:14 PM",
+      "dateStarted": "Jul 5, 2017 3:02:30 PM",
+      "dateFinished": "Jul 5, 2017 3:02:52 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val train \u003d sc.textFile(new File(\"data_session_train\").toString).map { line \u003d\u003e\n  val fields \u003d line.split(\" \")\n  // format: Rating(userId, movieId, rating)\n  Rating(fields(0).toInt, fields(1).toInt, 1.0)\n}",
+      "text": "val train \u003d sc.textFile(new File(\"data_session_train\").toString).map { line \u003d\u003e\n  val fields \u003d line.split(\" \")\n  Rating(fields(1).toInt, fields(2).toInt, 1.0)\n}",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:15:16 PM",
+      "dateUpdated": "Jul 5, 2017 3:02:31 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -57,7 +57,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\ntrain: org.apache.spark.rdd.RDD[org.apache.spark.mllib.recommendation.Rating] \u003d MapPartitionsRDD[198] at map at \u003cconsole\u003e:49\n"
+            "data": "\ntrain: org.apache.spark.rdd.RDD[org.apache.spark.mllib.recommendation.Rating] \u003d MapPartitionsRDD[2] at map at \u003cconsole\u003e:38\n"
           }
         ]
       },
@@ -65,15 +65,15 @@
       "jobName": "paragraph_1498731671529_1433541185",
       "id": "20170629-122111_1766785322",
       "dateCreated": "Jun 29, 2017 12:21:11 PM",
-      "dateStarted": "Jun 30, 2017 4:15:16 PM",
-      "dateFinished": "Jun 30, 2017 4:15:16 PM",
+      "dateStarted": "Jul 5, 2017 3:02:31 PM",
+      "dateFinished": "Jul 5, 2017 3:02:54 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "val numRatings \u003d train.count()\nval numUsers \u003d train.map(_.user).distinct().count()\nval numArtirs \u003d train.map(_.product).distinct().count()\n\nprintln(\"Got \" + numRatings + \" views from \"\n  + numUsers + \" users on \" + numArtirs + \" artists.\")",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:15:19 PM",
+      "dateUpdated": "Jul 5, 2017 3:02:32 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -92,7 +92,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\nnumRatings: Long \u003d 11626\n\nnumUsers: Long \u003d 11386\n\nnumArtirs: Long \u003d 4328\nGot 11626 views from 11386 users on 4328 artists.\n"
+            "data": "\nnumRatings: Long \u003d 57254\n\nnumUsers: Long \u003d 11187\n\nnumArtirs: Long \u003d 17012\nGot 57254 views from 11187 users on 17012 artists.\n"
           }
         ]
       },
@@ -100,15 +100,15 @@
       "jobName": "paragraph_1498731912747_-2040631946",
       "id": "20170629-122512_17073212",
       "dateCreated": "Jun 29, 2017 12:25:12 PM",
-      "dateStarted": "Jun 30, 2017 4:15:19 PM",
-      "dateFinished": "Jun 30, 2017 4:15:20 PM",
+      "dateStarted": "Jul 5, 2017 3:02:53 PM",
+      "dateFinished": "Jul 5, 2017 3:02:57 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val rank \u003d 5\nval numIter \u003d 5\nval lambda \u003d 0.1\nval alpha \u003d 1\n\nval model \u003d ALS.trainImplicit(ratings, rank, numIter)",
+      "text": "val rank \u003d 20\nval numIter \u003d 4\nval lambda \u003d 0.1\nval alpha \u003d 1.0\n\nval model \u003d ALS.trainImplicit(train, rank, numIter)",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:23:32 PM",
+      "dateUpdated": "Jul 5, 2017 3:02:32 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -127,7 +127,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\nrank: Int \u003d 5\n\nnumIter: Int \u003d 5\n\nlambda: Double \u003d 0.1\n\nalpha: Int \u003d 1\n"
+            "data": "\nrank: Int \u003d 20\n\nnumIter: Int \u003d 4\n\nlambda: Double \u003d 0.1\n\nalpha: Double \u003d 1.0\n\nmodel: org.apache.spark.mllib.recommendation.MatrixFactorizationModel \u003d org.apache.spark.mllib.recommendation.MatrixFactorizationModel@4d72485d\n"
           }
         ]
       },
@@ -135,15 +135,15 @@
       "jobName": "paragraph_1498746875800_-1712388502",
       "id": "20170629-163435_1169211418",
       "dateCreated": "Jun 29, 2017 4:34:35 PM",
-      "dateStarted": "Jun 30, 2017 4:15:24 PM",
-      "dateFinished": "Jun 30, 2017 4:15:24 PM",
+      "dateStarted": "Jul 5, 2017 3:02:54 PM",
+      "dateFinished": "Jul 5, 2017 3:03:03 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "model.recommendProductsForUsers(5)\n    .map(x \u003d\u003e x._2)\n    .map(x \u003d\u003e for(i \u003c- 0 to 4) yield (x(i).user, x(i).product))\n    .map(_.mkString(\"\\n\")).saveAsTextFile(\"sparkPredictions\")",
+      "text": "model.save(sc, \"sparkPrediction\")",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:23:32 PM",
+      "dateUpdated": "Jul 5, 2017 3:02:33 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -159,19 +159,14 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "\nmodel: org.apache.spark.mllib.recommendation.MatrixFactorizationModel \u003d org.apache.spark.mllib.recommendation.MatrixFactorizationModel@37857f27\n"
-          }
-        ]
+        "msg": []
       },
       "apps": [],
-      "jobName": "paragraph_1498732007195_517917591",
-      "id": "20170629-122647_1038703934",
-      "dateCreated": "Jun 29, 2017 12:26:47 PM",
-      "dateStarted": "Jun 30, 2017 4:15:27 PM",
-      "dateFinished": "Jun 30, 2017 4:15:29 PM",
+      "jobName": "paragraph_1498829065250_1103777604",
+      "id": "20170630-152425_1580496281",
+      "dateCreated": "Jun 30, 2017 3:24:25 PM",
+      "dateStarted": "Jul 5, 2017 3:02:58 PM",
+      "dateFinished": "Jul 5, 2017 3:03:06 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -183,9 +178,9 @@
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1498829065250_1103777604",
-      "id": "20170630-152425_1580496281",
-      "dateCreated": "Jun 30, 2017 3:24:25 PM",
+      "jobName": "paragraph_1499254741050_-1989954517",
+      "id": "20170705-133901_558502930",
+      "dateCreated": "Jul 5, 2017 1:39:01 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
