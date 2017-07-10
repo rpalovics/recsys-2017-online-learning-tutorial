@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "import pandas as pd     \nimport numpy as np\nimport heapq    \nimport glob\nimport os   \n\nimport math \nfrom collections import defaultdict\n\nimport pyarrow.parquet as pq",
+      "text": "import pandas as pd     \nimport numpy as np\nimport heapq    \nimport glob\nimport os   \n    \nimport math \nfrom collections import defaultdict\n\nimport pyarrow.parquet as pq",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 6:12:10 PM",
+      "dateUpdated": "Jul 7, 2017 12:14:05 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -27,8 +27,8 @@
       "jobName": "paragraph_1498733730225_-394490617",
       "id": "20170629-125530_1695150477",
       "dateCreated": "Jun 29, 2017 12:55:30 PM",
-      "dateStarted": "Jul 5, 2017 6:12:10 PM",
-      "dateFinished": "Jul 5, 2017 6:12:10 PM",
+      "dateStarted": "Jul 7, 2017 12:14:05 PM",
+      "dateFinished": "Jul 7, 2017 12:14:10 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -36,7 +36,7 @@
       "title": "Flink evaluation part",
       "text": "userVec \u003d pd.read_csv(\u0027userVector.map\u0027, delimiter \u003d \u0027;\u0027, header \u003d None)\n\ntemp \u003d userVec.groupby([0,1])[0].agg({\u0027Frequency\u0027:\u0027count\u0027})\nuserVectors \u003d {k:list(temp.ix[k].index) for k in temp.index.levels[0]}",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 6:12:13 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:02 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -69,15 +69,15 @@
       "jobName": "paragraph_1498733737470_-461421601",
       "id": "20170629-125537_745128020",
       "dateCreated": "Jun 29, 2017 12:55:37 PM",
-      "dateStarted": "Jul 5, 2017 6:12:13 PM",
-      "dateFinished": "Jul 5, 2017 6:12:17 PM",
+      "dateStarted": "Jul 7, 2017 3:41:02 PM",
+      "dateFinished": "Jul 7, 2017 3:41:07 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "itemVec \u003d pd.read_csv(\u0027itemVector.map\u0027, delimiter \u003d \u0027;\u0027, header \u003d None)\n\ntemp \u003d itemVec.groupby([0,1])[0].agg({\u0027Frequency\u0027:\u0027count\u0027})\nitemVectors \u003d {k:list(temp.ix[k].index) for k in temp.index.levels[0]}",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 6:12:23 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:03 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -101,15 +101,15 @@
       "jobName": "paragraph_1498733883561_640685307",
       "id": "20170629-125803_567860690",
       "dateCreated": "Jun 29, 2017 12:58:03 PM",
-      "dateStarted": "Jul 5, 2017 6:12:23 PM",
-      "dateFinished": "Jul 5, 2017 6:12:41 PM",
+      "dateStarted": "Jul 7, 2017 3:41:03 PM",
+      "dateFinished": "Jul 7, 2017 3:41:27 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "userItemTests \u003d pd.read_csv(\u0027data_session_test\u0027, delimiter \u003d \u0027 \u0027, header \u003d None)\n\ntemp \u003d userItemTests.groupby([1,2])[1].agg({\u0027Frequency\u0027:\u0027count\u0027})\nuserItemTest \u003d {k:list(temp.ix[k].index) for k in temp.index.levels[0]}",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 6:12:26 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:03 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -133,15 +133,15 @@
       "jobName": "paragraph_1498734346294_722359343",
       "id": "20170629-130546_1802189169",
       "dateCreated": "Jun 29, 2017 1:05:46 PM",
-      "dateStarted": "Jul 5, 2017 6:12:26 PM",
-      "dateFinished": "Jul 5, 2017 6:12:44 PM",
+      "dateStarted": "Jul 7, 2017 3:41:08 PM",
+      "dateFinished": "Jul 7, 2017 3:41:31 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "userItemTrains \u003d pd.read_csv(\u0027data_session_train\u0027, delimiter \u003d \u0027 \u0027, header \u003d None)\n\ntemp \u003d userItemTrains.groupby([1,2])[1].agg({\u0027Frequency\u0027:\u0027count\u0027})\nuserItemTrain \u003d {k:list(temp.ix[k].index) for k in temp.index.levels[0]}",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:55:57 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:04 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -165,15 +165,15 @@
       "jobName": "paragraph_1498736286612_1272659708",
       "id": "20170629-133806_1286069022",
       "dateCreated": "Jun 29, 2017 1:38:06 PM",
-      "dateStarted": "Jul 5, 2017 5:56:17 PM",
-      "dateFinished": "Jul 5, 2017 5:56:23 PM",
+      "dateStarted": "Jul 7, 2017 3:41:28 PM",
+      "dateFinished": "Jul 7, 2017 3:41:38 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "userRecommendations \u003d {}    \nactiveUsers \u003d set(set(userItemTrains[1]).intersection(set(userItemTest.keys()))).intersection(set(userVectors.keys()))\nactiveItems \u003d set(userItemTrains[2].unique())",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 6:08:21 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:04 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -197,8 +197,8 @@
       "jobName": "paragraph_1498736295568_1924824417",
       "id": "20170629-133815_917423687",
       "dateCreated": "Jun 29, 2017 1:38:15 PM",
-      "dateStarted": "Jul 5, 2017 5:56:35 PM",
-      "dateFinished": "Jul 5, 2017 5:56:35 PM",
+      "dateStarted": "Jul 7, 2017 3:41:31 PM",
+      "dateFinished": "Jul 7, 2017 3:41:38 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -206,7 +206,7 @@
       "title": "Create topK recommendations",
       "text": "k \u003d 10\n\nfor userID in activeUsers:\n    u \u003d np.array(userVectors[userID])\n    userRatings \u003d {}\n    for itemID in activeItems - set(userItemTrain[userID]):\n        i \u003d np.array(itemVectors[itemID])\n        prediction \u003d np.dot(u,i)\n        userRatings[itemID] \u003d prediction\n        \n    userRecommendations[userID] \u003d heapq.nlargest(k, userRatings, key\u003duserRatings.get) \n    for idx in range(k):\n        itemId \u003d userRecommendations[userID][idx]\n        userRecommendations[userID][idx] \u003d (itemId, idx + 1)\n        \n    ",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:56:38 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:05 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -231,8 +231,8 @@
       "jobName": "paragraph_1498737228974_-341952993",
       "id": "20170629-135348_180474626",
       "dateCreated": "Jun 29, 2017 1:53:48 PM",
-      "dateStarted": "Jul 5, 2017 5:56:38 PM",
-      "dateFinished": "Jul 5, 2017 6:02:03 PM",
+      "dateStarted": "Jul 7, 2017 3:41:38 PM",
+      "dateFinished": "Jul 7, 2017 3:51:12 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -240,7 +240,7 @@
       "title": "Precision + Recall",
       "text": "hit \u003d 0.0\ncount \u003d 0.0\n\nfor userID in activeUsers:\n    hit +\u003d len(set(userItemTest[userID]).intersection(set(map(lambda x: x[0], userRecommendations[userID]))))\n    count +\u003d len(userItemTest[userID])\n    \n\nrecall \u003d hit / count\nprecision \u003d hit / (len(userRecommendations) * float(k))\n\nprint(recall)\nprint(precision)\nprint(hit)",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 6:05:28 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:06 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -262,7 +262,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "... ... ... ... 0.021436408135707654\n0.006514490895101308\n254.0\n"
+            "data": "... ... ... ... 0.019917292598531523\n0.0060528340600153885\n236.0\n"
           }
         ]
       },
@@ -270,8 +270,8 @@
       "jobName": "paragraph_1498737247743_803105706",
       "id": "20170629-135407_1104131842",
       "dateCreated": "Jun 29, 2017 1:54:07 PM",
-      "dateStarted": "Jul 5, 2017 6:05:28 PM",
-      "dateFinished": "Jul 5, 2017 6:05:28 PM",
+      "dateStarted": "Jul 7, 2017 3:41:38 PM",
+      "dateFinished": "Jul 7, 2017 3:51:12 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -279,7 +279,7 @@
       "title": "NDCG",
       "text": "userItemTests \u003d pd.read_csv(\u0027data_session_test\u0027, delimiter \u003d \u0027 \u0027, header \u003d None, names \u003d [\"user\", \"item\"])  \nuserItemTests[\u0027score\u0027] \u003d 1",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 6:06:05 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:06 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -303,15 +303,15 @@
       "jobName": "paragraph_1498837852731_204212176",
       "id": "20170630-175052_1997031746",
       "dateCreated": "Jun 30, 2017 5:50:52 PM",
-      "dateStarted": "Jul 5, 2017 6:06:06 PM",
-      "dateFinished": "Jul 5, 2017 6:06:06 PM",
+      "dateStarted": "Jul 7, 2017 3:51:12 PM",
+      "dateFinished": "Jul 7, 2017 3:51:12 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "\nrecommendationsList \u003d []\nfor (userID, itemID_ranks_list) in userRecommendations.items():\n    for (itemID, rank) in itemID_ranks_list:\n        recommendationsList.append((userID, itemID, rank))\n\n    \nrec \u003d pd.DataFrame(recommendationsList)\nrec.columns \u003d [\u0027user\u0027, \u0027item\u0027, \u0027rank\u0027]",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 6:06:08 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:07 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -334,15 +334,15 @@
       "jobName": "paragraph_1498837870075_-1878418296",
       "id": "20170630-175110_291108853",
       "dateCreated": "Jun 30, 2017 5:51:10 PM",
-      "dateStarted": "Jul 5, 2017 6:06:08 PM",
-      "dateFinished": "Jul 5, 2017 6:06:08 PM",
+      "dateStarted": "Jul 7, 2017 3:51:12 PM",
+      "dateFinished": "Jul 7, 2017 3:51:12 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "\ndef ndcg_fast2(test, recommendations, top_k\u003d100):\n    \n    to_join\u003dtest\\\n        .drop_duplicates(subset\u003d[\u0027user\u0027,\u0027item\u0027])[[\u0027user\u0027,\u0027item\u0027,\u0027score\u0027]]\\\n        .rename(columns\u003d{\u0027score\u0027:\u0027score_test\u0027})\\\n        .set_index([\u0027user\u0027,\u0027item\u0027])\n    recs \u003d recommendations.join(to_join, on\u003d[\u0027user\u0027,\u0027item\u0027], how\u003d\u0027inner\u0027).copy()\n    \n    users \u003d set(recommendations[\u0027user\u0027]) \u0026 set(test[\u0027user\u0027])\n    idcgs \u003d pd.DataFrame({\u0027user\u0027:list(users)}).set_index(\u0027user\u0027).sort_index()\n    idcg_map \u003d defaultdict(lambda:0)\n    for i in range(1,top_k+1):\n        idcg_map[i]\u003didcg_map[i-1]+1.0/math.log(i+1,2)\n    \n    idcg_map\u003ddict(idcg_map)\n    idcgs[\u0027idcg\u0027]\u003dtest.drop_duplicates(subset\u003d[\u0027item\u0027,\u0027user\u0027])\\\n            .groupby(\u0027user\u0027)\\\n            .size()\\\n            .map(idcg_map)\\\n            .fillna(idcg_map[top_k])\n    recs[\u0027dg\u0027]\u003drecs[\u0027score_test\u0027]/np.log2(recs[\u0027rank\u0027]+1)\n    dcgs \u003d recs.groupby(\u0027user\u0027)[\u0027dg\u0027].sum()\n    ndcgs \u003d (dcgs/idcgs[\u0027idcg\u0027]).fillna(0)\n    ndcg \u003d ndcgs.mean()\n    return ndcg",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:38:49 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:10 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -365,15 +365,15 @@
       "jobName": "paragraph_1499175206036_-2056912354",
       "id": "20170704-153326_1266381132",
       "dateCreated": "Jul 4, 2017 3:33:26 PM",
-      "dateStarted": "Jul 5, 2017 5:44:27 PM",
-      "dateFinished": "Jul 5, 2017 5:44:27 PM",
+      "dateStarted": "Jul 7, 2017 3:51:12 PM",
+      "dateFinished": "Jul 7, 2017 3:51:12 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "print(ndcg_fast2(userItemTests, rec, top_k \u003d k))",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 6:06:11 PM",
+      "dateUpdated": "Jul 7, 2017 3:41:10 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -393,7 +393,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "0.015803277499014244\n"
+            "data": "0.015467586467533835\n"
           }
         ]
       },
@@ -401,8 +401,8 @@
       "jobName": "paragraph_1499175852408_101443609",
       "id": "20170704-154412_1318575000",
       "dateCreated": "Jul 4, 2017 3:44:12 PM",
-      "dateStarted": "Jul 5, 2017 6:06:11 PM",
-      "dateFinished": "Jul 5, 2017 6:06:11 PM",
+      "dateStarted": "Jul 7, 2017 3:51:12 PM",
+      "dateFinished": "Jul 7, 2017 3:51:13 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -436,7 +436,7 @@
       "title": "Reading product features",
       "text": "os.remove(\u0027sparkPrediction/data/product/_SUCCESS\u0027)\n\npath \u003d r\u0027sparkPrediction/data/product\u0027 \nall_files \u003d glob.glob(os.path.join(path, \"*\"))\n\ndf_from_each_file \u003d (pq.read_table(f).to_pandas() for f in all_files)\nitemVec   \u003d pd.concat(df_from_each_file, ignore_index\u003dTrue)\n\n\nitemVectors \u003d {}\n\nfor idx, row in itemVec.iterrows():\n    itemID \u003d row[0]\n    features \u003d row[1]\n    itemVectors[itemID] \u003d list(features)",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:15:10 PM",
+      "dateUpdated": "Jul 6, 2017 6:30:11 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -460,8 +460,8 @@
       "jobName": "paragraph_1499255163345_711191843",
       "id": "20170705-134603_58841614",
       "dateCreated": "Jul 5, 2017 1:46:03 PM",
-      "dateStarted": "Jul 5, 2017 5:15:10 PM",
-      "dateFinished": "Jul 5, 2017 5:15:13 PM",
+      "dateStarted": "Jul 6, 2017 6:30:11 PM",
+      "dateFinished": "Jul 6, 2017 6:30:16 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -469,7 +469,7 @@
       "title": "Reading user features",
       "text": "os.remove(\u0027sparkPrediction/data/user/_SUCCESS\u0027)\n\npath \u003d r\u0027sparkPrediction/data/user\u0027 \nall_files \u003d glob.glob(os.path.join(path, \"*\"))\n\ndf_from_each_file \u003d (pq.read_table(f).to_pandas() for f in all_files)\nuserVec \u003d pd.concat(df_from_each_file, ignore_index\u003dTrue)\n\n\nuserVectors \u003d {}\n\nfor idx, row in userVec.iterrows():\n    itemID \u003d row[0]\n    features \u003d row[1]\n    userVectors[itemID] \u003d list(features)",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:15:12 PM",
+      "dateUpdated": "Jul 6, 2017 6:30:12 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -493,15 +493,15 @@
       "jobName": "paragraph_1499255207369_-1778472317",
       "id": "20170705-134647_567254842",
       "dateCreated": "Jul 5, 2017 1:46:47 PM",
-      "dateStarted": "Jul 5, 2017 5:15:12 PM",
-      "dateFinished": "Jul 5, 2017 5:15:16 PM",
+      "dateStarted": "Jul 6, 2017 6:30:12 PM",
+      "dateFinished": "Jul 6, 2017 6:30:19 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "userRecommendations \u003d {}\nactiveUsers \u003d set(set(userItemTrains[1]).intersection(set(userItemTest.keys()))).intersection(set(userVectors.keys())) \nactiveItems \u003d set(userItemTrains[2].unique())",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:15:13 PM",
+      "dateUpdated": "Jul 6, 2017 6:30:13 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -524,8 +524,8 @@
       "jobName": "paragraph_1499255258060_659189445",
       "id": "20170705-134738_1652517228",
       "dateCreated": "Jul 5, 2017 1:47:38 PM",
-      "dateStarted": "Jul 5, 2017 5:15:14 PM",
-      "dateFinished": "Jul 5, 2017 5:15:16 PM",
+      "dateStarted": "Jul 6, 2017 6:30:17 PM",
+      "dateFinished": "Jul 6, 2017 6:30:19 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -533,7 +533,7 @@
       "title": "Create topK recommendations",
       "text": "k \u003d 10\n\nfor userID in activeUsers:\n    u \u003d np.array(userVectors[userID])\n    userRatings \u003d {}\n    for itemID in activeItems - set(userItemTrain[userID]):\n        i \u003d np.array(itemVectors[itemID])\n        prediction \u003d np.dot(u,i)\n        userRatings[itemID] \u003d prediction\n        \n    userRecommendations[userID] \u003d heapq.nlargest(k, userRatings, key\u003duserRatings.get) \n    for idx in range(k):\n        itemId \u003d userRecommendations[userID][idx]\n        userRecommendations[userID][idx] \u003d (itemId, idx + 1)\n        ",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:15:13 PM",
+      "dateUpdated": "Jul 6, 2017 6:30:15 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -557,8 +557,8 @@
       "jobName": "paragraph_1499256597745_1182717730",
       "id": "20170705-140957_473064521",
       "dateCreated": "Jul 5, 2017 2:09:57 PM",
-      "dateStarted": "Jul 5, 2017 5:15:16 PM",
-      "dateFinished": "Jul 5, 2017 5:22:29 PM",
+      "dateStarted": "Jul 6, 2017 6:30:19 PM",
+      "dateFinished": "Jul 6, 2017 6:40:20 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -566,7 +566,7 @@
       "title": "Precision@K \u0026 Recall@K",
       "text": "hit \u003d 0.0\ncount \u003d 0.0\n\nfor userID in activeUsers:\n    hit +\u003d len(set(userItemTest[userID]).intersection(set(map(lambda x: x[0], userRecommendations[userID]))))\n    count +\u003d len(userItemTest[userID])\n    \n\nrecall \u003d hit / count\nprecision \u003d hit / (len(userRecommendations) * float(k))\n    \nprint(recall)\nprint(precision)\nprint(hit)",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:23:29 PM",
+      "dateUpdated": "Jul 6, 2017 6:40:28 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -587,7 +587,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "... ... ... ... ... 0.01730103806228374\n0.005257758399589639\n205.0\n"
+            "data": "... ... ... ... ... 0.01611950375559119\n0.00489869197230059\n191.0\n"
           }
         ]
       },
@@ -595,8 +595,8 @@
       "jobName": "paragraph_1499256864152_816019735",
       "id": "20170705-141424_1421287043",
       "dateCreated": "Jul 5, 2017 2:14:24 PM",
-      "dateStarted": "Jul 5, 2017 5:23:29 PM",
-      "dateFinished": "Jul 5, 2017 5:23:29 PM",
+      "dateStarted": "Jul 6, 2017 6:40:28 PM",
+      "dateFinished": "Jul 6, 2017 6:40:29 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -604,7 +604,7 @@
       "title": "nDCG@K",
       "text": "userItemTests \u003d pd.read_csv(\u0027data_session_test\u0027, delimiter \u003d \u0027 \u0027, header \u003d None, names \u003d [\"user\", \"item\"])  \nuserItemTests[\u0027score\u0027] \u003d 1\n\nrecommendationsList \u003d []\nfor (userID, itemID_ranks_list) in userRecommendations.items():\n    for (itemID, rank) in itemID_ranks_list:\n        recommendationsList.append((userID, itemID, rank))\n\n    \nrec \u003d pd.DataFrame(recommendationsList)\nrec.columns \u003d [\u0027user\u0027, \u0027item\u0027, \u0027rank\u0027]\n\nprint(ndcg_fast2(userItemTests, rec, top_k \u003d k))",
       "user": "anonymous",
-      "dateUpdated": "Jul 5, 2017 5:23:32 PM",
+      "dateUpdated": "Jul 6, 2017 6:17:24 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -625,7 +625,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "... ... ... ... 0.012041093560324881\n"
+            "data": "... ... ... ... 0.011685258368875169\n"
           }
         ]
       },
@@ -633,8 +633,8 @@
       "jobName": "paragraph_1499259366404_-1811231289",
       "id": "20170705-145606_1984260446",
       "dateCreated": "Jul 5, 2017 2:56:06 PM",
-      "dateStarted": "Jul 5, 2017 5:23:32 PM",
-      "dateFinished": "Jul 5, 2017 5:23:32 PM",
+      "dateStarted": "Jul 6, 2017 6:27:49 PM",
+      "dateFinished": "Jul 6, 2017 6:27:49 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
