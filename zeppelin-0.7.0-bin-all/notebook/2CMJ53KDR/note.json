@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "import org.apache.flink.api.common.functions.{RichFlatMapFunction, RichMapFunction}\r\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\r\nimport org.apache.flink.streaming.api.scala._\r\nimport org.apache.flink.util.Collector\r\n\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils.{ItemId, UserId}\r\n\r\nimport scala.collection.mutable\r\n\r\nimport scala.util.Random",
+      "text": "import org.apache.flink.api.common.functions.{RichFlatMapFunction, RichMapFunction}\r\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\r\nimport org.apache.flink.streaming.api.scala._\r\nimport org.apache.flink.util.Collector\r\n    \r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils.{ItemId, UserId}\r\n\r\nimport scala.collection.mutable\r\n\r\nimport scala.util.Random",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:37:59 PM",
+      "dateUpdated": "Jul 7, 2017 2:41:45 PM",
       "config": {
         "enabled": true,
         "results": {},
@@ -31,15 +31,15 @@
       "jobName": "paragraph_1498218544399_1001600492",
       "id": "20170622-084645_781320986",
       "dateCreated": "Jun 23, 2017 1:49:04 PM",
-      "dateStarted": "Jun 30, 2017 4:37:59 PM",
-      "dateFinished": "Jun 30, 2017 4:38:02 PM",
+      "dateStarted": "Jul 7, 2017 2:41:45 PM",
+      "dateFinished": "Jul 7, 2017 2:42:09 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val trainDataPath \u003d \"data_session_train\"\nval userVectorFileName \u003d \"userVector.map\"\nval itemVectorFileName \u003d \"itemVector.map\"",
+      "text": "val trainDataPath \u003d \"data_session_train\"\nval userVectorFileName \u003d \"userVector.map\"\nval itemVectorFileName \u003d \"itemVector.map\"   ",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:35:10 PM",
+      "dateUpdated": "Jul 7, 2017 2:41:46 PM",
       "config": {
         "enabled": true,
         "results": {},
@@ -67,15 +67,15 @@
       "jobName": "paragraph_1498218544400_1011988713",
       "id": "20170622-083625_311133921",
       "dateCreated": "Jun 23, 2017 1:49:04 PM",
-      "dateStarted": "Jun 30, 2017 4:35:10 PM",
-      "dateFinished": "Jun 30, 2017 4:35:11 PM",
+      "dateStarted": "Jul 7, 2017 2:41:47 PM",
+      "dateFinished": "Jul 7, 2017 2:42:10 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "senv.setParallelism(4)",
+      "text": "senv.setParallelism(4)      ",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:35:14 PM",
+      "dateUpdated": "Jul 7, 2017 2:41:46 PM",
       "config": {
         "enabled": true,
         "results": {},
@@ -98,15 +98,15 @@
       "jobName": "paragraph_1498218544401_1011603964",
       "id": "20170622-084103_214762686",
       "dateCreated": "Jun 23, 2017 1:49:04 PM",
-      "dateStarted": "Jun 30, 2017 4:35:14 PM",
-      "dateFinished": "Jun 30, 2017 4:35:15 PM",
+      "dateStarted": "Jul 7, 2017 2:42:10 PM",
+      "dateFinished": "Jul 7, 2017 2:42:11 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val data \u003d senv.readTextFile(trainDataPath)\n\nval lastFM_RichFlatMap \u003d data.flatMap(new RichFlatMapFunction[String, (Int, Int, Double)] {\n\n  override def flatMap(value: String, out: Collector[(ItemId, ItemId, Double)]): Unit \u003d {\n    val fieldsArray \u003d value.split(\" \")\n    val r \u003d Tuple3(fieldsArray(1).toInt, fieldsArray(2).toInt, 1.0)\n    out.collect(r)\n\n    for(i \u003c- 1 to 40){\n     out.collect(r._1, 1+Random.nextInt(37988) , 0.0)\n    }\n  }\n})\n",
+      "text": "val data \u003d senv.readTextFile(trainDataPath)\n\nval lastFM_RichFlatMap \u003d data.flatMap(new RichFlatMapFunction[String, (Int, Int, Double)] {\n\n  override def flatMap(value: String, out: Collector[(ItemId, ItemId, Double)]): Unit \u003d {\n    val fieldsArray \u003d value.split(\" \")\n    val r \u003d Tuple3(fieldsArray(1).toInt, fieldsArray(2).toInt, 1.0)\n    out.collect(r)\n\n    for(i \u003c- 1 to 9){\n     out.collect(r._1, 1+Random.nextInt(44546) , 0.0)\n    }\n  }\n})\n",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:39:25 PM",
+      "dateUpdated": "Jul 7, 2017 3:37:34 PM",
       "config": {
         "enabled": true,
         "editorMode": "ace/mode/scala",
@@ -126,7 +126,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "data: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@5eb0315f\nlastFM_RichFlatMap: org.apache.flink.streaming.api.scala.DataStream[(Int, Int, Double)] \u003d org.apache.flink.streaming.api.scala.DataStream@6594e350\n"
+            "data": "data: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@42e17b71\nlastFM_RichFlatMap: org.apache.flink.streaming.api.scala.DataStream[(Int, Int, Double)] \u003d org.apache.flink.streaming.api.scala.DataStream@427412c9\n"
           }
         ]
       },
@@ -134,15 +134,15 @@
       "jobName": "paragraph_1498218544403_1012373462",
       "id": "20170622-083948_1402225892",
       "dateCreated": "Jun 23, 2017 1:49:04 PM",
-      "dateStarted": "Jun 30, 2017 4:39:25 PM",
-      "dateFinished": "Jun 30, 2017 4:39:27 PM",
+      "dateStarted": "Jul 7, 2017 3:37:34 PM",
+      "dateFinished": "Jul 7, 2017 3:37:36 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "psOfflineMF(lastFM_RichFlatMap,\n          numFactors \u003d 5,\n          learningRate \u003d 0.01,\n          iterations \u003d 5,\n          pullLimit \u003d 100,\n          workerParallelism \u003d 2,\n          psParallelism \u003d 2,\n          iterationWaitTime \u003d 10000)\n             .addSink(new RichSinkFunction[Either[(UserId, Vector), (ItemId, Vector)]] {\n\n              val userVectors \u003d new mutable.HashMap[UserId, Array[Double]]\n              val itemVectors \u003d new mutable.HashMap[ItemId, Array[Double]]\n    \n              override def invoke(value: Either[(UserId, Vector), (ItemId, Vector)]): Unit \u003d {\n                value match {\n                  case Left((userId, vec)) \u003d\u003e\n                    userVectors.update(userId, vec)\n                  case Right((itemId, vec)) \u003d\u003e\n                    itemVectors.update(itemId, vec)\n                }\n              }\n    \n              override def close(): Unit \u003d {\n                val userVectorFile \u003d new java.io.PrintWriter(new java.io.File(userVectorFileName))\n                for((k,v) \u003c- userVectors){\n                  for(value \u003c- v){\n                    userVectorFile.write(k + \";\" + value + \u0027\\n\u0027)\n                  }\n                }\n                userVectorFile.close()\n    \n                val itemVectorFile \u003d new java.io.PrintWriter(new java.io.File(itemVectorFileName))\n                for((k,v) \u003c- itemVectors){\n                  for(value \u003c- v){\n                    itemVectorFile.write(k + \";\" + value + \u0027\\n\u0027)\n                  }\n                }\n                itemVectorFile.close()\n              }\n    \n            }).setParallelism(1)\n         ",
+      "text": "psOfflineMF(lastFM_RichFlatMap,\n          numFactors \u003d 20,\n          learningRate \u003d 0.02,\n          iterations \u003d 6,\n          minRange \u003d -0.1,\n          maxRange \u003d 0.1,\n          pullLimit \u003d 2000,\n          workerParallelism \u003d 4,\n          psParallelism \u003d 4,\n          iterationWaitTime \u003d 20000)\n             .addSink(new RichSinkFunction[Either[(UserId, Vector), (ItemId, Vector)]] {\n\n              val userVectors \u003d new mutable.HashMap[UserId, Array[Double]]\n              val itemVectors \u003d new mutable.HashMap[ItemId, Array[Double]]\n    \n              override def invoke(value: Either[(UserId, Vector), (ItemId, Vector)]): Unit \u003d {\n                value match {\n                  case Left((userId, vec)) \u003d\u003e\n                    userVectors.update(userId, vec)\n                  case Right((itemId, vec)) \u003d\u003e\n                    itemVectors.update(itemId, vec)\n                }\n              }\n    \n              override def close(): Unit \u003d {\n                val userVectorFile \u003d new java.io.PrintWriter(new java.io.File(userVectorFileName))\n                for((k,v) \u003c- userVectors){\n                  for(value \u003c- v){\n                    userVectorFile.write(k + \";\" + value + \u0027\\n\u0027)\n                  }\n                }\n                userVectorFile.close()\n    \n                val itemVectorFile \u003d new java.io.PrintWriter(new java.io.File(itemVectorFileName))\n                for((k,v) \u003c- itemVectors){\n                  for(value \u003c- v){\n                    itemVectorFile.write(k + \";\" + value + \u0027\\n\u0027)\n                  }\n                }\n                itemVectorFile.close()\n              }\n    \n            }).setParallelism(1)\n         ",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:39:39 PM",
+      "dateUpdated": "Jul 7, 2017 3:37:35 PM",
       "config": {
         "enabled": true,
         "results": {},
@@ -162,7 +162,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "res7: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@51c26acf\n"
+            "data": "res21: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@4812db49\n"
           }
         ]
       },
@@ -170,15 +170,15 @@
       "jobName": "paragraph_1498218544404_1010449717",
       "id": "20170622-084005_798284100",
       "dateCreated": "Jun 23, 2017 1:49:04 PM",
-      "dateStarted": "Jun 30, 2017 4:39:39 PM",
-      "dateFinished": "Jun 30, 2017 4:39:42 PM",
+      "dateStarted": "Jul 7, 2017 3:37:35 PM",
+      "dateFinished": "Jul 7, 2017 3:37:37 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "senv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Jun 30, 2017 4:39:49 PM",
+      "dateUpdated": "Jul 7, 2017 3:37:36 PM",
       "config": {
         "enabled": true,
         "results": {},
@@ -198,7 +198,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "res9: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@3bdb1a45\n"
+            "data": "res23: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@37cc9bfb\n"
           }
         ]
       },
@@ -206,8 +206,8 @@
       "jobName": "paragraph_1498218544405_1010064968",
       "id": "20170622-084509_1135866173",
       "dateCreated": "Jun 23, 2017 1:49:04 PM",
-      "dateStarted": "Jun 30, 2017 4:39:49 PM",
-      "dateFinished": "Jun 30, 2017 5:40:42 PM",
+      "dateStarted": "Jul 7, 2017 3:37:36 PM",
+      "dateFinished": "Jul 7, 2017 3:38:54 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
