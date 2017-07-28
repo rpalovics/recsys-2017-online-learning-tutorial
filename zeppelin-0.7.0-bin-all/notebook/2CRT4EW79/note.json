@@ -212,9 +212,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "psTopKGenerator(\n      testInput,\n      parsedModel,\n      bucketK \u003d 50,\n      bucketSize \u003d 100,\n      K \u003d 100,\n      pullLimit \u003d 600,\n      workerParallelism \u003d 4,\n      psParallelism \u003d 4,\n      iterationWaitTime \u003d 10000)\n    .addSink(new RichSinkFunction[(ItemId, List[(Double, ItemId)])] {\n    \n      var sumnDCG \u003d 0.0\n      var counter \u003d 0\n      var hit \u003d 0\n    \n      val log2: VectorLength \u003d Math.log(2)\n    \n    \n      override def invoke(value: (ItemId, List[(Double, ItemId)])): Unit \u003d {\n    \n        val index \u003d value._2.indexWhere (\n          recommendation \u003d\u003e recommendation._2 \u003d\u003d value._1 ) match {\n    \n          case -1 \u003d\u003e Int.MaxValue\n    \n          case i \u003d\u003e i + 1\n        }\n    \n    \n        val nDCG \u003d index match {\n    \n          case Int.MaxValue \u003d\u003e 0.0\n    \n          case i \u003d\u003e log2 / Math.log(1.0 + i)\n        }\n    \n        if(nDCG !\u003d 0)\n          hit +\u003d 1\n        sumnDCG +\u003d nDCG\n        counter +\u003d 1\n    \n      }\n    \n      override def close(): Unit \u003d {\n        val outputFile \u003d new PrintWriter(new File(\"nDCG.out\"))\n    \n        val avgnDCG \u003d sumnDCG / counter\n        outputFile write s\"Number of invokes: $counter \\n\"\n        outputFile write s\"Sum nDCG: $sumnDCG \\n\"\n        outputFile write s\"Avg nDCG: $avgnDCG \\n\"\n        outputFile write s\"Hit: $hit\"\n    \n        outputFile.close()\n    \n      }\n}).setParallelism(1)",
+      "text": "psTopKGenerator(\n      testInput,\n      parsedModel,\n      bucketK \u003d 50,\n      bucketSize \u003d 100,\n      K \u003d 100,\n      pullLimit \u003d 100,\n      workerParallelism \u003d 4,\n      psParallelism \u003d 4,\n      iterationWaitTime \u003d 10000)\n    .addSink(new RichSinkFunction[(ItemId, List[(Double, ItemId)])] {\n    \n      var sumnDCG \u003d 0.0\n      var counter \u003d 0\n      var hit \u003d 0\n    \n      val log2: VectorLength \u003d Math.log(2)\n    \n    \n      override def invoke(value: (ItemId, List[(Double, ItemId)])): Unit \u003d {\n    \n        val index \u003d value._2.indexWhere (\n          recommendation \u003d\u003e recommendation._2 \u003d\u003d value._1 ) match {\n    \n          case -1 \u003d\u003e Int.MaxValue\n    \n          case i \u003d\u003e i + 1\n        }\n    \n    \n        val nDCG \u003d index match {\n    \n          case Int.MaxValue \u003d\u003e 0.0\n    \n          case i \u003d\u003e log2 / Math.log(1.0 + i)\n        }\n    \n        if(nDCG !\u003d 0)\n          hit +\u003d 1\n        sumnDCG +\u003d nDCG\n        counter +\u003d 1\n    \n      }\n    \n      override def close(): Unit \u003d {\n        val outputFile \u003d new PrintWriter(new File(\"nDCG.out\"))\n    \n        val avgnDCG \u003d sumnDCG / counter\n        outputFile write s\"Number of invokes: $counter \\n\"\n        outputFile write s\"Sum nDCG: $sumnDCG \\n\"\n        outputFile write s\"Avg nDCG: $avgnDCG \\n\"\n        outputFile write s\"Hit: $hit\"\n    \n        outputFile.close()\n    \n      }\n}).setParallelism(1)",
       "user": "anonymous",
-      "dateUpdated": "Jul 28, 2017 7:31:50 PM",
+      "dateUpdated": "Jul 28, 2017 7:42:58 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -234,7 +234,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "res13: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@6788a154\n"
+            "data": "res16: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@7df6c4e9\n"
           }
         ]
       },
@@ -242,15 +242,15 @@
       "jobName": "paragraph_1501262281939_40642152",
       "id": "20170728-191801_59374304",
       "dateCreated": "Jul 28, 2017 7:18:01 PM",
-      "dateStarted": "Jul 28, 2017 7:31:50 PM",
-      "dateFinished": "Jul 28, 2017 7:31:51 PM",
+      "dateStarted": "Jul 28, 2017 7:42:58 PM",
+      "dateFinished": "Jul 28, 2017 7:42:59 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "senv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Jul 28, 2017 7:31:54 PM",
+      "dateUpdated": "Jul 28, 2017 7:43:02 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -270,7 +270,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "res11: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@2002e13b\n"
+            "data": "res18: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@34649d90\n"
           }
         ]
       },
@@ -278,8 +278,8 @@
       "jobName": "paragraph_1501262492028_300102473",
       "id": "20170728-192132_1029922272",
       "dateCreated": "Jul 28, 2017 7:21:32 PM",
-      "dateStarted": "Jul 28, 2017 7:21:50 PM",
-      "dateFinished": "Jul 28, 2017 7:31:13 PM",
+      "dateStarted": "Jul 28, 2017 7:43:02 PM",
+      "dateFinished": "Jul 28, 2017 7:46:08 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
