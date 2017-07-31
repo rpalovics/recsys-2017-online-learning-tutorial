@@ -355,7 +355,7 @@ More specifically,
 	\item each model $m$ should return a score $\hat{r}_{ui}^m$,
 	\item the global combination weight of model $m$ is $\alpha_m$,
 	\item for user $u$ the personalized combination weight is $\beta_m^u$,
-	\item we learn using SGD in two different settings the parameters $\alpha_m$ and $\beta_m^u$.
+	\item we learn the parameters $\alpha_m$ and $\beta_m^u$ by online SGD.
 \end{myitemize}
 We optimize for
 \begin{equation}
