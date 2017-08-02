@@ -345,27 +345,27 @@ In an implicit setting we may use the following sampling technique:
 \item We exclude items that appeared before the time of the positive interaction when generating negative samples.
 \end{myitemize}
 
-\section{Online combination}
-\label{sec:online-combination}
+%\section{Online combination}
+%\label{sec:online-combination}
 
-We give an SGD based method to learn the online combination weight of recommender algorithms.
-More specifically,
-\begin{myitemize}
-	\item we intend to linearly combine the output of $M$ models,
-	\item each model $m$ should return a score $\hat{r}_{ui}^m$,
-	\item the global combination weight of model $m$ is $\alpha_m$,
-	\item for user $u$ the personalized combination weight is $\beta_m^u$,
-	\item we learn the parameters $\alpha_m$ and $\beta_m^u$ by online SGD.
-\end{myitemize}
-We optimize for
-\begin{equation}
-F_{\text{C}}= \left ( r_{ui} - \displaystyle\sum_m (\alpha_m + \beta_m^u) \hat{r}^m_{ui}\right )^2.
-\end{equation}
-In this setting (1) we iterate over each record in the data set in temporal order, (2) we generate negative samples for each implicit record, (3) we learn the combination weights by online SGD. The corresponding derivatives are
-\begin{gather}
-\frac{\partial F}{\partial \alpha_m} = \frac{\partial F}{\partial \hat{r}_{ui}} \frac{\partial \hat{r}_{ui}}{\partial \alpha_m} = \frac{\partial F}{\partial \hat{r}_{ui}} \hat{r}_{ui}^m, \hspace{1cm}
-  \frac{\partial F}{\partial \beta_m^u} = \frac{\partial F}{\partial \hat{r}_{ui}} \frac{\partial \hat{r}_{ui}}{\partial \beta_m^u} = \frac{\partial F}{\partial \hat{r}_{ui}} \hat{r}_{ui}^m.
-\end{gather}
+%We give an SGD based method to learn the online combination weight of recommender algorithms.
+%More specifically,
+%\begin{myitemize}
+	%\item we intend to linearly combine the output of $M$ models,
+	%\item each model $m$ should return a score $\hat{r}_{ui}^m$,
+	%\item the global combination weight of model $m$ is $\alpha_m$,
+	%\item for user $u$ the personalized combination weight is $\beta_m^u$,
+	%\item we learn the parameters $\alpha_m$ and $\beta_m^u$ by online SGD.
+%\end{myitemize}
+%We optimize for
+%\begin{equation}
+%F_{\text{C}}= \left ( r_{ui} - \displaystyle\sum_m (\alpha_m + \beta_m^u) \hat{r}^m_{ui}\right )^2.
+%\end{equation}
+%In this setting (1) we iterate over each record in the data set in temporal order, (2) we generate negative samples for each implicit record, (3) we learn the combination weights by online SGD. The corresponding derivatives are
+%\begin{gather}
+%\frac{\partial F}{\partial \alpha_m} = \frac{\partial F}{\partial \hat{r}_{ui}} \frac{\partial \hat{r}_{ui}}{\partial \alpha_m} = \frac{\partial F}{\partial \hat{r}_{ui}} \hat{r}_{ui}^m, \hspace{1cm}
+  %\frac{\partial F}{\partial \beta_m^u} = \frac{\partial F}{\partial \hat{r}_{ui}} \frac{\partial \hat{r}_{ui}}{\partial \beta_m^u} = \frac{\partial F}{\partial \hat{r}_{ui}} \hat{r}_{ui}^m.
+%\end{gather}
 
 \begin{thebibliography}{10}
 
