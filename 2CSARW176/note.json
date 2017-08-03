@@ -1,0 +1,254 @@
+{
+  "paragraphs": [
+    {
+      "text": "import org.apache.flink.api.common.functions.{RichFlatMapFunction, RichMapFunction}\r\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\r\nimport org.apache.flink.streaming.api.scala._\r\nimport org.apache.flink.util.Collector\r\n    \r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils.{ItemId, UserId}\r\n\r\nimport scala.collection.mutable",
+      "user": "bereczdaniel",
+      "dateUpdated": "Aug 2, 2017 12:55:07 PM",
+      "config": {
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.flink.api.common.functions.{RichFlatMapFunction, RichMapFunction}\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\nimport org.apache.flink.streaming.api.scala._\nimport org.apache.flink.util.Collector\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\nimport hu.sztaki.ilab.ps.matrix.factorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils.{ItemId, UserId}\nimport scala.collection.mutable\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1501666353779_1863300828",
+      "id": "20170622-084645_781320986",
+      "dateCreated": "Aug 2, 2017 11:32:33 AM",
+      "dateStarted": "Aug 2, 2017 12:55:07 PM",
+      "dateFinished": "Aug 2, 2017 12:55:29 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val trainDataPath \u003d \"data_session_train\"\nval userVectorFileName \u003d \"userVector.map\"\nval itemVectorFileName \u003d \"itemVector.map\"   ",
+      "dateUpdated": "Aug 2, 2017 11:32:33 AM",
+      "config": {
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "trainDataPath: String \u003d data_session_train\nuserVectorFileName: String \u003d userVector.map\nitemVectorFileName: String \u003d itemVector.map\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1501666353788_1858299092",
+      "id": "20170622-083625_311133921",
+      "dateCreated": "Aug 2, 2017 11:32:33 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "senv.setParallelism(4)      ",
+      "dateUpdated": "Aug 2, 2017 11:32:33 AM",
+      "config": {
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1501666353789_1857914343",
+      "id": "20170622-084103_214762686",
+      "dateCreated": "Aug 2, 2017 11:32:33 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val data \u003d senv.readTextFile(trainDataPath)\n\nval lastFM \u003d data.map(line \u003d\u003e {\n    val fieldsArray \u003d line.split(\" \")\n    (fieldsArray(1).toInt, fieldsArray(2).toInt, 1.0)})",
+      "dateUpdated": "Aug 2, 2017 11:32:33 AM",
+      "config": {
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "data: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@24799413\nlastFM: org.apache.flink.streaming.api.scala.DataStream[(Int, Int, Double)] \u003d org.apache.flink.streaming.api.scala.DataStream@77b5188a\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1501666353790_1859068590",
+      "id": "20170622-083948_1402225892",
+      "dateCreated": "Aug 2, 2017 11:32:33 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "psOfflineMF(lastFM,\n          numFactors \u003d 20,\n          learningRate \u003d 0.1,\n          minRange \u003d -0.001,\n          maxRange \u003d 0.001,\n          negativeSampleRate \u003d 9,\n          iterations \u003d 2,\n          pullLimit \u003d 2000,\n          workerParallelism \u003d 4,\n          psParallelism \u003d 4,\n          iterationWaitTime \u003d 20000)\n             .addSink(new RichSinkFunction[Either[(UserId, Vector), (ItemId, Vector)]] {\n\n              val userVectors \u003d new mutable.HashMap[UserId, Array[Double]]\n              val itemVectors \u003d new mutable.HashMap[ItemId, Array[Double]]\n    \n              override def invoke(value: Either[(UserId, Vector), (ItemId, Vector)]): Unit \u003d {\n                value match {\n                  case Left((userId, vec)) \u003d\u003e\n                    userVectors.update(userId, vec)\n                  case Right((itemId, vec)) \u003d\u003e\n                    itemVectors.update(itemId, vec)\n                }\n              }\n    \n              override def close(): Unit \u003d {\n                val modelFile \u003d new java.io.PrintWriter(new java.io.File(\"model\"))\n                val userVectorFile \u003d new java.io.PrintWriter(new java.io.File(userVectorFileName))\n                \n                for((k,v) \u003c- userVectors){\n                    modelFile.write(\"u;\" + k)\n                  for(value \u003c- v){\n                    userVectorFile.write(k + \";\" + value + \u0027\\n\u0027)\n                    modelFile.write(\";\" + value)\n                  }\n                  modelFile.write(\"\\n\")\n                }\n                userVectorFile.close()\n    \n                val itemVectorFile \u003d new java.io.PrintWriter(new java.io.File(itemVectorFileName))\n                for((k,v) \u003c- itemVectors){\n                    modelFile.write(\"i;\" + k)\n                  for(value \u003c- v){\n                    itemVectorFile.write(k + \";\" + value + \u0027\\n\u0027)\n                    modelFile.write(\";\" + value)\n                  }\n                  modelFile.write(\"\\n\")\n                }\n                itemVectorFile.close()\n                modelFile.close()\n              }\n    \n            }).setParallelism(1)\n         ",
+      "dateUpdated": "Aug 2, 2017 3:04:04 PM",
+      "config": {
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res17: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorizationForNaiveGenerator.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorizationForNaiveGenerator.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@33f669c\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1501666353791_1858683841",
+      "id": "20170622-084005_798284100",
+      "dateCreated": "Aug 2, 2017 11:32:33 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "senv.execute()",
+      "dateUpdated": "Aug 2, 2017 11:32:33 AM",
+      "config": {
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res19: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@53397d2d\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1501666353792_1942943850",
+      "id": "20170622-084509_1135866173",
+      "dateCreated": "Aug 2, 2017 11:32:33 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "dateUpdated": "Aug 2, 2017 11:32:33 AM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1501666353801_1939481110",
+      "id": "20170623-111545_417741466",
+      "dateCreated": "Aug 2, 2017 11:32:33 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "flink_offlineMF",
+  "id": "2CSARW176",
+  "angularObjects": {
+    "2CS2X4V6Q:shared_process": [],
+    "2CQV3F3T2:shared_process": [],
+    "2CQMEQTZK:shared_process": [],
+    "2CR4QRH5Z:shared_process": [],
+    "2CS4845DM:shared_process": [],
+    "2CS4WVSB8:shared_process": [],
+    "2CR7YHR14:shared_process": [],
+    "2CP7F92SD:shared_process": [],
+    "2CPEYC312:shared_process": [],
+    "2CQ7EPJ5Q:shared_process": [],
+    "2CP5CWWYS:shared_process": [],
+    "2CPQRACW2:shared_process": [],
+    "2CR92FFEM:shared_process": [],
+    "2CR11QPMN:shared_process": [],
+    "2CRATQUF7:shared_process": [],
+    "2CPM8WTKH:shared_process": [],
+    "2CPRE72RG:shared_process": [],
+    "2CQV2ZGB4:shared_process": [],
+    "2CS9S6T6U:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

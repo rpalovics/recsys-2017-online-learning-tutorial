@@ -1,0 +1,81 @@
+{
+  "paragraphs": [
+    {
+      "text": "print(\"Hello World\")",
+      "user": "bereczdaniel",
+      "dateUpdated": "Aug 2, 2017 12:55:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Hello World\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1501516710447_737492036",
+      "id": "20170731-175830_858083122",
+      "dateCreated": "Jul 31, 2017 5:58:30 PM",
+      "dateStarted": "Aug 2, 2017 12:55:45 PM",
+      "dateFinished": "Aug 2, 2017 12:55:45 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%python.conda\n",
+      "user": "anonymous",
+      "dateUpdated": "Jul 31, 2017 6:00:16 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1501516816920_1234126769",
+      "id": "20170731-180016_1412799091",
+      "dateCreated": "Jul 31, 2017 6:00:16 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "~Trash/conda",
+  "id": "2CQZJK2KT",
+  "angularObjects": {
+    "2CS2X4V6Q:shared_process": [],
+    "2CQV3F3T2:shared_process": [],
+    "2CQMEQTZK:shared_process": [],
+    "2CR4QRH5Z:shared_process": [],
+    "2CS4845DM:shared_process": [],
+    "2CS4WVSB8:shared_process": [],
+    "2CR7YHR14:shared_process": [],
+    "2CP7F92SD:shared_process": [],
+    "2CPEYC312:shared_process": [],
+    "2CQ7EPJ5Q:shared_process": [],
+    "2CP5CWWYS:shared_process": [],
+    "2CPQRACW2:shared_process": [],
+    "2CR92FFEM:shared_process": [],
+    "2CR11QPMN:shared_process": [],
+    "2CRATQUF7:shared_process": [],
+    "2CPM8WTKH:shared_process": [],
+    "2CQV2ZGB4:shared_process": [],
+    "2CPRE72RG:shared_process": [],
+    "2CS9S6T6U:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

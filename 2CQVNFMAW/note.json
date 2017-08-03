@@ -1,0 +1,43 @@
+{
+  "paragraphs": [
+    {
+      "user": "bereczdaniel",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1501671395689_672501861",
+      "id": "20170802-125635_698017628",
+      "dateCreated": "Aug 2, 2017 12:56:35 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "~Trash/zepl_test",
+  "id": "2CQVNFMAW",
+  "angularObjects": {
+    "2CS2X4V6Q:shared_process": [],
+    "2CQV3F3T2:shared_process": [],
+    "2CQMEQTZK:shared_process": [],
+    "2CR4QRH5Z:shared_process": [],
+    "2CS4845DM:shared_process": [],
+    "2CS4WVSB8:shared_process": [],
+    "2CR7YHR14:shared_process": [],
+    "2CP7F92SD:shared_process": [],
+    "2CPEYC312:shared_process": [],
+    "2CQ7EPJ5Q:shared_process": [],
+    "2CP5CWWYS:shared_process": [],
+    "2CPQRACW2:shared_process": [],
+    "2CR92FFEM:shared_process": [],
+    "2CR11QPMN:shared_process": [],
+    "2CRATQUF7:shared_process": [],
+    "2CPM8WTKH:shared_process": [],
+    "2CQV2ZGB4:shared_process": [],
+    "2CPRE72RG:shared_process": [],
+    "2CS9S6T6U:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
