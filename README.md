@@ -10,7 +10,12 @@ In contrast, online learning models can adopt to temporal effects, hence they ma
 In our tutorial, we present open source systems capable of updating their models on the fly after each event: Apache Spark, Apache Flink and [Alpenglow](https://github.com/rpalovics/Alpenglow), a C++ based Python recommender framework.
 Participants of the tutorial will be able to experiment with all the three systems by using Zeppelin Notebooks.
 
-Our final objective is to compare and then blend batch and online methods to build models providing high quality top-k recommendation in non-stationary environments. 
+Our final objective is to compare and then blend batch and online methods to build models providing high quality top-k recommendation in non-stationary environments.
+
+The hands-on tutorial running parallel to the workshops is on Sunday, Aug 27, 2017.
+Participants may attend the tutorial in two identical sessions starting from either 9:00 or 14:00.
+Both sessions start with installation instructions, which is crucial to participate.
+Participants must register for the tutorial via this [form](https://goo.gl/forms/LcXCjr5mByWx1QUA2).
 
 ## Theoretical background
 
