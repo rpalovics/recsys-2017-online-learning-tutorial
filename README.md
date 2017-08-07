@@ -24,3 +24,11 @@ A brief summary of the tutorial's theoretical background is now [available](http
 Participants should check out the summary before attending to the tutorial, as during the event there will be less emphasis on the theoretical background.
 
 A preview of the introductory slides are now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/intro.pdf).
+
+## Installation
+
+Coming soon.
+
+## Notebooks
+
+Check out the preview of the [Alpenglow online ranking notebook!](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy9kZDlmMzExNGUyYTA0ZDI5ODQ3MThiMTViNjllNzNlMi9ub3RlLmpzb24)
