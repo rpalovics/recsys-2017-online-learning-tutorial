@@ -15,29 +15,9 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Untitled Note 1",
+  "name": "~Trash/Untitled Note 1",
   "id": "2CNV76W9V",
-  "angularObjects": {
-    "2CK72QMC5:shared_process": [],
-    "2CKXYZ6CN:shared_process": [],
-    "2CMTWB74R:shared_process": [],
-    "2CKS4TJTK:shared_process": [],
-    "2CMHDPRT3:shared_process": [],
-    "2CJZ774GG:shared_process": [],
-    "2CJTTF25Z:shared_process": [],
-    "2CKM3CRYB:shared_process": [],
-    "2CN17ZKCE:shared_process": [],
-    "2CNBPAE22:shared_process": [],
-    "2CKHHD5Y3:shared_process": [],
-    "2CPGBTGZR:shared_process": [],
-    "2CMMTM4MK:shared_process": [],
-    "2CMASUG7B:shared_process": [],
-    "2CKKGRVGB:shared_process": [],
-    "2CNNQKFTP:shared_process": [],
-    "2CMK1BN3B:shared_process": [],
-    "2CPQCC3MT:shared_process": [],
-    "2CKFWAW5R:shared_process": []
-  },
+  "angularObjects": {},
   "config": {},
   "info": {}
 }

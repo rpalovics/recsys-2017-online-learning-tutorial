@@ -39,45 +39,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%python.conda activate ds3",
-      "user": "anonymous",
-      "dateUpdated": "Aug 3, 2017 1:19:20 PM",
-      "config": {
-        "colWidth": 12.0,
-        "enabled": true,
-        "results": {},
-        "editorSetting": {
-          "language": "sh",
-          "editOnDblClick": false
-        },
-        "editorMode": "ace/mode/sh"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "\u0027ds3\u0027 is activated"
-          }
-        ]
-      },
-      "apps": [],
-      "jobName": "paragraph_1501060023362_1368377681",
-      "id": "20170726-110703_1052167631",
-      "dateCreated": "Jul 26, 2017 11:07:03 AM",
-      "dateStarted": "Aug 3, 2017 1:19:20 PM",
-      "dateFinished": "Aug 3, 2017 1:19:26 PM",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
       "text": "import pandas as pd\nimport matplotlib\nimport matplotlib.pyplot as plt\nimport alpenglow as ag\nimport alpenglow.experiments\nimport alpenglow.evaluation\nimport numpy as np",
       "user": "anonymous",
-      "dateUpdated": "Aug 3, 2017 1:19:22 PM",
+      "dateUpdated": "Aug 8, 2017 3:20:44 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -100,15 +64,15 @@
       "jobName": "paragraph_1501060026243_2131334750",
       "id": "20170726-110706_2104719445",
       "dateCreated": "Jul 26, 2017 11:07:06 AM",
-      "dateStarted": "Aug 3, 2017 1:19:23 PM",
-      "dateFinished": "Aug 3, 2017 1:19:36 PM",
+      "dateStarted": "Aug 8, 2017 3:20:44 PM",
+      "dateFinished": "Aug 8, 2017 3:20:44 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "import seaborn as sns\nsns.set(font\u003d\"Droid Sans\",font_scale \u003d 1.5)\nsns.set_style(\"white\")\nsns.set_color_codes(\"dark\")",
       "user": "anonymous",
-      "dateUpdated": "Aug 3, 2017 1:19:24 PM",
+      "dateUpdated": "Aug 8, 2017 3:20:45 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -131,15 +95,15 @@
       "jobName": "paragraph_1501675634109_-575586942",
       "id": "20170802-140714_80881209",
       "dateCreated": "Aug 2, 2017 2:07:14 PM",
-      "dateStarted": "Aug 3, 2017 1:19:27 PM",
-      "dateFinished": "Aug 3, 2017 1:19:39 PM",
+      "dateStarted": "Aug 8, 2017 3:20:45 PM",
+      "dateFinished": "Aug 8, 2017 3:20:48 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "folder \u003d \"/home/rpalovics/\"\ndata \u003d pd.read_csv(folder + \"/data\",names\u003d[\"time\",\"user\",\"item\"],sep\u003d\" \")",
       "user": "anonymous",
-      "dateUpdated": "Aug 3, 2017 1:19:43 PM",
+      "dateUpdated": "Aug 8, 2017 3:20:47 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -162,15 +126,15 @@
       "jobName": "paragraph_1501060156619_1236560405",
       "id": "20170726-110916_812963230",
       "dateCreated": "Jul 26, 2017 11:09:16 AM",
-      "dateStarted": "Aug 3, 2017 1:19:43 PM",
-      "dateFinished": "Aug 3, 2017 1:19:43 PM",
+      "dateStarted": "Aug 8, 2017 3:20:47 PM",
+      "dateFinished": "Aug 8, 2017 3:20:49 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "beginTime \u003d data[\"time\"][0]\nweek \u003d 604800\nnumberOfWeeks \u003d 30\nendTime \u003d beginTime + int(week * numberOfWeeks)",
       "user": "anonymous",
-      "dateUpdated": "Aug 3, 2017 1:19:45 PM",
+      "dateUpdated": "Aug 8, 2017 3:20:49 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -193,15 +157,15 @@
       "jobName": "paragraph_1501061738404_-1567637363",
       "id": "20170726-113538_1278431767",
       "dateCreated": "Jul 26, 2017 11:35:38 AM",
-      "dateStarted": "Aug 3, 2017 1:19:45 PM",
-      "dateFinished": "Aug 3, 2017 1:19:45 PM",
+      "dateStarted": "Aug 8, 2017 3:20:49 PM",
+      "dateFinished": "Aug 8, 2017 3:20:49 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "beginEvalWeek\u003d20\ntrain \u003d data[data[\"time\"] \u003c\u003d endTime]\ntrain[\"eval\"] \u003d train.apply(lambda x: 1 if x[\u0027time\u0027] \u003e beginTime + beginEvalWeek * week else 0,axis\u003d1)",
+      "text": "beginEvalWeek\u003d20\ntrain \u003d data[data[\"time\"] \u003c\u003d endTime]\ntrain.to_csv(folder + \"train\",index\u003dFalse,header\u003dFalse)\ntrain[\"eval\"] \u003d train.apply(lambda x: 1 if x[\u0027time\u0027] \u003e beginTime + beginEvalWeek * week else 0,axis\u003d1)\ntrain_batch \u003d data[data[\"time\"] \u003c\u003d beginEvalWeek * week + beginTime]\ntest_batch \u003d train[train[\"time\"] \u003e beginEvalWeek * week + beginTime]\ntrain_batch.to_csv(folder + \"train_batch\",index\u003dFalse,header\u003dFalse)\ntest_batch.to_csv(folder + \"test_batch\",index\u003dFalse,header\u003dFalse)\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 3, 2017 1:19:46 PM",
+      "dateUpdated": "Aug 8, 2017 3:22:02 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -224,8 +188,8 @@
       "jobName": "paragraph_1501062008222_2008217270",
       "id": "20170726-114008_834000443",
       "dateCreated": "Jul 26, 2017 11:40:08 AM",
-      "dateStarted": "Aug 3, 2017 1:19:46 PM",
-      "dateFinished": "Aug 3, 2017 1:20:00 PM",
+      "dateStarted": "Aug 8, 2017 3:22:02 PM",
+      "dateFinished": "Aug 8, 2017 3:22:18 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -268,7 +232,7 @@
     {
       "text": "pop_ranks",
       "user": "anonymous",
-      "dateUpdated": "Aug 3, 2017 1:19:51 PM",
+      "dateUpdated": "Aug 8, 2017 3:04:43 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -284,11 +248,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "                time  score   user   item  prediction  rank\nid                                                         \n249993  1.402306e+09    1.0  22293  16603    0.421771   NaN\n249994  1.402306e+09    1.0  25762   1886    0.743929   NaN\n249995  1.402306e+09    1.0  24241  23581    0.334246   NaN\n249996  1.402306e+09    1.0   5696    111    0.740458   NaN\n249997  1.402306e+09    1.0  20956   2932    0.751731   NaN\n249998  1.402306e+09    1.0  27005   3839    0.439689   NaN\n249999  1.402306e+09    1.0  26855  46932    0.105443   NaN\n250000  1.402306e+09    1.0  21136  51669    0.105443   NaN\n250001  1.402306e+09    1.0   4787   6485    0.517396   NaN\n250002  1.402306e+09    1.0  26935   9161    0.210886   NaN\n250003  1.402306e+09    1.0   2370  13212    0.000000   NaN\n250004  1.402306e+09    1.0  27156   2203    0.595104   NaN\n250005  1.402306e+09    1.0  23302    637    0.846485  56.0\n250006  1.402306e+09    1.0  26794   4766    0.476977   NaN\n250007  1.402306e+09    1.0   6709   2041    0.687863   NaN\n250008  1.402307e+09    1.0   3894    150    0.603968   NaN\n250009  1.402307e+09    1.0  27157    375    0.612344   NaN\n250010  1.402307e+09    1.0  25610  35914    0.000000   NaN\n250011  1.402307e+09    1.0   9540   1831    0.736906   NaN\n250012  1.402307e+09    1.0  24776   1644    0.811956  96.0\n250013  1.402307e+09    1.0  26930    563    0.727009   NaN\n250014  1.402307e+09    1.0  26840   2004    0.681100   NaN\n250015  1.402307e+09    1.0  26561   1760    0.778558   NaN\n250016  1.402307e+09    1.0  26279    388    0.884909  25.0\n250017  1.402307e+09    1.0  26496   3803    0.654742   NaN\n250018  1.402307e+09    1.0  23949  10835    0.390185   NaN\n250019  1.402307e+09    1.0  26833  11344    0.244831   NaN\n250020  1.402307e+09    1.0   4536  46497    0.000000   NaN\n250021  1.402308e+09    1.0  25580   3999    0.501369   NaN\n250022  1.402308e+09    1.0   1548   3376    0.694337   NaN\n...              ...    ...    ...    ...         ...   ...\n347855  1.408352e+09    1.0    247   2856    0.513218   NaN\n347856  1.408352e+09    1.0  32371    898    0.837542  67.0\n347857  1.408352e+09    1.0  15806  21770    0.300169   NaN\n347858  1.408352e+09    1.0  21854   2820    0.390910   NaN\n347859  1.408352e+09    1.0  25818   7162    0.158586   NaN\n347860  1.408352e+09    1.0  24776  20873    0.000000   NaN\n347861  1.408352e+09    1.0  29681   2163    0.539536   NaN\n347862  1.408352e+09    1.0  22410   4341    0.581064   NaN\n347863  1.408352e+09    1.0  10524   1300    0.632550   NaN\n347864  1.408353e+09    1.0  31573    864    0.694644   NaN\n347865  1.408353e+09    1.0  32372   5740    0.346139   NaN\n347866  1.408353e+09    1.0  29597   6687    0.452612   NaN\n347867  1.408353e+09    1.0  18997  19291    0.200113   NaN\n347868  1.408353e+09    1.0  27973   8456    0.470310   NaN\n347869  1.408353e+09    1.0  19921   2192    0.317172   NaN\n347870  1.408353e+09    1.0   6189     36    0.864874  38.0\n347871  1.408353e+09    1.0  32121    132    0.767676   NaN\n347872  1.408353e+09    1.0  32058   5240    0.681120   NaN\n347873  1.408353e+09    1.0   3904    327    0.828080  80.0\n347874  1.408353e+09    1.0  25335  27688    0.280894   NaN\n347875  1.408353e+09    1.0  31823    967    0.673172   NaN\n347876  1.408353e+09    1.0  31197   5919    0.358699   NaN\n347877  1.408353e+09    1.0  14782  17819    0.317172   NaN\n347878  1.408353e+09    1.0  32175   4576    0.681120   NaN\n347879  1.408353e+09    1.0  31909    666    0.890891  20.0\n347880  1.408353e+09    1.0  32059   7869    0.641301   NaN\n347881  1.408354e+09    1.0  32165   5810    0.495700   NaN\n347882  1.408354e+09    1.0   4713  11054    0.490966   NaN\n347883  1.408354e+09    1.0  10057   4764    0.661845   NaN\n347884  1.408354e+09    1.0  19691    762    0.692277   NaN\n\n[97892 rows x 6 columns]\n"
+            "data": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-8508093873923264182.py\", line 275, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\nNameError: name \u0027pop_ranks\u0027 is not defined\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_python-8508093873923264182.py\", line 282, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-8508093873923264182.py\", line 275, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\nNameError: name \u0027pop_ranks\u0027 is not defined\n\n"
           }
         ]
       },
@@ -296,9 +260,9 @@
       "jobName": "paragraph_1501676870888_1793845617",
       "id": "20170802-142750_394851903",
       "dateCreated": "Aug 2, 2017 2:27:50 PM",
-      "dateStarted": "Aug 3, 2017 1:20:01 PM",
-      "dateFinished": "Aug 3, 2017 1:20:40 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 8, 2017 3:04:43 PM",
+      "dateFinished": "Aug 8, 2017 3:04:43 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {

@@ -16,29 +16,9 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "OfflineMF_PS",
+  "name": "~Trash/OfflineMF_PS",
   "id": "2CN5HTVG7",
-  "angularObjects": {
-    "2CMSKU9E5:shared_process": [],
-    "2CMKUT8X3:shared_process": [],
-    "2CNUPNYFG:shared_process": [],
-    "2CK288YS4:shared_process": [],
-    "2CNK6F2SE:shared_process": [],
-    "2CJHX1DT2:shared_process": [],
-    "2CMZBHQC6:shared_process": [],
-    "2CKZWZS74:shared_process": [],
-    "2CNVQG2P5:shared_process": [],
-    "2CJRU185B:shared_process": [],
-    "2CN7HX61X:shared_process": [],
-    "2CMG4MQ55:shared_process": [],
-    "2CNVPGXMX:shared_process": [],
-    "2CKRQKETH:shared_process": [],
-    "2CJE4NK2C:shared_process": [],
-    "2CJG9RJYT:shared_process": [],
-    "2CK8J2AQR:shared_process": [],
-    "2CNFG3DQP:shared_process": [],
-    "2CMR9FW5Y:shared_process": []
-  },
+  "angularObjects": {},
   "config": {},
   "info": {}
 }

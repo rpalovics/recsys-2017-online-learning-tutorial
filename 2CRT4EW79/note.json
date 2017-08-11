@@ -3,27 +3,27 @@
     {
       "text": "import java.io.{File, PrintWriter}\n\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMP._\nimport org.apache.flink.api.common.functions.RichFlatMapFunction\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\nimport org.apache.flink.streaming.api.scala._\nimport org.apache.flink.util.Collector\n\n\nimport scala.collection.mutable\nimport scala.collection.mutable.ArrayBuffer",
       "user": "anonymous",
-      "dateUpdated": "Jul 28, 2017 7:14:53 PM",
+      "dateUpdated": "Aug 8, 2017 1:19:13 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala",
+          "language": "text",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/text"
       },
       "settings": {
         "params": {},
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "import java.io.{File, PrintWriter}\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMP._\nimport org.apache.flink.api.common.functions.RichFlatMapFunction\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\nimport org.apache.flink.streaming.api.scala._\nimport org.apache.flink.util.Collector\nimport scala.collection.mutable\nimport scala.collection.mutable.ArrayBuffer\n"
+            "data": "\nimport java.io.{File, PrintWriter}\n\n\n\n\u003cconsole\u003e:27: error: not found: value hu\n       import hu.sztaki.ilab.ps.matrix.factorization.Utils._\n              ^\n"
           }
         ]
       },
@@ -31,9 +31,9 @@
       "jobName": "paragraph_1501261999722_-2013530581",
       "id": "20170728-191319_552594448",
       "dateCreated": "Jul 28, 2017 7:13:19 PM",
-      "dateStarted": "Jul 28, 2017 7:14:53 PM",
-      "dateFinished": "Jul 28, 2017 7:15:22 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 8, 2017 1:19:13 PM",
+      "dateFinished": "Aug 8, 2017 1:19:48 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -140,18 +140,18 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val testInput \u003d testData.map(line \u003d\u003e\n  Rating(line.split(\" \")(1).toInt, line.split(\" \")(2).toInt, 1.0))",
+      "text": "val testInput \u003d testData.map(line \u003d\u003e Rating(line.split(\" \")(1).toInt, line.split(\" \")(2).toInt, 1.0))",
       "user": "anonymous",
-      "dateUpdated": "Jul 28, 2017 7:17:37 PM",
+      "dateUpdated": "Aug 8, 2017 1:19:11 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala",
+          "language": "text",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/text"
       },
       "settings": {
         "params": {},
@@ -301,25 +301,25 @@
   "name": "Eval_with_Flink",
   "id": "2CRT4EW79",
   "angularObjects": {
-    "2CK72QMC5:shared_process": [],
-    "2CKXYZ6CN:shared_process": [],
-    "2CMTWB74R:shared_process": [],
-    "2CKS4TJTK:shared_process": [],
-    "2CMHDPRT3:shared_process": [],
-    "2CJZ774GG:shared_process": [],
-    "2CJTTF25Z:shared_process": [],
-    "2CKM3CRYB:shared_process": [],
-    "2CN17ZKCE:shared_process": [],
-    "2CNBPAE22:shared_process": [],
-    "2CKHHD5Y3:shared_process": [],
-    "2CPGBTGZR:shared_process": [],
-    "2CMMTM4MK:shared_process": [],
-    "2CMASUG7B:shared_process": [],
-    "2CKKGRVGB:shared_process": [],
-    "2CNNQKFTP:shared_process": [],
-    "2CMK1BN3B:shared_process": [],
-    "2CPQCC3MT:shared_process": [],
-    "2CKFWAW5R:shared_process": []
+    "2CQEV1KZW:shared_process": [],
+    "2CRKCK1NF:shared_process": [],
+    "2CRF8AWSP:shared_process": [],
+    "2CP4WKAT7:shared_process": [],
+    "2CPUXQHH6:shared_process": [],
+    "2CPA1PCD9:shared_process": [],
+    "2CN78HPAV:shared_process": [],
+    "2CQ7RBMUN:shared_process": [],
+    "2CRH2FK3R:shared_process": [],
+    "2CQNSADQH:shared_process": [],
+    "2CQRXZD89:shared_process": [],
+    "2CRDUPHCE:shared_process": [],
+    "2CNABP9UM:shared_process": [],
+    "2CPXHZ2CH:shared_process": [],
+    "2CRNE8QE4:shared_process": [],
+    "2CPJDUB2G:shared_process": [],
+    "2CNC49WN4:shared_process": [],
+    "2CPW8TH9V:shared_process": [],
+    "2CPUQ468Z:shared_process": []
   },
   "config": {},
   "info": {}
