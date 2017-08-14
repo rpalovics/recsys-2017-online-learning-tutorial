@@ -1,9 +1,10 @@
 {
   "paragraphs": [
     {
+      "title": "",
       "text": "%python\nimport pandas as pd\nimport numpy as np\nimport heapq\nimport glob\nimport os\nimport shutil\nimport math\nfrom collections import defaultdict\nimport pyarrow.parquet as pq",
       "user": "anonymous",
-      "dateUpdated": "Aug 10, 2017 11:41:05 AM",
+      "dateUpdated": "Aug 14, 2017 2:20:53 PM",
       "config": {
         "enabled": true,
         "tableHide": false,
@@ -13,7 +14,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "colWidth": 12.0
+        "colWidth": 12.0,
+        "title": false
       },
       "settings": {
         "params": {},
@@ -27,8 +29,8 @@
       "jobName": "paragraph_1501759629101_-1187359513",
       "id": "20170629-125530_1695150477",
       "dateCreated": "Aug 3, 2017 1:27:09 PM",
-      "dateStarted": "Aug 10, 2017 11:41:05 AM",
-      "dateFinished": "Aug 10, 2017 11:41:05 AM",
+      "dateStarted": "Aug 14, 2017 1:00:23 PM",
+      "dateFinished": "Aug 14, 2017 1:00:28 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -36,7 +38,7 @@
       "title": "",
       "text": "%flink\r\nimport org.apache.flink.streaming.api.scala._\r\n\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\r\nimport hu.sztaki.ilab.ps.matrix.factorization._",
       "user": "anonymous",
-      "dateUpdated": "Aug 10, 2017 1:02:03 PM",
+      "dateUpdated": "Aug 14, 2017 2:07:34 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -65,15 +67,15 @@
       "jobName": "paragraph_1501759635452_1207702390",
       "id": "20170803-132715_2082215327",
       "dateCreated": "Aug 3, 2017 1:27:15 PM",
-      "dateStarted": "Aug 10, 2017 1:02:03 PM",
-      "dateFinished": "Aug 10, 2017 1:02:05 PM",
+      "dateStarted": "Aug 14, 2017 2:07:34 PM",
+      "dateFinished": "Aug 14, 2017 2:07:36 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%flink\nsenv.setParallelism(4)",
       "user": "anonymous",
-      "dateUpdated": "Aug 10, 2017 1:02:07 PM",
+      "dateUpdated": "Aug 14, 2017 2:07:37 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -96,15 +98,15 @@
       "jobName": "paragraph_1501759762052_-1542666638",
       "id": "20170803-132922_686332586",
       "dateCreated": "Aug 3, 2017 1:29:22 PM",
-      "dateStarted": "Aug 10, 2017 1:02:08 PM",
-      "dateFinished": "Aug 10, 2017 1:02:09 PM",
+      "dateStarted": "Aug 14, 2017 2:07:37 PM",
+      "dateFinished": "Aug 14, 2017 2:07:38 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\nval trainDataPath \u003d \"/home/rpalovics/train_batch\"\nval data \u003d ImplicitDataToRatingParser.parse(senv,trainDataPath,\",\",1,2).map{_ match {case Rating(x,y,z)\u003d\u003e(x,y,z)}}",
+      "text": "%flink\nval trainDataPath \u003d \"train_batch\"\nval data \u003d ImplicitDataToRatingParser.parse(senv, trainDataPath, \",\", 1, 2)",
       "user": "anonymous",
-      "dateUpdated": "Aug 10, 2017 1:05:58 PM",
+      "dateUpdated": "Aug 14, 2017 3:30:22 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -124,7 +126,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "trainDataPath: String \u003d /home/rpalovics/train_batch\ndata: org.apache.flink.streaming.api.scala.DataStream[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, Double)] \u003d org.apache.flink.streaming.api.scala.DataStream@3162c284\n"
+            "data": "trainDataPath: String \u003d train_batch\ndata: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, Double)] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@5f75703e\n"
           }
         ]
       },
@@ -132,15 +134,15 @@
       "jobName": "paragraph_1501759787828_-1183280517",
       "id": "20170803-132947_233557466",
       "dateCreated": "Aug 3, 2017 1:29:47 PM",
-      "dateStarted": "Aug 10, 2017 1:05:58 PM",
-      "dateFinished": "Aug 10, 2017 1:06:04 PM",
+      "dateStarted": "Aug 14, 2017 2:07:38 PM",
+      "dateFinished": "Aug 14, 2017 2:07:40 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\nval userVectorFileName \u003d \"userVector.map\"\nval itemVectorFileName \u003d \"itemVector.map\"  \nPSOfflineMatrixFactorization.psOfflineMF(data,\n            numFactors \u003d 10,\n            learningRate \u003d 0.05,\n            iterations \u003d 4,\n            minRange \u003d -0.01,\n            maxRange \u003d 0.01,\n            pullLimit \u003d 200,\n            negativeSampleRate \u003d 20,\n            workerParallelism \u003d 4,\n            psParallelism \u003d 4,\n            iterationWaitTime \u003d 20000)",
+      "text": "%flink\nval userVectorFileName \u003d \"userVector.map\"\nval itemVectorFileName \u003d \"itemVector.map\"  \nPSOfflineMatrixFactorization.psOfflineMF(data,\n            numFactors \u003d 10,\n            learningRate \u003d 0.05,\n            iterations \u003d 4,\n            minRange \u003d -0.01,\n            maxRange \u003d 0.01,\n            pullLimit \u003d 2000,\n            negativeSampleRate \u003d 20,\n            workerParallelism \u003d 4,\n            psParallelism \u003d 4,\n            iterationWaitTime \u003d 20000)\n         .addSink(new VectorModelToSeparateFilesSink(userVectorFileName, itemVectorFileName)\n         ).setParallelism(1)",
       "user": "anonymous",
-      "dateUpdated": "Aug 10, 2017 1:17:19 PM",
+      "dateUpdated": "Aug 14, 2017 2:18:13 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -160,7 +162,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "userVectorFileName: String \u003d userVector.map\nitemVectorFileName: String \u003d itemVector.map\nres23: org.apache.flink.streaming.api.scala.DataStream[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization.Vector)]] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@731c3fcd\n"
+            "data": "userVectorFileName: String \u003d userVector.map\nitemVectorFileName: String \u003d itemVector.map\nres46: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization.Vector)]] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@32fb5b6d\n"
           }
         ]
       },
@@ -168,15 +170,15 @@
       "jobName": "paragraph_1501759800364_-1743292670",
       "id": "20170803-133000_951117325",
       "dateCreated": "Aug 3, 2017 1:30:00 PM",
-      "dateStarted": "Aug 10, 2017 1:17:19 PM",
-      "dateFinished": "Aug 10, 2017 1:17:22 PM",
+      "dateStarted": "Aug 14, 2017 2:07:41 PM",
+      "dateFinished": "Aug 14, 2017 2:07:43 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%flink\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 10, 2017 1:17:25 PM",
+      "dateUpdated": "Aug 14, 2017 2:07:42 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -191,15 +193,22 @@
         "params": {},
         "forms": {}
       },
-      "results": "org.apache.thrift.transport.TTransportException",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res48: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@208d7784\n"
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1501759814852_1803722764",
       "id": "20170803-133014_732234976",
       "dateCreated": "Aug 3, 2017 1:30:14 PM",
-      "dateStarted": "Aug 10, 2017 1:17:25 PM",
-      "dateFinished": "Aug 10, 2017 1:30:08 PM",
-      "status": "ERROR",
-      "errorMessage": "org.apache.thrift.transport.TTransportException\n\tat org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:132)\n\tat org.apache.thrift.transport.TTransport.readAll(TTransport.java:86)\n\tat org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:429)\n\tat org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:318)\n\tat org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:219)\n\tat org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:69)\n\tat org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Client.recv_interpret(RemoteInterpreterService.java:266)\n\tat org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Client.interpret(RemoteInterpreterService.java:250)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.interpret(RemoteInterpreter.java:373)\n\tat org.apache.zeppelin.interpreter.LazyOpenInterpreter.interpret(LazyOpenInterpreter.java:97)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:406)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:175)\n\tat org.apache.zeppelin.scheduler.RemoteScheduler$JobRunner.run(RemoteScheduler.java:329)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)\n\tat java.lang.Thread.run(Thread.java:748)\n",
+      "dateStarted": "Aug 14, 2017 2:07:43 PM",
+      "dateFinished": "Aug 14, 2017 2:14:44 PM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -241,18 +250,18 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark\nval train \u003d sc.textFile(new File(\"data_session_train\").toString).map { line \u003d\u003e\n  val fields \u003d line.split(\" \")\n  Rating(fields(1).toInt, fields(2).toInt, 1.0)\n}",
+      "text": "%spark\nval train \u003d sc.textFile(new File(\"train_batch\").toString).map { line \u003d\u003e\n  val fields \u003d line.split(\" \")\n  Rating(fields(1).toInt, fields(2).toInt, 1.0)\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 3, 2017 1:31:38 PM",
+      "dateUpdated": "Aug 14, 2017 2:19:28 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "python",
+          "language": "scala",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/scala"
       },
       "settings": {
         "params": {},
@@ -403,8 +412,8 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "userVectorsFlink \u003d get_user_data(\u0027userVector.map\u0027,\u0027;\u0027,[0,1],\"userVectorFlink\")\nuserVectorsSpark \u003d read_vectors_pq(\u0027sparkPrediction/data/user\u0027,\u0027userVectorSpark\u0027)\n\nitemVectorsFlink \u003d get_user_data(\u0027itemVector.map\u0027,\u0027;\u0027,[0,1],\"itemVectorFlink\")\nitemVectorsSpark \u003d read_vectors_pq(\u0027sparkPrediction/data/product\u0027,\u0027itemVectorSpark\u0027)\n\nuserItemTest2 \u003d get_user_data(\u0027data_session_test\u0027,\u0027 \u0027,[1,2],\"userItemTest\")\nuserItemTrain2 \u003d get_user_data(\u0027data_session_train\u0027,\u0027 \u0027,[1,2],\"userItemTrain\")\n\nuserdata \u003d pd.concat([userVectorsFlink,userVectorsSpark,userItemTest2,userItemTrain2],axis\u003d1)\nitemdata \u003d pd.concat([itemVectorsFlink,itemVectorsSpark],axis\u003d1)\n\nrec_types \u003d [\u0027Flink\u0027,\u0027Spark\u0027]",
-      "dateUpdated": "Aug 3, 2017 1:27:09 PM",
+      "text": "userVectorsFlink \u003d get_user_data(userVectorFileName,\u0027;\u0027,[0,1],\"userVectorFlink\")\nuserVectorsSpark \u003d read_vectors_pq(\u0027sparkPrediction/data/user\u0027,\u0027userVectorSpark\u0027)\n\nitemVectorsFlink \u003d get_user_data(itemVectorFileName,\u0027;\u0027,[0,1],\"itemVectorFlink\")\nitemVectorsSpark \u003d read_vectors_pq(\u0027sparkPrediction/data/product\u0027,\u0027itemVectorSpark\u0027)\n\nuserItemTest2 \u003d get_user_data(\u0027test_batch\u0027,\u0027 \u0027,[1,2],\"userItemTest\")\nuserItemTrain2 \u003d get_user_data(\u0027train_batch\u0027,\u0027 \u0027,[1,2],\"userItemTrain\")\n\nuserdata \u003d pd.concat([userVectorsFlink,userVectorsSpark,userItemTest2,userItemTrain2],axis\u003d1)\nitemdata \u003d pd.concat([itemVectorsFlink,itemVectorsSpark],axis\u003d1)\n\nrec_types \u003d [\u0027Flink\u0027,\u0027Spark\u0027]",
+      "dateUpdated": "Aug 14, 2017 2:19:51 PM",
       "config": {
         "enabled": true,
         "editorMode": "ace/mode/python",
@@ -666,25 +675,25 @@
   "name": "offlineMF\u0026eval",
   "id": "2CRZTB4M8",
   "angularObjects": {
-    "2CQEV1KZW:shared_process": [],
-    "2CRKCK1NF:shared_process": [],
-    "2CRF8AWSP:shared_process": [],
-    "2CP4WKAT7:shared_process": [],
-    "2CPUXQHH6:shared_process": [],
-    "2CPA1PCD9:shared_process": [],
-    "2CN78HPAV:shared_process": [],
-    "2CQ7RBMUN:shared_process": [],
-    "2CRH2FK3R:shared_process": [],
-    "2CQNSADQH:shared_process": [],
-    "2CQRXZD89:shared_process": [],
-    "2CRDUPHCE:shared_process": [],
-    "2CNABP9UM:shared_process": [],
-    "2CPXHZ2CH:shared_process": [],
-    "2CRNE8QE4:shared_process": [],
-    "2CPJDUB2G:shared_process": [],
-    "2CNC49WN4:shared_process": [],
-    "2CPW8TH9V:shared_process": [],
-    "2CPUQ468Z:shared_process": []
+    "2CQ5CHCVK:shared_process": [],
+    "2CQA8ANBF:shared_process": [],
+    "2CPUWTNP5:shared_process": [],
+    "2CS666EJY:shared_process": [],
+    "2CQ1SYMWR:shared_process": [],
+    "2CRX78HZ4:shared_process": [],
+    "2CSE5JPER:shared_process": [],
+    "2CPEJRKEY:shared_process": [],
+    "2CR9VJ4VU:shared_process": [],
+    "2CQ144JX5:shared_process": [],
+    "2CNWA3851:shared_process": [],
+    "2CRTAP1ZV:shared_process": [],
+    "2CQVGSGZX:shared_process": [],
+    "2CRQ2EJN1:shared_process": [],
+    "2CS38SHJX:shared_process": [],
+    "2CNU9Q44Q:shared_process": [],
+    "2CSK5B72V:shared_process": [],
+    "2CRPWHNGP:shared_process": [],
+    "2CS7NTJ4W:shared_process": []
   },
   "config": {},
   "info": {}
