@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "import java.io.File\n\nimport scala.io.Source\n\nimport org.apache.spark.SparkConf\nimport org.apache.spark.SparkContext\nimport org.apache.spark.SparkContext._\nimport org.apache.spark.rdd._\nimport org.apache.spark.mllib.recommendation.{ALS, Rating, MatrixFactorizationModel}",
+      "text": "import java.io.{File, PrintWriter}\nimport scala.io.Source\n\nimport org.apache.spark.SparkConf\nimport org.apache.spark.SparkContext\nimport org.apache.spark.SparkContext._\nimport org.apache.spark.rdd._\nimport org.apache.spark.mllib.recommendation.{ALS, Rating, MatrixFactorizationModel}",
       "user": "anonymous",
-      "dateUpdated": "Jul 6, 2017 5:18:34 PM",
+      "dateUpdated": "Aug 15, 2017 11:45:16 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -22,7 +22,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\nimport java.io.File\n\nimport scala.io.Source\n\nimport org.apache.spark.SparkConf\n\nimport org.apache.spark.SparkContext\n\nimport org.apache.spark.SparkContext._\n\nimport org.apache.spark.rdd._\n\nimport org.apache.spark.mllib.recommendation.{ALS, Rating, MatrixFactorizationModel}\n"
+            "data": "\nimport java.io.{File, PrintWriter}\n\nimport scala.io.Source\n\nimport org.apache.spark.SparkConf\n\nimport org.apache.spark.SparkContext\n\nimport org.apache.spark.SparkContext._\n\nimport org.apache.spark.rdd._\n\nimport org.apache.spark.mllib.recommendation.{ALS, Rating, MatrixFactorizationModel}\n"
           }
         ]
       },
@@ -30,15 +30,15 @@
       "jobName": "paragraph_1498731944855_-1201448622",
       "id": "20170629-122544_1893183764",
       "dateCreated": "Jun 29, 2017 12:25:44 PM",
-      "dateStarted": "Jul 6, 2017 5:18:34 PM",
-      "dateFinished": "Jul 6, 2017 5:19:00 PM",
+      "dateStarted": "Aug 15, 2017 11:45:16 AM",
+      "dateFinished": "Aug 15, 2017 11:45:17 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val train \u003d sc.textFile(new File(\"data_session_train\").toString).map { line \u003d\u003e\n  val fields \u003d line.split(\" \")\n  Rating(fields(1).toInt, fields(2).toInt, 1.0)\n}",
+      "text": "val train \u003d sc.textFile(new File(\"train_batch\").toString).map { line \u003d\u003e\n  val fields \u003d line.split(\",\")\n  Rating(fields(1).toInt, fields(2).toInt, 1.0)\n}",
       "user": "anonymous",
-      "dateUpdated": "Jul 6, 2017 5:18:35 PM",
+      "dateUpdated": "Aug 15, 2017 10:34:31 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -65,15 +65,15 @@
       "jobName": "paragraph_1498731671529_1433541185",
       "id": "20170629-122111_1766785322",
       "dateCreated": "Jun 29, 2017 12:21:11 PM",
-      "dateStarted": "Jul 6, 2017 5:18:35 PM",
-      "dateFinished": "Jul 6, 2017 5:19:01 PM",
+      "dateStarted": "Aug 15, 2017 10:34:31 AM",
+      "dateFinished": "Aug 15, 2017 10:34:51 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "val numRatings \u003d train.count()\nval numUsers \u003d train.map(_.user).distinct().count()\nval numArtirs \u003d train.map(_.product).distinct().count()\n\nprintln(\"Got \" + numRatings + \" views from \"\n  + numUsers + \" users on \" + numArtirs + \" artists.\")",
       "user": "anonymous",
-      "dateUpdated": "Jul 6, 2017 5:18:35 PM",
+      "dateUpdated": "Aug 15, 2017 10:34:32 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -92,7 +92,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\nnumRatings: Long \u003d 57254\n\nnumUsers: Long \u003d 11187\n\nnumArtirs: Long \u003d 17012\nGot 57254 views from 11187 users on 17012 artists.\n"
+            "data": "\nnumRatings: Long \u003d 249993\n\nnumUsers: Long \u003d 26985\n\nnumArtirs: Long \u003d 35739\nGot 249993 views from 26985 users on 35739 artists.\n"
           }
         ]
       },
@@ -100,15 +100,15 @@
       "jobName": "paragraph_1498731912747_-2040631946",
       "id": "20170629-122512_17073212",
       "dateCreated": "Jun 29, 2017 12:25:12 PM",
-      "dateStarted": "Jul 6, 2017 5:19:00 PM",
-      "dateFinished": "Jul 6, 2017 5:19:05 PM",
+      "dateStarted": "Aug 15, 2017 10:34:50 AM",
+      "dateFinished": "Aug 15, 2017 10:34:56 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "val rank \u003d 20\nval numIter \u003d 4\nval lambda \u003d 0.01\nval alpha \u003d 2\n\nval model \u003d ALS.trainImplicit(train, rank, numIter, lambda, alpha)",
       "user": "anonymous",
-      "dateUpdated": "Jul 6, 2017 6:30:02 PM",
+      "dateUpdated": "Aug 15, 2017 10:34:34 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -127,7 +127,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\nrank: Int \u003d 20\n\nnumIter: Int \u003d 4\n\nlambda: Double \u003d 0.01\n\nalpha: Int \u003d 2\n\nmodel: org.apache.spark.mllib.recommendation.MatrixFactorizationModel \u003d org.apache.spark.mllib.recommendation.MatrixFactorizationModel@585c3e33\n"
+            "data": "\nrank: Int \u003d 20\n\nnumIter: Int \u003d 4\n\nlambda: Double \u003d 0.01\n\nalpha: Int \u003d 2\n\nmodel: org.apache.spark.mllib.recommendation.MatrixFactorizationModel \u003d org.apache.spark.mllib.recommendation.MatrixFactorizationModel@36f93497\n"
           }
         ]
       },
@@ -135,24 +135,24 @@
       "jobName": "paragraph_1498746875800_-1712388502",
       "id": "20170629-163435_1169211418",
       "dateCreated": "Jun 29, 2017 4:34:35 PM",
-      "dateStarted": "Jul 6, 2017 6:30:02 PM",
-      "dateFinished": "Jul 6, 2017 6:30:06 PM",
+      "dateStarted": "Aug 15, 2017 10:34:52 AM",
+      "dateFinished": "Aug 15, 2017 10:35:05 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%python\nimport shutil       \n    \nshutil.rmtree(\u0027sparkPrediction\u0027)",
+      "text": "val test \u003d sc.textFile(new File(\"test_batch\").toString).map { line \u003d\u003e\n  val fields \u003d line.split(\",\")\n  Rating(fields(1).toInt, fields(2).toInt, 1.0)\n}",
       "user": "anonymous",
-      "dateUpdated": "Jul 6, 2017 6:30:03 PM",
+      "dateUpdated": "Aug 15, 2017 10:46:46 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "python",
+          "language": "scala",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/scala"
       },
       "settings": {
         "params": {},
@@ -160,21 +160,62 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": []
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\ntest: org.apache.spark.rdd.RDD[org.apache.spark.mllib.recommendation.Rating] \u003d MapPartitionsRDD[125] at map at \u003cconsole\u003e:38\n"
+          }
+        ]
       },
       "apps": [],
       "jobName": "paragraph_1498829065250_1103777604",
       "id": "20170630-152425_1580496281",
       "dateCreated": "Jun 30, 2017 3:24:25 PM",
-      "dateStarted": "Jul 6, 2017 6:30:03 PM",
-      "dateFinished": "Jul 6, 2017 6:30:03 PM",
+      "dateStarted": "Aug 15, 2017 10:46:46 AM",
+      "dateFinished": "Aug 15, 2017 10:46:46 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "model.save(sc, \"sparkPrediction\")",
+      "text": "val manipulatedTest \u003d test.keyBy(r \u003d\u003e r.user)\nval manipulatedTrain \u003d train.keyBy(r \u003d\u003e r.user)\n\nval joinData \u003d manipulatedTrain.join(manipulatedTest).map(t \u003d\u003e t._1).distinct\n\nval activeUsers \u003d joinData.collect",
       "user": "anonymous",
-      "dateUpdated": "Jul 6, 2017 6:30:06 PM",
+      "dateUpdated": "Aug 15, 2017 11:31:02 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nmanipulatedTest: org.apache.spark.rdd.RDD[(Int, org.apache.spark.mllib.recommendation.Rating)] \u003d MapPartitionsRDD[127] at keyBy at \u003cconsole\u003e:40\n\nmanipulatedTrain: org.apache.spark.rdd.RDD[(Int, org.apache.spark.mllib.recommendation.Rating)] \u003d MapPartitionsRDD[128] at keyBy at \u003cconsole\u003e:40\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1499254741050_-1989954517",
+      "id": "20170705-133901_558502930",
+      "dateCreated": "Jul 5, 2017 1:39:01 PM",
+      "dateStarted": "Aug 15, 2017 10:57:08 AM",
+      "dateFinished": "Aug 15, 2017 10:57:09 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val outputFile \u003d new PrintWriter(new File(\"sparkRecommendations\"))\nfor(userId \u003c- activeUsers){\n    var rank \u003d 1\n    for(rating \u003c- model.recommendProducts(userId, 100)){\n        outputFile write s\"(${rating.user}, ${rating.product}, $rank)\\n\"\n        rank +\u003d 1\n    }\n}\noutputFile.close()",
+      "user": "anonymous",
+      "dateUpdated": "Aug 15, 2017 12:01:13 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -189,29 +230,45 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
-        "msg": []
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\noutputFile: java.io.PrintWriter \u003d java.io.PrintWriter@65c0bc30\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\norg.apache.spark.SparkException: Job 85067 cancelled part of cancelled job group zeppelin-20170814-185500_74223139\n  at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1435)\n  at org.apache.spark.scheduler.DAGScheduler.handleJobCancellation(DAGScheduler.scala:1375)\n  at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleJobGroupCancelled$1.apply$mcVI$sp(DAGScheduler.scala:788)\n  at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleJobGroupCancelled$1.apply(DAGScheduler.scala:788)\n  at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleJobGroupCancelled$1.apply(DAGScheduler.scala:788)\n  at scala.collection.mutable.HashSet.foreach(HashSet.scala:78)\n  at org.apache.spark.scheduler.DAGScheduler.handleJobGroupCancelled(DAGScheduler.scala:788)\n  at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1625)\n  at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1605)\n  at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1594)\n  at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)\n  at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:628)\n  at org.apache.spark.SparkContext.runJob(SparkContext.scala:1918)\n  at org.apache.spark.SparkContext.runJob(SparkContext.scala:1981)\n  at org.apache.spark.rdd.RDD$$anonfun$reduce$1.apply(RDD.scala:1025)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)\n  at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)\n  at org.apache.spark.rdd.RDD.reduce(RDD.scala:1007)\n  at org.apache.spark.rdd.RDD$$anonfun$takeOrdered$1.apply(RDD.scala:1428)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)\n  at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)\n  at org.apache.spark.rdd.RDD.takeOrdered(RDD.scala:1415)\n  at org.apache.spark.rdd.RDD$$anonfun$top$1.apply(RDD.scala:1393)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)\n  at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)\n  at org.apache.spark.rdd.RDD.top(RDD.scala:1392)\n  at org.apache.spark.mllib.recommendation.MatrixFactorizationModel$.org$apache$spark$mllib$recommendation$MatrixFactorizationModel$$recommend(MatrixFactorizationModel.scala:260)\n  at org.apache.spark.mllib.recommendation.MatrixFactorizationModel.recommendProducts(MatrixFactorizationModel.scala:169)\n  at $anonfun$1.apply$mcVI$sp(\u003cconsole\u003e:76)\n  at $anonfun$1.apply(\u003cconsole\u003e:74)\n  at $anonfun$1.apply(\u003cconsole\u003e:74)\n  at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)\n  at scala.collection.mutable.ArrayOps$ofInt.foreach(ArrayOps.scala:234)\n  ... 54 elided\n"
+          }
+        ]
       },
       "apps": [],
-      "jobName": "paragraph_1499254741050_-1989954517",
-      "id": "20170705-133901_558502930",
-      "dateCreated": "Jul 5, 2017 1:39:01 PM",
-      "dateStarted": "Jul 6, 2017 6:30:06 PM",
-      "dateFinished": "Jul 6, 2017 6:30:08 PM",
-      "status": "FINISHED",
+      "jobName": "paragraph_1502729700154_366146726",
+      "id": "20170814-185500_74223139",
+      "dateCreated": "Aug 14, 2017 6:55:00 PM",
+      "dateStarted": "Aug 15, 2017 12:01:13 PM",
+      "dateFinished": "Aug 15, 2017 12:16:00 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "",
       "user": "anonymous",
-      "config": {},
+      "dateUpdated": "Aug 15, 2017 12:21:12 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1499265620853_808160822",
-      "id": "20170705-164020_1408282163",
-      "dateCreated": "Jul 5, 2017 4:40:20 PM",
+      "jobName": "paragraph_1502789072903_-731449933",
+      "id": "20170815-112432_1077657461",
+      "dateCreated": "Aug 15, 2017 11:24:32 AM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -219,25 +276,25 @@
   "name": "spark_offlineMF",
   "id": "2CMAZQ9S5",
   "angularObjects": {
-    "2CK72QMC5:shared_process": [],
-    "2CKXYZ6CN:shared_process": [],
-    "2CMTWB74R:shared_process": [],
-    "2CKS4TJTK:shared_process": [],
-    "2CMHDPRT3:shared_process": [],
-    "2CJZ774GG:shared_process": [],
-    "2CJTTF25Z:shared_process": [],
-    "2CKM3CRYB:shared_process": [],
-    "2CN17ZKCE:shared_process": [],
-    "2CNBPAE22:shared_process": [],
-    "2CKHHD5Y3:shared_process": [],
-    "2CPGBTGZR:shared_process": [],
-    "2CMMTM4MK:shared_process": [],
-    "2CMASUG7B:shared_process": [],
-    "2CKKGRVGB:shared_process": [],
-    "2CNNQKFTP:shared_process": [],
-    "2CMK1BN3B:shared_process": [],
-    "2CPQCC3MT:shared_process": [],
-    "2CKFWAW5R:shared_process": []
+    "2CQ5CHCVK:shared_process": [],
+    "2CQA8ANBF:shared_process": [],
+    "2CPUWTNP5:shared_process": [],
+    "2CS666EJY:shared_process": [],
+    "2CQ1SYMWR:shared_process": [],
+    "2CRX78HZ4:shared_process": [],
+    "2CSE5JPER:shared_process": [],
+    "2CPEJRKEY:shared_process": [],
+    "2CR9VJ4VU:shared_process": [],
+    "2CQ144JX5:shared_process": [],
+    "2CNWA3851:shared_process": [],
+    "2CRTAP1ZV:shared_process": [],
+    "2CQVGSGZX:shared_process": [],
+    "2CRQ2EJN1:shared_process": [],
+    "2CS38SHJX:shared_process": [],
+    "2CNU9Q44Q:shared_process": [],
+    "2CSK5B72V:shared_process": [],
+    "2CRPWHNGP:shared_process": [],
+    "2CS7NTJ4W:shared_process": []
   },
   "config": {},
   "info": {}
