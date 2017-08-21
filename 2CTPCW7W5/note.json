@@ -3,7 +3,7 @@
     {
       "text": "import pandas as pd\nimport numpy as np\nimport heapq\nimport glob\nimport os\nimport shutil\nimport math\nfrom collections import defaultdict\nimport pyarrow.parquet as pq\nimport alpenglow as ag\nfrom alpenglow.offline.models import FactorModel\nfrom alpenglow.offline.evaluation import NdcgScore",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:13:40 PM",
+      "dateUpdated": "Aug 21, 2017 1:21:43 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -12,7 +12,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -26,15 +27,15 @@
       "jobName": "paragraph_1503043976596_1345513851",
       "id": "20170818-101256_1862447283",
       "dateCreated": "Aug 18, 2017 10:12:56 AM",
-      "dateStarted": "Aug 21, 2017 12:13:40 PM",
-      "dateFinished": "Aug 21, 2017 12:13:40 PM",
+      "dateStarted": "Aug 21, 2017 1:21:43 PM",
+      "dateFinished": "Aug 21, 2017 1:22:01 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%flink\r\nimport org.apache.flink.streaming.api.scala._\r\n\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\r\n\r\n\r\nimport java.io.{File, PrintWriter}\r\nimport scala.collection.mutable\r\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\r\n\r\n\r\nsenv.setParallelism(4)",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:12:33 PM",
+      "dateUpdated": "Aug 21, 2017 1:21:44 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -43,7 +44,8 @@
           "language": "scala",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -62,15 +64,15 @@
       "jobName": "paragraph_1503043992138_-1755346101",
       "id": "20170818-101312_1674360328",
       "dateCreated": "Aug 18, 2017 10:13:12 AM",
-      "dateStarted": "Aug 21, 2017 12:12:33 PM",
-      "dateFinished": "Aug 21, 2017 12:12:37 PM",
+      "dateStarted": "Aug 21, 2017 1:21:44 PM",
+      "dateFinished": "Aug 21, 2017 1:22:23 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nimport java.io.File\n\nimport scala.io.Source\n\nimport org.apache.spark.SparkConf\nimport org.apache.spark.SparkContext\nimport org.apache.spark.SparkContext._\nimport org.apache.spark.rdd._\nimport org.apache.spark.mllib.recommendation.{ALS, Rating, MatrixFactorizationModel}",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:12:45 PM",
+      "dateUpdated": "Aug 21, 2017 1:21:45 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -79,7 +81,8 @@
           "language": "scala",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -98,8 +101,8 @@
       "jobName": "paragraph_1503044018011_1384250897",
       "id": "20170818-101338_623641606",
       "dateCreated": "Aug 18, 2017 10:13:38 AM",
-      "dateStarted": "Aug 21, 2017 12:12:45 PM",
-      "dateFinished": "Aug 21, 2017 12:13:14 PM",
+      "dateStarted": "Aug 21, 2017 1:21:47 PM",
+      "dateFinished": "Aug 21, 2017 1:22:32 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -107,7 +110,7 @@
       "title": "reading data",
       "text": "",
       "user": "anonymous",
-      "dateUpdated": "Aug 18, 2017 12:13:01 PM",
+      "dateUpdated": "Aug 21, 2017 1:21:09 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -117,7 +120,8 @@
           "editOnDblClick": false
         },
         "editorMode": "ace/mode/python",
-        "title": true
+        "title": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -133,7 +137,7 @@
     {
       "text": "train_batch \u003d pd.read_csv(\n    \u0027train_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:11:44 PM",
+      "dateUpdated": "Aug 21, 2017 1:22:47 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -142,7 +146,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -156,15 +161,15 @@
       "jobName": "paragraph_1503044042861_-1196062407",
       "id": "20170818-101402_497732565",
       "dateCreated": "Aug 18, 2017 10:14:02 AM",
-      "dateStarted": "Aug 21, 2017 12:11:44 PM",
-      "dateFinished": "Aug 21, 2017 12:11:44 PM",
+      "dateStarted": "Aug 21, 2017 1:22:47 PM",
+      "dateFinished": "Aug 21, 2017 1:22:47 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%flink\nval trainDataPath \u003d \"train_batch\"\nval testDataPath \u003d \"test_batch\"\nval model \u003d \"model\"\nval topKOut \u003d \"topK.out\"\n\nval trainData \u003d ImplicitDataToRatingParser.parse(senv,trainDataPath,\",\",1,2)",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:12:38 PM",
+      "dateUpdated": "Aug 21, 2017 1:22:49 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -173,7 +178,8 @@
           "language": "scala",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -184,7 +190,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "trainDataPath: String \u003d train_batch\ntestDataPath: String \u003d test_batch\nmodel: String \u003d model\ntopKOut: String \u003d topK.out\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@334bb011\n"
+            "data": "trainDataPath: String \u003d train_batch\ntestDataPath: String \u003d test_batch\nmodel: String \u003d model\ntopKOut: String \u003d topK.out\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@47df3846\n"
           }
         ]
       },
@@ -192,15 +198,15 @@
       "jobName": "paragraph_1503044083369_929721239",
       "id": "20170818-101443_42483437",
       "dateCreated": "Aug 18, 2017 10:14:43 AM",
-      "dateStarted": "Aug 21, 2017 12:12:38 PM",
-      "dateFinished": "Aug 21, 2017 12:12:42 PM",
+      "dateStarted": "Aug 21, 2017 1:22:49 PM",
+      "dateFinished": "Aug 21, 2017 1:22:54 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\n\nval train \u003d sc.textFile(new File(\"train_batch\").toString).map { line \u003d\u003e\n  val fields \u003d line.split(\",\")\n  Rating(fields(1).toInt, fields(2).toInt, 1.0)\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:13:17 PM",
+      "dateUpdated": "Aug 21, 2017 1:22:50 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -209,7 +215,8 @@
           "language": "scala",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -228,15 +235,15 @@
       "jobName": "paragraph_1503044383850_-1498583956",
       "id": "20170818-101943_1275364393",
       "dateCreated": "Aug 18, 2017 10:19:43 AM",
-      "dateStarted": "Aug 21, 2017 12:13:17 PM",
-      "dateFinished": "Aug 21, 2017 12:13:19 PM",
+      "dateStarted": "Aug 21, 2017 1:22:50 PM",
+      "dateFinished": "Aug 21, 2017 1:22:55 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "training models",
       "user": "anonymous",
-      "dateUpdated": "Aug 18, 2017 12:13:17 PM",
+      "dateUpdated": "Aug 21, 2017 1:21:09 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -246,7 +253,8 @@
           "editOnDblClick": false
         },
         "editorMode": "ace/mode/python",
-        "title": true
+        "title": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -262,7 +270,7 @@
     {
       "text": "model \u003d FactorModel(\n    dimension\u003d20,\n    learning_rate\u003d0.05,\n    negative_rate\u003d9,\n    number_of_iterations\u003d4,\n)\nmodel.fit(train_batch)",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:13:47 PM",
+      "dateUpdated": "Aug 21, 2017 1:23:18 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -271,7 +279,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -282,7 +291,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\nBeginning of 1th iteration.\n\n\nEnd of 1th iteration.\nBeginning of 2th iteration.\n\n\nEnd of 2th iteration.\nBeginning of 3th iteration.\n\n\nEnd of 3th iteration.\nBeginning of 4th iteration.\n\nEnd of 4th iteration.\n"
+            "data": "Beginning of \n1th iteration.\n\n\nEnd of 1th iteration.\nBeginning of 2th iteration.\n\n\nEnd of 2th iteration.\nBeginning of 3th iteration.\n\n\nEnd of 3th iteration.\nBeginning of 4th iteration.\n\nEnd of 4th iteration.\n"
           }
         ]
       },
@@ -290,15 +299,15 @@
       "jobName": "paragraph_1503044488882_-1534781001",
       "id": "20170818-102128_494115451",
       "dateCreated": "Aug 18, 2017 10:21:28 AM",
-      "dateStarted": "Aug 21, 2017 12:13:47 PM",
-      "dateFinished": "Aug 21, 2017 12:14:05 PM",
+      "dateStarted": "Aug 21, 2017 1:23:18 PM",
+      "dateFinished": "Aug 21, 2017 1:24:27 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%flink\n\npsOfflineMF(\n        trainData,\n        numFactors \u003d 20,\n        learningRate \u003d 0.05,\n        minRange \u003d -0.01,\n        maxRange \u003d 0.01,\n        negativeSampleRate \u003d 9,\n        iterations \u003d 4,\n        pullLimit \u003d 2000,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000\n    )\n    .addSink(new VectorModelToFileSink(model))\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:14:05 PM",
+      "dateUpdated": "Aug 21, 2017 1:23:19 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -307,7 +316,8 @@
           "language": "scala",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -318,7 +328,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "res3: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@479473a9\nres4: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@1cf6b5e0\n"
+            "data": "res3: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@4aac3cec\nres4: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@4551fdfc\n"
           }
         ]
       },
@@ -326,15 +336,15 @@
       "jobName": "paragraph_1503044504674_-241408440",
       "id": "20170818-102144_2001725201",
       "dateCreated": "Aug 18, 2017 10:21:44 AM",
-      "dateStarted": "Aug 21, 2017 12:14:05 PM",
-      "dateFinished": "Aug 21, 2017 12:16:50 PM",
+      "dateStarted": "Aug 21, 2017 1:23:20 PM",
+      "dateFinished": "Aug 21, 2017 1:26:28 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark\nval rank \u003d 20\nval numIter \u003d 4\nval lambda \u003d 0.01\nval alpha \u003d 40\n\nval model \u003d ALS.trainImplicit(train, rank, numIter, lambda, alpha)\n",
+      "text": "%spark\nval rank \u003d 20\nval numIter \u003d 8\nval lambda \u003d 0.01\nval alpha \u003d 40\n\nval model \u003d ALS.trainImplicit(train, rank, numIter, lambda, alpha)\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:17:15 PM",
+      "dateUpdated": "Aug 21, 2017 1:54:27 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -343,7 +353,8 @@
           "language": "scala",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -354,7 +365,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\nrank: Int \u003d 20\n\nnumIter: Int \u003d 4\n\nlambda: Double \u003d 0.01\n\nalpha: Int \u003d 40\n\nmodel: org.apache.spark.mllib.recommendation.MatrixFactorizationModel \u003d org.apache.spark.mllib.recommendation.MatrixFactorizationModel@693bdaac\n"
+            "data": "\nrank: Int \u003d 20\n\nnumIter: Int \u003d 8\n\nlambda: Double \u003d 0.01\n\nalpha: Int \u003d 40\n\nmodel: org.apache.spark.mllib.recommendation.MatrixFactorizationModel \u003d org.apache.spark.mllib.recommendation.MatrixFactorizationModel@77a46bd9\n"
           }
         ]
       },
@@ -362,8 +373,8 @@
       "jobName": "paragraph_1503044524622_-469549214",
       "id": "20170818-102204_1132678300",
       "dateCreated": "Aug 18, 2017 10:22:04 AM",
-      "dateStarted": "Aug 21, 2017 12:17:15 PM",
-      "dateFinished": "Aug 21, 2017 12:17:27 PM",
+      "dateStarted": "Aug 21, 2017 1:54:27 PM",
+      "dateFinished": "Aug 21, 2017 1:54:35 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -371,7 +382,7 @@
       "title": "calculating toplists",
       "text": "",
       "user": "anonymous",
-      "dateUpdated": "Aug 18, 2017 12:13:33 PM",
+      "dateUpdated": "Aug 21, 2017 1:21:09 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -381,7 +392,8 @@
           "editOnDblClick": false
         },
         "editorMode": "ace/mode/python",
-        "title": true
+        "title": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -397,7 +409,7 @@
     {
       "text": "test_batch \u003d pd.read_csv(\n    \u0027test_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:17:31 PM",
+      "dateUpdated": "Aug 21, 2017 1:26:46 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -406,7 +418,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -420,15 +433,15 @@
       "jobName": "paragraph_1503045269757_1245530043",
       "id": "20170818-103429_1482871678",
       "dateCreated": "Aug 18, 2017 10:34:29 AM",
-      "dateStarted": "Aug 21, 2017 12:17:31 PM",
-      "dateFinished": "Aug 21, 2017 12:18:46 PM",
+      "dateStarted": "Aug 21, 2017 1:26:46 PM",
+      "dateFinished": "Aug 21, 2017 1:28:03 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%flink\nval users \u003d senv.readTextFile(\"train_test_users.csv\")\nval usersForToplist \u003d users.map((x:String) \u003d\u003e Rating(x.toInt,0,0,0))\nval modelStream \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 20)\npsTopKGenerator(\n        usersForToplist,\n        modelStream,\n        workerK \u003d 35,\n        bucketSize \u003d 100,\n        K \u003d 100,\n        pullLimit \u003d 1600,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000\n    )\n    .addSink(new RichSinkFunction[(UserId, List[(Double, ItemId)])]{\n        \n        val topK \u003d new mutable.HashMap[UserId, List[ItemId]]()\n        override def invoke(value: (UserId, List[(Double, ItemId)])): Unit \u003d {\n            val userId \u003d value._1\n            val topKItemId \u003d value._2.map(x \u003d\u003e x._2)\n            topK(userId) \u003d topKItemId\n        }\n        override def close(): Unit \u003d {\n            val outputFile \u003d new PrintWriter(new File(topKOut))\n            for((userId, topK) \u003c- topK){\n                var rank \u003d 1\n                for(item \u003c- topK){\n                    outputFile write s\"$userId, $item, $rank\\n\"\n                    rank +\u003d 1\n                }\n                outputFile write s\"\\n\"\n            }\n            outputFile.close()\n        }\n    })\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:18:51 PM",
+      "dateUpdated": "Aug 21, 2017 1:28:05 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -445,7 +458,8 @@
           "language": "scala",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -456,7 +470,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "users: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@1cef638f\nusersForToplist: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d org.apache.flink.streaming.api.scala.DataStream@422fa848\nmodelStream: org.apache.flink.streaming.api.scala.DataStream[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]] \u003d org.apache.flink.streaming.api.scala.DataStream@4356bfca\nres6: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@7fc578e\nres7: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@7fae1261\n"
+            "data": "users: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@b171fab\nusersForToplist: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d org.apache.flink.streaming.api.scala.DataStream@7947861\nmodelStream: org.apache.flink.streaming.api.scala.DataStream[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]] \u003d org.apache.flink.streaming.api.scala.DataStream@1c95ca76\nres6: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@4e650ec1\nres7: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@5c9b4e14\n"
           }
         ]
       },
@@ -464,15 +478,15 @@
       "jobName": "paragraph_1503045322137_1221583666",
       "id": "20170818-103522_275665771",
       "dateCreated": "Aug 18, 2017 10:35:22 AM",
-      "dateStarted": "Aug 21, 2017 12:18:51 PM",
-      "dateFinished": "Aug 21, 2017 12:19:46 PM",
+      "dateStarted": "Aug 21, 2017 1:28:05 PM",
+      "dateFinished": "Aug 21, 2017 1:28:56 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%python\ntry:    \n    shutil.rmtree(\u0027sparkPrediction\u0027)\nexcept FileNotFoundError:\n    pass",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:20:05 PM",
+      "dateUpdated": "Aug 21, 2017 1:54:40 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -481,7 +495,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -495,15 +510,15 @@
       "jobName": "paragraph_1503045465374_-1369548579",
       "id": "20170818-103745_516122392",
       "dateCreated": "Aug 18, 2017 10:37:45 AM",
-      "dateStarted": "Aug 21, 2017 12:20:05 PM",
-      "dateFinished": "Aug 21, 2017 12:20:05 PM",
+      "dateStarted": "Aug 21, 2017 1:54:40 PM",
+      "dateFinished": "Aug 21, 2017 1:54:40 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nmodel.save(sc, \"sparkPrediction\")",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:20:07 PM",
+      "dateUpdated": "Aug 21, 2017 1:54:41 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -512,7 +527,8 @@
           "language": "scala",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -526,15 +542,15 @@
       "jobName": "paragraph_1503045573655_-921530648",
       "id": "20170818-103933_624259920",
       "dateCreated": "Aug 18, 2017 10:39:33 AM",
-      "dateStarted": "Aug 21, 2017 12:20:07 PM",
-      "dateFinished": "Aug 21, 2017 12:20:14 PM",
+      "dateStarted": "Aug 21, 2017 1:54:41 PM",
+      "dateFinished": "Aug 21, 2017 1:54:43 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%python\n\nuser_vectors \u003d pq.read_table(\"sparkPrediction/data/user\").to_pandas()\nuser_vectors.columns \u003d [\u0027user\u0027,\u0027factors\u0027]\nuser_vectors \u003d pd.concat([\n    user_vectors[\u0027user\u0027],\n    user_vectors[\u0027factors\u0027].apply(pd.Series)\n], axis\u003d1)\n\nitem_vectors \u003d pq.read_table(\"sparkPrediction/data/product\").to_pandas()\nitem_vectors.columns \u003d [\u0027item\u0027,\u0027factors\u0027]\nitem_vectors \u003d pd.concat([\n    item_vectors[\u0027item\u0027],\n    item_vectors[\u0027factors\u0027].apply(pd.Series)\n], axis\u003d1)\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:20:20 PM",
+      "dateUpdated": "Aug 21, 2017 1:54:45 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -543,7 +559,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -557,15 +574,15 @@
       "jobName": "paragraph_1503045533863_-2028315316",
       "id": "20170818-103853_1354159219",
       "dateCreated": "Aug 18, 2017 10:38:53 AM",
-      "dateStarted": "Aug 21, 2017 12:20:20 PM",
-      "dateFinished": "Aug 21, 2017 12:20:34 PM",
+      "dateStarted": "Aug 21, 2017 1:54:45 PM",
+      "dateFinished": "Aug 21, 2017 1:54:59 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "item_vectors.set_index(\u0027item\u0027)\nps \u003d None\nrelevant_user_vectors \u003d user_vectors[user_vectors.user.isin(set(train_test_users))]\n\nuser_toplists \u003d []\nfor v in relevant_user_vectors.values:\n    user \u003d v[0]\n    user_vec \u003d pd.Series(v[1:])\n    items \u003d item_vectors\\\n        .multiply(user_vec,axis\u003d1)\\\n        .sum(axis\u003d1) \\\n        .nlargest(100)\\\n        .index\n    for item,rank in zip(items, range(1,101)):\n        user_toplists.append((user,item,rank))\n\nspark_topks \u003d pd.DataFrame.from_records(user_toplists, columns\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])",
+      "text": "item_vectors.set_index(\u0027item\u0027, inplace\u003dTrue)\nps \u003d None\nrelevant_user_vectors \u003d user_vectors[user_vectors.user.isin(set(train_test_users))]\n\nuser_toplists \u003d []\nfor v in relevant_user_vectors.values:\n    user \u003d v[0]\n    user_vec \u003d pd.Series(v[1:])\n    items \u003d item_vectors\\\n        .multiply(user_vec,axis\u003d1)\\\n        .sum(axis\u003d1) \\\n        .nlargest(100)\\\n        .index\n    for item,rank in zip(items, range(1,101)):\n        user_toplists.append((user,item,rank))\n\nspark_topks \u003d pd.DataFrame.from_records(user_toplists, columns\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:21:42 PM",
+      "dateUpdated": "Aug 21, 2017 1:55:01 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -574,7 +591,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -588,8 +606,8 @@
       "jobName": "paragraph_1503045813349_1475995158",
       "id": "20170818-104333_812357724",
       "dateCreated": "Aug 18, 2017 10:43:33 AM",
-      "dateStarted": "Aug 21, 2017 12:21:42 PM",
-      "dateFinished": "Aug 21, 2017 12:25:56 PM",
+      "dateStarted": "Aug 21, 2017 1:55:01 PM",
+      "dateFinished": "Aug 21, 2017 1:56:22 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -597,7 +615,7 @@
       "title": "evaluating toplists",
       "text": "flink_topks \u003d pd.read_csv(\u0027topK.out\u0027, header\u003dNone, names\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\n\ntest_relevant \u003d test_batch[test_batch.user.isin(train_batch.user)]\ntest_relevant[\u0027score\u0027]\u003d1\n\nprint(NdcgScore(test_relevant, alpenglow_topks))\nprint(NdcgScore(test_relevant, flink_topks))\nprint(NdcgScore(test_relevant, spark_topks))",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 12:23:46 PM",
+      "dateUpdated": "Aug 21, 2017 1:56:25 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -607,7 +625,8 @@
           "editOnDblClick": false
         },
         "editorMode": "ace/mode/python",
-        "title": true
+        "title": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -618,7 +637,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "6.945569618840723e-05\n0.00013602086800901893\n0.0\n"
+            "data": "0.03877882763052508\n0.03739512825316998\n0.011551208624244384\n"
           }
         ]
       },
@@ -626,15 +645,15 @@
       "jobName": "paragraph_1503046070769_1492675634",
       "id": "20170818-104750_33771494",
       "dateCreated": "Aug 18, 2017 10:47:50 AM",
-      "dateStarted": "Aug 21, 2017 12:23:46 PM",
-      "dateFinished": "Aug 21, 2017 12:26:17 PM",
+      "dateStarted": "Aug 21, 2017 1:56:25 PM",
+      "dateFinished": "Aug 21, 2017 1:56:44 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "",
       "user": "anonymous",
-      "dateUpdated": "Aug 18, 2017 12:12:45 PM",
+      "dateUpdated": "Aug 21, 2017 1:21:10 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -643,7 +662,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
