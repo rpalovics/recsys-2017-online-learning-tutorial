@@ -3,7 +3,6 @@
   <img src="https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw=true" height=100 alt="alpenglow"/>
   <img src="https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png" height=100 alt="flink"/>
   <img src="https://bol.nobleprog.com/sites/hitramx/files/styles/medium/public/category_image/cursos-de-apache-spark-mllib-en-mexico.png?itok=xAuUvMg3" height=100 alt="spark"/>
-
 </p>
 
 # RecSys 2017 Hands-on Online Ranking Tutorial
@@ -20,6 +19,10 @@ The hands-on tutorial running parallel to the workshops is on Sunday, Aug 27, 20
 Participants may attend the tutorial in two identical sessions starting from either 9:00 or 14:00.
 Both sessions start with installation instructions, which is crucial to participate.
 Participants must register for the tutorial via this [form](https://goo.gl/forms/LcXCjr5mByWx1QUA2).
+
+<p align="center">
+  <img src="https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/online%20reco.png?raw=true" height=100 alt="flink"/>
+</p>
 
 ## Theoretical background
 
