@@ -2,6 +2,12 @@
   <img src="./figs/online reco.png" alt="alpenglow"/>
 </p>
 
+<p align="center">
+  <img src="https://zeppelin.apache.org/assets/themes/zeppelin/img/zeppelin_classic_logo.png" height=100 alt="alpenglow"/>
+  <img src="https://i2.wp.com/hsto.org/files/b50/94b/39c/b5094b39c19a4d4d8ad532225e67a91f.png" height=100 alt="alpenglow"/>
+  <img src="https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw=true" height=100 alt="alpenglow"/>
+</p>
+
 # RecSys 2017 Hands-on Online Ranking Tutorial
 
 Traditional recommender algorithms may periodically rebuild their models, but they cannot adjust to quick changes in trends caused by timely information.
