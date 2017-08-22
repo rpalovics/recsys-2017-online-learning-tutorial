@@ -21,7 +21,7 @@ Both sessions start with installation instructions, which is crucial to particip
 Participants must register for the tutorial via this [form](https://goo.gl/forms/LcXCjr5mByWx1QUA2).
 
 <p align="center">
-  <img src="https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/online%20reco.png?raw=true" height=100 alt="flink"/>
+  <img src="https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/online%20reco.png?raw=true" height=200 alt="flink"/>
 </p>
 
 ## Theoretical background
