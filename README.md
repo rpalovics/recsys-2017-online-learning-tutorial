@@ -27,7 +27,7 @@ A preview of the introductory slides are now [available](https://github.com/rpal
 
 ## Installation
 
-Coming soon.
+Head to our [Wiki](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/wiki/Zeppelin-installation-guide) for the detailed installation guide
 
 ## Notebooks
 
