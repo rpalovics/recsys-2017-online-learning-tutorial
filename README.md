@@ -1,10 +1,10 @@
 <p align="center">
   <img src="https://zeppelin.apache.org/assets/themes/zeppelin/img/zeppelin_classic_logo.png" height=100 alt="zeppelin"/>
-  <img hspace=20>
+  <img hspace=10>
   <img src="https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw=true" height=100 alt="alpenglow"/>
-  <img hspace=20>
+  <img hspace=10>
   <img src="https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png" height=100 alt="flink"/>
-  <img hspace=20>
+  <img hspace=10>
   <img src="https://bol.nobleprog.com/sites/hitramx/files/styles/medium/public/category_image/cursos-de-apache-spark-mllib-en-mexico.png?itok=xAuUvMg3" height=100 alt="spark"/>
 </p>
 
