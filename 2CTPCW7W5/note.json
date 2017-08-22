@@ -3,7 +3,7 @@
     {
       "text": "import pandas as pd\nimport numpy as np\nimport heapq\nimport glob\nimport os\nimport shutil\nimport math\nfrom collections import defaultdict\nimport pyarrow.parquet as pq\nimport alpenglow as ag\nfrom alpenglow.offline.models import FactorModel\nfrom alpenglow.offline.evaluation import NdcgScore",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 1:21:43 PM",
+      "dateUpdated": "Aug 22, 2017 6:28:53 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -20,22 +20,27 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
-        "msg": []
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 270, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 11, in \u003cmodule\u003e\nImportError: cannot import name \u0027FactorModel\u0027\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 282, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 270, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 11, in \u003cmodule\u003e\nImportError: cannot import name \u0027FactorModel\u0027\n\n"
+          }
+        ]
       },
       "apps": [],
       "jobName": "paragraph_1503043976596_1345513851",
       "id": "20170818-101256_1862447283",
       "dateCreated": "Aug 18, 2017 10:12:56 AM",
-      "dateStarted": "Aug 21, 2017 1:21:43 PM",
-      "dateFinished": "Aug 21, 2017 1:22:01 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 22, 2017 6:28:53 PM",
+      "dateFinished": "Aug 22, 2017 6:28:53 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\r\nimport org.apache.flink.streaming.api.scala._\r\n\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\r\n\r\n\r\nimport java.io.{File, PrintWriter}\r\nimport scala.collection.mutable\r\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\r\n\r\n\r\nsenv.setParallelism(4)",
+      "text": "%flink\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\r\n\r\nsenv.setParallelism(4)",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 1:21:44 PM",
+      "dateUpdated": "Aug 22, 2017 6:21:50 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -56,7 +61,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "import org.apache.flink.streaming.api.scala._\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\nimport java.io.{File, PrintWriter}\nimport scala.collection.mutable\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\n"
+            "data": "import hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\n"
           }
         ]
       },
@@ -64,8 +69,8 @@
       "jobName": "paragraph_1503043992138_-1755346101",
       "id": "20170818-101312_1674360328",
       "dateCreated": "Aug 18, 2017 10:13:12 AM",
-      "dateStarted": "Aug 21, 2017 1:21:44 PM",
-      "dateFinished": "Aug 21, 2017 1:22:23 PM",
+      "dateStarted": "Aug 22, 2017 6:21:50 PM",
+      "dateFinished": "Aug 22, 2017 6:22:18 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -144,7 +149,7 @@
     {
       "text": "train_batch \u003d pd.read_csv(\n    \u0027train_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 1:22:47 PM",
+      "dateUpdated": "Aug 22, 2017 6:10:52 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -168,15 +173,15 @@
       "jobName": "paragraph_1503044042861_-1196062407",
       "id": "20170818-101402_497732565",
       "dateCreated": "Aug 18, 2017 10:14:02 AM",
-      "dateStarted": "Aug 21, 2017 1:22:47 PM",
-      "dateFinished": "Aug 21, 2017 1:22:47 PM",
+      "dateStarted": "Aug 22, 2017 6:10:52 PM",
+      "dateFinished": "Aug 22, 2017 6:10:52 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%flink\nval trainDataPath \u003d \"train_batch\"\nval testDataPath \u003d \"test_batch\"\nval model \u003d \"model\"\nval topKOut \u003d \"topK.out\"\n\nval trainData \u003d ImplicitDataToRatingParser.parse(senv,trainDataPath,\",\",1,2)",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 1:22:49 PM",
+      "dateUpdated": "Aug 22, 2017 6:23:22 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -197,7 +202,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "trainDataPath: String \u003d train_batch\ntestDataPath: String \u003d test_batch\nmodel: String \u003d model\ntopKOut: String \u003d topK.out\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@47df3846\n"
+            "data": "trainDataPath: String \u003d train_batch\ntestDataPath: String \u003d test_batch\nmodel: String \u003d model\ntopKOut: String \u003d topK.out\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@7080ffdc\n"
           }
         ]
       },
@@ -205,8 +210,8 @@
       "jobName": "paragraph_1503044083369_929721239",
       "id": "20170818-101443_42483437",
       "dateCreated": "Aug 18, 2017 10:14:43 AM",
-      "dateStarted": "Aug 21, 2017 1:22:49 PM",
-      "dateFinished": "Aug 21, 2017 1:22:54 PM",
+      "dateStarted": "Aug 22, 2017 6:23:22 PM",
+      "dateFinished": "Aug 22, 2017 6:23:26 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -320,9 +325,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\n\npsOfflineMF(\n        trainData,\n        numFactors \u003d 20,\n        learningRate \u003d 0.05,\n        minRange \u003d -0.01,\n        maxRange \u003d 0.01,\n        negativeSampleRate \u003d 9,\n        iterations \u003d 4,\n        pullLimit \u003d 2000,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000\n    )\n    .addSink(new VectorModelToFileSink(model))\n    .setParallelism(1)\n\nsenv.execute()",
+      "text": "%flink\npsOfflineMF(\n        trainData,\n        numFactors \u003d 20,\n        rangeMin \u003d -0.01,\n        rangeMax \u003d 0.01,\n        learningRate \u003d 0.05,\n        negativeSampleRate \u003d 9,\n        userMemory \u003d 16,\n        iterations \u003d 4,\n        pullLimit \u003d 2000,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000)\n    .addSink(new VectorModelToFileSink(model))\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 1:23:19 PM",
+      "dateUpdated": "Aug 22, 2017 6:23:31 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -343,7 +348,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "res3: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@4aac3cec\nres4: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@4551fdfc\n"
+            "data": "res3: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@71927d5a\nres4: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@20600299\n"
           }
         ]
       },
@@ -351,8 +356,8 @@
       "jobName": "paragraph_1503044504674_-241408440",
       "id": "20170818-102144_2001725201",
       "dateCreated": "Aug 18, 2017 10:21:44 AM",
-      "dateStarted": "Aug 21, 2017 1:23:20 PM",
-      "dateFinished": "Aug 21, 2017 1:26:28 PM",
+      "dateStarted": "Aug 22, 2017 6:23:31 PM",
+      "dateFinished": "Aug 22, 2017 6:27:16 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -429,9 +434,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "test_batch \u003d pd.read_csv(\n    \u0027test_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)\n",
+      "text": "test_batch \u003d pd.read_csv(\n    \u0027test_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 5:13:55 PM",
+      "dateUpdated": "Aug 22, 2017 6:11:20 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -455,15 +460,15 @@
       "jobName": "paragraph_1503045269757_1245530043",
       "id": "20170818-103429_1482871678",
       "dateCreated": "Aug 18, 2017 10:34:29 AM",
-      "dateStarted": "Aug 21, 2017 1:26:46 PM",
-      "dateFinished": "Aug 21, 2017 1:28:03 PM",
+      "dateStarted": "Aug 22, 2017 6:11:14 PM",
+      "dateFinished": "Aug 22, 2017 6:11:15 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\nval users \u003d senv.readTextFile(\"train_test_users.csv\")\nval usersForToplist \u003d users.map((x:String) \u003d\u003e Rating(x.toInt,0,0,0))\nval modelStream \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 20)\npsTopKGenerator(\n        usersForToplist,\n        modelStream,\n        workerK \u003d 35,\n        bucketSize \u003d 100,\n        K \u003d 100,\n        pullLimit \u003d 1600,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000\n    )\n    .addSink(new RichSinkFunction[(UserId, List[(Double, ItemId)])]{\n        \n        val topK \u003d new mutable.HashMap[UserId, List[ItemId]]()\n        override def invoke(value: (UserId, List[(Double, ItemId)])): Unit \u003d {\n            val userId \u003d value._1\n            val topKItemId \u003d value._2.map(x \u003d\u003e x._2)\n            topK(userId) \u003d topKItemId\n        }\n        override def close(): Unit \u003d {\n            val outputFile \u003d new PrintWriter(new File(topKOut))\n            for((userId, topK) \u003c- topK){\n                var rank \u003d 1\n                for(item \u003c- topK){\n                    outputFile write s\"$userId, $item, $rank\\n\"\n                    rank +\u003d 1\n                }\n                outputFile write s\"\\n\"\n            }\n            outputFile.close()\n        }\n    })\n    .setParallelism(1)\n\nsenv.execute()",
+      "text": "%flink\nval users \u003d senv.readTextFile(\"train_test_users.csv\")\nval usersForToplist \u003d users.map((x:String) \u003d\u003e Rating(x.toInt,0,0,0))\nval modelStream \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 20)\n\npsTopKGenerator(\n        usersForToplist,\n        model \u003d modelStream,\n        userMemory \u003d 16,\n        workerK \u003d 35,\n        bucketSize \u003d 100,\n        K \u003d 100,\n        pullLimit \u003d 1600,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000\n    )\n    .addSink(new TopKToFileSink(topKOut))\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 1:28:05 PM",
+      "dateUpdated": "Aug 22, 2017 6:27:30 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -492,7 +497,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "users: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@b171fab\nusersForToplist: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d org.apache.flink.streaming.api.scala.DataStream@7947861\nmodelStream: org.apache.flink.streaming.api.scala.DataStream[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]] \u003d org.apache.flink.streaming.api.scala.DataStream@1c95ca76\nres6: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@4e650ec1\nres7: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@5c9b4e14\n"
+            "data": "users: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@31c80a6c\nusersForToplist: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d org.apache.flink.streaming.api.scala.DataStream@2cac43e4\nmodelStream: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@16b96091\nres6: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@3c04d363\nres7: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@450fd5be\n"
           }
         ]
       },
@@ -500,8 +505,8 @@
       "jobName": "paragraph_1503045322137_1221583666",
       "id": "20170818-103522_275665771",
       "dateCreated": "Aug 18, 2017 10:35:22 AM",
-      "dateStarted": "Aug 21, 2017 1:28:05 PM",
-      "dateFinished": "Aug 21, 2017 1:28:56 PM",
+      "dateStarted": "Aug 22, 2017 6:27:30 PM",
+      "dateFinished": "Aug 22, 2017 6:28:42 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -542,7 +547,7 @@
       "title": "evaluating toplists",
       "text": "flink_topks \u003d pd.read_csv(\u0027topK.out\u0027, header\u003dNone, names\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\n\ntest_relevant \u003d test_batch[test_batch.user.isin(train_batch.user)]\ntest_relevant[\u0027score\u0027]\u003d1\n\nprint(NdcgScore(test_relevant, alpenglow_topks))\nprint(NdcgScore(test_relevant, flink_topks))\nprint(NdcgScore(test_relevant, spark_topks))",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 1:56:25 PM",
+      "dateUpdated": "Aug 22, 2017 6:16:56 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -560,11 +565,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "0.03877882763052508\n0.03739512825316998\n0.011551208624244384\n"
+            "data": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 275, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 4, in \u003cmodule\u003e\nNameError: name \u0027NdcgScore\u0027 is not defined\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 282, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 275, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 4, in \u003cmodule\u003e\nNameError: name \u0027NdcgScore\u0027 is not defined\n\n"
           }
         ]
       },
@@ -572,9 +577,9 @@
       "jobName": "paragraph_1503046070769_1492675634",
       "id": "20170818-104750_33771494",
       "dateCreated": "Aug 18, 2017 10:47:50 AM",
-      "dateStarted": "Aug 21, 2017 1:56:25 PM",
-      "dateFinished": "Aug 21, 2017 1:56:44 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 22, 2017 6:16:40 PM",
+      "dateFinished": "Aug 22, 2017 6:16:41 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
