@@ -42,3 +42,10 @@ A preview of the introductory slides are now [available](https://github.com/rpal
 - 1 [Alpenglow online ranking notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy8zNTk0NmUzMTQwNTU0NTc1YmIzNGIyODJhNjhjNzA5MS9ub3RlLmpzb24)
 - 2 Alpenglow/Flink/Spark batch notebook
 - 3 Flink parameter server based streaming SGD notebook
+
+<p align="center">
+  <img src="https://www.sztaki.hu/sites/default/files/styles/max_1300x1300/public/2016/project/logo/streamline_logo_3%5B1%5D.png?itok=YlwiafED" height=100 alt="zeppelin"/>
+  <img hspace=20>
+  <img src="https://info.ilab.sztaki.hu/~rpalovics/sztaki_logo_angol_kek.png" height=100 alt="alpenglow"/> 
+</p>
+
