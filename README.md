@@ -21,6 +21,10 @@ Participants may attend the tutorial in two identical sessions starting from eit
 Both sessions start with installation instructions, which is crucial to participate.
 Participants must register for the tutorial via this [form](https://goo.gl/forms/LcXCjr5mByWx1QUA2).
 
+## Installation
+
+Check this [Wiki page](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/wiki/Zeppelin-installation-guide) for the detailed installation guide.
+
 <p align="center">
   <img src="https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/online%20reco.png?raw=true" height=200 alt="flink"/>
 </p>
@@ -33,10 +37,8 @@ Participants should check out the summary before attending to the tutorial, as d
 
 A preview of the introductory slides are now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/intro.pdf).
 
-## Installation
-
-Check this [Wiki page](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/wiki/Zeppelin-installation-guide) for the detailed installation guide.
-
 ## Notebooks
 
-Check out the preview of the [Alpenglow online ranking notebook!](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy8zNTk0NmUzMTQwNTU0NTc1YmIzNGIyODJhNjhjNzA5MS9ub3RlLmpzb24)
+- 1 [Alpenglow online ranking notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy8zNTk0NmUzMTQwNTU0NTc1YmIzNGIyODJhNjhjNzA5MS9ub3RlLmpzb24)
+- 2 Alpenglow/Flink/Spark batch notebook
+- 3 Flink parameter server based streaming SGD notebook
