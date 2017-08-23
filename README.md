@@ -39,4 +39,4 @@ Check this [Wiki page](https://github.com/rpalovics/recsys-2017-online-learning-
 
 ## Notebooks
 
-Check out the preview of the [Alpenglow online ranking notebook!](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy9kZDlmMzExNGUyYTA0ZDI5ODQ3MThiMTViNjllNzNlMi9ub3RlLmpzb24)
+Check out the preview of the [Alpenglow online ranking notebook!](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy8zNTk0NmUzMTQwNTU0NTc1YmIzNGIyODJhNjhjNzA5MS9ub3RlLmpzb24)
