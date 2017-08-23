@@ -213,7 +213,7 @@
     {
       "text": "%md\n### **Setting up the experiment: learn over 30 weeks, online evaluate between weeks 20 and 30**\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/experiment-weeks.png?raw\u003dtrue\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 23, 2017 10:33:49 AM",
+      "dateUpdated": "Aug 23, 2017 11:45:21 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -243,8 +243,8 @@
       "jobName": "paragraph_1503476949651_1557200550",
       "id": "20170823-102909_1528122786",
       "dateCreated": "Aug 23, 2017 10:29:09 AM",
-      "dateStarted": "Aug 23, 2017 10:33:49 AM",
-      "dateFinished": "Aug 23, 2017 10:33:49 AM",
+      "dateStarted": "Aug 23, 2017 11:45:21 AM",
+      "dateFinished": "Aug 23, 2017 11:45:21 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -542,10 +542,48 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "title": "Setting up a periodic batch model",
-      "text": "batch_mf_experiment \u003d alpenglow.experiments.SimulatedBatchExperiment(negative_rate\u003d19,period_length\u003dweek,learning_rate\u003d0.07,number_of_iterations\u003d4)\nbatch_mf_ranks \u003d batch_mf_experiment.run(train)",
+      "text": "%md\n### **Setting up a periodic batch model**\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/periodic-batch-update.png?raw\u003dtrue\" alt\u003d\"periodic batch\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 23, 2017 11:30:43 AM",
+      "dateUpdated": "Aug 23, 2017 11:47:05 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003e\u003cstrong\u003eSetting up a periodic batch model\u003c/strong\u003e\u003c/h3\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/periodic-batch-update.png?raw\u003dtrue\" alt\u003d\"periodic batch\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503481563415_-1272670891",
+      "id": "20170823-114603_426814158",
+      "dateCreated": "Aug 23, 2017 11:46:03 AM",
+      "dateStarted": "Aug 23, 2017 11:47:05 AM",
+      "dateFinished": "Aug 23, 2017 11:47:05 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Setting up a periodic batch model",
+      "text": "batch_mf_experiment \u003d alpenglow.experiments.BatchFactorExperiment(negative_rate\u003d19,period_length\u003dweek,learning_rate\u003d0.07,number_of_iterations\u003d4)\nbatch_mf_ranks \u003d batch_mf_experiment.run(train)",
+      "user": "anonymous",
+      "dateUpdated": "Aug 23, 2017 11:46:34 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -562,11 +600,11 @@
         "forms": {}
       },
       "results": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "msg": [
           {
             "type": "TEXT",
-            "data": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-3863531813939515136.py\", line 270, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\nAttributeError: module \u0027alpenglow.experiments\u0027 has no attribute \u0027SimulatedBatchExperiment\u0027\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_python-3863531813939515136.py\", line 282, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-3863531813939515136.py\", line 270, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\nAttributeError: module \u0027alpenglow.experiments\u0027 has no attribute \u0027SimulatedBatchExperiment\u0027\n\n"
+            "data": "reading data...\ndata reading finished\nrunning experiment...\n\nrun...\n0%-1%-2%-3%-4%-5%-Number of positive samples\u003d18350, cost\u003d1468000\n\n6%-7%-8%-9%-\nNumber of positive samples\u003d33891, cost\u003d2711280\n10%-11%-12%-13%-\nNumber of positive samples\u003d48679, cost\u003d3894320\n14%-15%-16%-17%-18%-\nNumber of positive samples\u003d63039, cost\u003d5043120\n19%-20%-21%-\nNumber of positive samples\u003d76226, cost\u003d6098080\n22%-23%-24%-25%-\nNumber of positive samples\u003d89448, cost\u003d7155840\n26%-27%-28%-29%-\nNumber of positive samples\u003d102086, cost\u003d8166880\n30%-31%-32%-\nNumber of positive samples\u003d114524, cost\u003d9161920\n33%-34%-35%-36%-\nNumber of positive samples\u003d126804, cost\u003d10144320\n37%-38%-39%-\nNumber of positive samples\u003d138700, cost\u003d11096000\n40%-41%-42%-43%-\nNumber of positive samples\u003d150375, cost\u003d12030000\n44%-45%-46%-\nNumber of positive samples\u003d162165, cost\u003d12973200\n47%-48%-49%-\nNumber of positive samples\u003d173448, cost\u003d13875840\n50%-51%-52%-53%-\nNumber of positive samples\u003d185111, cost\u003d14808880\n54%-55%-56%-\nNumber of positive samples\u003d196418, cost\u003d15713440\n57%-58%-59%-\nNumber of positive samples\u003d207492, cost\u003d16599360\n60%-61%-62%-\nNumber of positive samples\u003d218422, cost\u003d17473760\n63%-64%-65%-\nNumber of positive samples\u003d229178, cost\u003d18334240\n66%-67%-68%-\nNumber of positive samples\u003d239605, cost\u003d19168400\n69%-70%-71%-\nNumber of positive samples\u003d249993, cost\u003d19999440\n72%-73%-74%-\nNumber of positive samples\u003d259830, cost\u003d20786400\n75%-76%-77%-\nNumber of positive samples\u003d269602, cost\u003d21568160\n78%-79%-80%-\nNumber of positive samples\u003d279430, cost\u003d22354400\n81%-82%-83%-\nNumber of positive samples\u003d289363, cost\u003d23149040\n84%-85%-\nNumber of positive samples\u003d299137, cost\u003d23930960\n86%-87%-88%-\nNumber of positive samples\u003d309077, cost\u003d24726160\n89%-90%-91%-\nNumber of positive samples\u003d318880, cost\u003d25510400\n92%-93%-94%-\nNumber of positive samples\u003d328446, cost\u003d26275680\n95%-96%-97%-\nNumber of positive samples\u003d338168, cost\u003d27053440\n98%-99%-\nOK\n\nNumber of positive samples\u003d347885, cost\u003d27830800\n"
           }
         ]
       },
@@ -574,9 +612,9 @@
       "jobName": "paragraph_1501675419891_-920846267",
       "id": "20170802-140339_1140653680",
       "dateCreated": "Aug 2, 2017 2:03:39 PM",
-      "dateStarted": "Aug 23, 2017 11:30:40 AM",
-      "dateFinished": "Aug 23, 2017 11:30:41 AM",
-      "status": "ERROR",
+      "dateStarted": "Aug 23, 2017 11:32:53 AM",
+      "dateFinished": "Aug 23, 2017 11:41:45 AM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
