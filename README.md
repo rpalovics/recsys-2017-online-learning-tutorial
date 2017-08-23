@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="./figs/online reco.png" alt="alpenglow"/>
+  <img src="https://zeppelin.apache.org/assets/themes/zeppelin/img/zeppelin_classic_logo.png" height=100 alt="zeppelin"/>
+  <img hspace=20>
+  <img src="https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw=true" height=100 alt="alpenglow"/>
+  <img hspace=20>
+  <img src="https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png" height=100 alt="flink"/>
 </p>
 
 # RecSys 2017 Hands-on Online Ranking Tutorial
@@ -17,6 +21,10 @@ Participants may attend the tutorial in two identical sessions starting from eit
 Both sessions start with installation instructions, which is crucial to participate.
 Participants must register for the tutorial via this [form](https://goo.gl/forms/LcXCjr5mByWx1QUA2).
 
+<p align="center">
+  <img src="https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/online%20reco.png?raw=true" height=200 alt="flink"/>
+</p>
+
 ## Theoretical background
 
 A brief summary of the tutorial's theoretical background is now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/summary.pdf).
@@ -27,7 +35,7 @@ A preview of the introductory slides are now [available](https://github.com/rpal
 
 ## Installation
 
-Coming soon.
+Check this [Wiki page](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/wiki/Zeppelin-installation-guide) for the detailed installation guide.
 
 ## Notebooks
 
