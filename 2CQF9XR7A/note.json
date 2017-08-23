@@ -213,7 +213,7 @@
     {
       "text": "%md\n### **Setting up the experiment: learn over 30 weeks, online evaluate between weeks 20 and 30**\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/experiment-weeks.png?raw\u003dtrue\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 23, 2017 11:45:21 AM",
+      "dateUpdated": "Aug 23, 2017 3:09:37 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -243,8 +243,8 @@
       "jobName": "paragraph_1503476949651_1557200550",
       "id": "20170823-102909_1528122786",
       "dateCreated": "Aug 23, 2017 10:29:09 AM",
-      "dateStarted": "Aug 23, 2017 11:45:21 AM",
-      "dateFinished": "Aug 23, 2017 11:45:21 AM",
+      "dateStarted": "Aug 23, 2017 3:09:37 PM",
+      "dateFinished": "Aug 23, 2017 3:09:37 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -544,7 +544,7 @@
     {
       "text": "%md\n### **Setting up a periodic batch model**\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/periodic-batch-update.png?raw\u003dtrue\" alt\u003d\"periodic batch\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 23, 2017 2:48:24 PM",
+      "dateUpdated": "Aug 23, 2017 3:15:39 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -574,8 +574,8 @@
       "jobName": "paragraph_1503481563415_-1272670891",
       "id": "20170823-114603_426814158",
       "dateCreated": "Aug 23, 2017 11:46:03 AM",
-      "dateStarted": "Aug 23, 2017 2:48:24 PM",
-      "dateFinished": "Aug 23, 2017 2:48:24 PM",
+      "dateStarted": "Aug 23, 2017 3:15:39 PM",
+      "dateFinished": "Aug 23, 2017 3:15:39 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -693,7 +693,7 @@
     {
       "text": "%md\n### **Setting up a periodic batch model**\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/periodic-batch-online-update.png?raw\u003dtrue\" alt\u003d\"periodic batch\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 23, 2017 3:06:54 PM",
+      "dateUpdated": "Aug 23, 2017 3:15:43 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -723,8 +723,8 @@
       "jobName": "paragraph_1503492514637_-2068547055",
       "id": "20170823-144834_18708070",
       "dateCreated": "Aug 23, 2017 2:48:34 PM",
-      "dateStarted": "Aug 23, 2017 3:06:54 PM",
-      "dateFinished": "Aug 23, 2017 3:06:54 PM",
+      "dateStarted": "Aug 23, 2017 3:15:43 PM",
+      "dateFinished": "Aug 23, 2017 3:15:43 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
