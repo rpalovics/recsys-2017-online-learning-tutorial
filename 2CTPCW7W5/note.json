@@ -3,16 +3,16 @@
     {
       "text": "import pandas as pd\nimport numpy as np\nimport heapq\nimport glob\nimport os\nimport shutil\nimport math\nfrom collections import defaultdict\nimport pyarrow.parquet as pq\nimport alpenglow as ag\nfrom alpenglow.offline.models import FactorModel\nfrom alpenglow.offline.evaluation import NdcgScore",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:28:53 PM",
+      "dateUpdated": "Aug 23, 2017 5:26:17 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "python",
+          "language": "text",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python",
+        "editorMode": "ace/mode/text",
         "tableHide": false
       },
       "settings": {
@@ -24,7 +24,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 270, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 11, in \u003cmodule\u003e\nImportError: cannot import name \u0027FactorModel\u0027\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 282, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 270, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 11, in \u003cmodule\u003e\nImportError: cannot import name \u0027FactorModel\u0027\n\n"
+            "data": "\n\n\n\u003cconsole\u003e:1: error: \u0027.\u0027 expected but identifier found.\nimport pandas as pd\n              ^\n"
           }
         ]
       },
@@ -32,8 +32,8 @@
       "jobName": "paragraph_1503043976596_1345513851",
       "id": "20170818-101256_1862447283",
       "dateCreated": "Aug 18, 2017 10:12:56 AM",
-      "dateStarted": "Aug 22, 2017 6:28:53 PM",
-      "dateFinished": "Aug 22, 2017 6:28:53 PM",
+      "dateStarted": "Aug 23, 2017 5:26:17 PM",
+      "dateFinished": "Aug 23, 2017 5:26:17 PM",
       "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
@@ -612,25 +612,25 @@
   "name": "offlineMF\u0026eval-clean",
   "id": "2CTPCW7W5",
   "angularObjects": {
-    "2CQ5CHCVK:shared_process": [],
-    "2CQA8ANBF:shared_process": [],
-    "2CPUWTNP5:shared_process": [],
-    "2CS666EJY:shared_process": [],
-    "2CQ1SYMWR:shared_process": [],
-    "2CRX78HZ4:shared_process": [],
-    "2CSE5JPER:shared_process": [],
-    "2CPEJRKEY:shared_process": [],
-    "2CR9VJ4VU:shared_process": [],
-    "2CQ144JX5:shared_process": [],
-    "2CNWA3851:shared_process": [],
-    "2CRTAP1ZV:shared_process": [],
-    "2CQVGSGZX:shared_process": [],
-    "2CRQ2EJN1:shared_process": [],
-    "2CS38SHJX:shared_process": [],
-    "2CNU9Q44Q:shared_process": [],
-    "2CSK5B72V:shared_process": [],
-    "2CRPWHNGP:shared_process": [],
-    "2CS7NTJ4W:shared_process": []
+    "2CQWNXBEY:shared_process": [],
+    "2CSJQQJ95:shared_process": [],
+    "2CTUNZE3G:shared_process": [],
+    "2CR5RQUS7:shared_process": [],
+    "2CQS16XH5:shared_process": [],
+    "2CS2GXSX5:shared_process": [],
+    "2CQYKYY8D:shared_process": [],
+    "2CT4ZCVQZ:shared_process": [],
+    "2CTZWMRUG:shared_process": [],
+    "2CTVHC8J2:shared_process": [],
+    "2CQFQ7ENM:shared_process": [],
+    "2CQG8P7FY:shared_process": [],
+    "2CSVSZGBK:shared_process": [],
+    "2CU2J9DMS:shared_process": [],
+    "2CRSB3U4X:shared_process": [],
+    "2CU1B4MPR:shared_process": [],
+    "2CTNFC8WU:shared_process": [],
+    "2CS5MUQWK:shared_process": [],
+    "2CRTAY5F7:shared_process": []
   },
   "config": {},
   "info": {}
