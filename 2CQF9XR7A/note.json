@@ -870,15 +870,16 @@
       "title": "Parameter Search with Scikit-learn",
       "text": "mf_parameter_search \u003d ag.ThreadedParameterSearch(online_mf_experiment, alpenglow.evaluation.DcgScore, threads\u003d4)\nmf_parameter_search.set_parameter_values(\u0027negative_rate\u0027, np.linspace(10, 100, 4))\nneg_rate_scores \u003d mf_parameter_search.run(train)",
       "user": "anonymous",
-      "dateUpdated": "Aug 23, 2017 2:36:11 PM",
+      "dateUpdated": "Aug 24, 2017 11:51:47 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala"
+          "language": "python",
+          "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala",
+        "editorMode": "ace/mode/python",
         "title": true
       },
       "settings": {
