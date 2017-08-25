@@ -3,7 +3,7 @@
     {
       "text": "%md\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/batch.png?raw\u003dtrue\" width\u003d768 alt\u003d\"time-aware batch\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:43:21 PM",
+      "dateUpdated": "Aug 26, 2017 12:18:46 AM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -41,8 +41,8 @@
       "jobName": "paragraph_1503696541121_368202089",
       "id": "20170825-232901_1378667887",
       "dateCreated": "Aug 25, 2017 11:29:01 PM",
-      "dateStarted": "Aug 25, 2017 11:43:21 PM",
-      "dateFinished": "Aug 25, 2017 11:43:21 PM",
+      "dateStarted": "Aug 26, 2017 12:18:46 AM",
+      "dateFinished": "Aug 26, 2017 12:18:46 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -136,7 +136,7 @@
       "title": "Flink",
       "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  width\u003d90 alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:28:01 PM",
+      "dateUpdated": "Aug 26, 2017 12:18:51 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -167,8 +167,8 @@
       "jobName": "paragraph_1503696147689_-999714880",
       "id": "20170825-232227_1562535417",
       "dateCreated": "Aug 25, 2017 11:22:27 PM",
-      "dateStarted": "Aug 25, 2017 11:28:01 PM",
-      "dateFinished": "Aug 25, 2017 11:28:01 PM",
+      "dateStarted": "Aug 26, 2017 12:18:51 AM",
+      "dateFinished": "Aug 26, 2017 12:18:51 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

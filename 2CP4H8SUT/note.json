@@ -1,9 +1,161 @@
 {
   "paragraphs": [
     {
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  width\u003d200 alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e",
+      "user": "anonymous",
+      "dateUpdated": "Aug 26, 2017 12:19:16 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  width\u003d200 alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503699515104_1004064493",
+      "id": "20170826-001835_921791038",
+      "dateCreated": "Aug 26, 2017 12:18:35 AM",
+      "dateStarted": "Aug 26, 2017 12:19:16 AM",
+      "dateFinished": "Aug 26, 2017 12:19:16 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/f1.png?raw\u003dtrue\" alt\u003d\"f1\"/\u003e\n\u003c/p\u003e",
+      "user": "anonymous",
+      "dateUpdated": "Aug 26, 2017 12:17:42 AM",
+      "config": {
+        "colWidth": 4.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/f1.png?raw\u003dtrue\" alt\u003d\"f1\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503698930557_-2080710981",
+      "id": "20170826-000850_2093413781",
+      "dateCreated": "Aug 26, 2017 12:08:50 AM",
+      "dateStarted": "Aug 26, 2017 12:17:42 AM",
+      "dateFinished": "Aug 26, 2017 12:17:42 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/f2.png?raw\u003dtrue\" alt\u003d\"f2\"/\u003e\n\u003c/p\u003e",
+      "user": "anonymous",
+      "dateUpdated": "Aug 26, 2017 12:17:55 AM",
+      "config": {
+        "colWidth": 4.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/f2.png?raw\u003dtrue\" alt\u003d\"f2\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503699413266_1177632220",
+      "id": "20170826-001653_1794843102",
+      "dateCreated": "Aug 26, 2017 12:16:53 AM",
+      "dateStarted": "Aug 26, 2017 12:17:55 AM",
+      "dateFinished": "Aug 26, 2017 12:17:55 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/f3.png?raw\u003dtrue\"/\u003e\n\u003c/p\u003e",
+      "user": "anonymous",
+      "dateUpdated": "Aug 26, 2017 12:18:15 AM",
+      "config": {
+        "colWidth": 4.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/f3.png?raw\u003dtrue\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503699416866_1356155710",
+      "id": "20170826-001656_68886044",
+      "dateCreated": "Aug 26, 2017 12:16:56 AM",
+      "dateStarted": "Aug 26, 2017 12:18:15 AM",
+      "dateFinished": "Aug 26, 2017 12:18:15 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "import hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization.Vector._\nimport hu.sztaki.ilab.ps.matrix.factorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions\nimport hu.sztaki.ilab.ps.matrix.factorization.pruning._\n\nimport org.apache.flink.streaming.api.scala._\nimport org.apache.flink.api.common.functions.RichFlatMapFunction\nimport org.apache.flink.util.Collector\nimport scala.collection.mutable\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\nimport java.io.PrintWriter\nimport java.io.File\n\nval startTimestamp \u003d {\n    val infile_reader \u003d new java.io.BufferedReader(new java.io.FileReader(\"data_session\"))\n    val s \u003dinfile_reader.readLine().split(\" \")(0).toLong\n    infile_reader.close()\n    s\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:59:43 PM",
+      "dateUpdated": "Aug 26, 2017 12:19:21 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -19,20 +171,28 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization.Vector._\nimport hu.sztaki.ilab.ps.matrix.factorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions\nimport hu.sztaki.ilab.ps.matrix.factorization.pruning._\nimport org.apache.flink.streaming.api.scala._\nimport org.apache.flink.api.common.functions.RichFlatMapFunction\nimport org.apache.flink.util.Collector\nimport scala.collection.mutable\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\nimport java.io.PrintWriter\nimport java.io.File\njava.io.FileNotFoundException: data_session (No such file or directory)\n  at java.io.FileInputStream.open0(Native Method)\n  at java.io.FileInputStream.open(FileInputStream.java:195)\n  at java.io.FileInputStream.\u003cinit\u003e(FileInputStream.java:138)\n  at java.io.FileInputStream.\u003cinit\u003e(FileInputStream.java:93)\n  at java.io.FileReader.\u003cinit\u003e(FileReader.java:58)\n  ... 36 elided\n"
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1503481249441_-1020486862",
       "id": "20170823-114049_825147051",
       "dateCreated": "Aug 23, 2017 11:40:49 AM",
-      "dateStarted": "Aug 25, 2017 4:48:56 PM",
-      "dateFinished": "Aug 25, 2017 4:49:00 PM",
-      "status": "FINISHED",
-      "errorMessage": "",
+      "dateStarted": "Aug 26, 2017 12:19:21 AM",
+      "dateFinished": "Aug 26, 2017 12:19:30 AM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "/**\n * Learning in batch\n * @param   inputs  an array containing the names of input files\n * @param   output  the name of the output file\n */\ndef BatchLearn(inputs: Array[String], output: String) {\n    val data \u003d ImplicitDataToRatingParser.parseAll(senv, inputs, \",\", 1, 2, 0, startTimestamp)\n    \n    val factorModel \u003d PSOfflineMatrixFactorization.psOfflineMF(\n      data,\n      learningRate \u003d 0.15,\n      negativeSampleRate \u003d 19,\n      iterations \u003d 4)\n      \n    factorModel.addSink(new VectorModelToFileSink(output))\n    \n    senv execute s\"generating model $output from $inputs\"\n\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 5:18:27 PM",
+      "dateUpdated": "Aug 26, 2017 12:19:49 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -50,11 +210,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "learn: (inputs: Array[String], output: String)Unit\n"
+            "data": "\u003cconsole\u003e:164: error: not found: value startTimestamp\n           val data \u003d ImplicitDataToRatingParser.parseAll(senv, inputs, \",\", 1, 2, 0, startTimestamp)\n                                                                                      ^\n\u003cconsole\u003e:166: error: not enough arguments for method psOfflineMF: (src: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating], numFactors: Int, learningRate: Double, minRange: Double, maxRange: Double, negativeSampleRate: Int, iterations: Int, pullLimit: Int, workerParallelism: Int, psParallelism: Int, iterationWaitTime: Long, userMemoryLimit: Int)hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]].\nUnspecified value parameters numFactors, minRange, maxRange, ...\n           val factorModel \u003d PSOfflineMatrixFactorization.psOfflineMF(\n                                                                     ^\n"
           }
         ]
       },
@@ -62,15 +222,15 @@
       "jobName": "paragraph_1503658843733_475169752",
       "id": "20170825-130043_1876990119",
       "dateCreated": "Aug 25, 2017 1:00:43 PM",
-      "dateStarted": "Aug 25, 2017 2:04:35 PM",
-      "dateFinished": "Aug 25, 2017 2:04:35 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 26, 2017 12:19:49 AM",
+      "dateFinished": "Aug 26, 2017 12:19:49 AM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "/**\n * Evaluates a model with online learning\n * @oaram   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef OnlineLearnAndEvaluate(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n    \n    val topK \u003d PSOnlineLearnerAndTopKGeneratorWithModelLoad.psOnlineLearnerAndGeneratorWithModelLoad(parsedModel)(\n        ratings,\n        learningRate \u003d 0.35,\n        negativeSampleRate \u003d 4)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, output, 86400)\n    \n    senv execute s\"Online evaluation of model $model with learning\"\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 5:18:07 PM",
+      "dateUpdated": "Aug 26, 2017 12:19:51 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -87,11 +247,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "evaluateWithLearning: (input: String, model: String, output: String)Unit\n"
+            "data": "\u003cconsole\u003e:165: error: not found: value startTimestamp\n           val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n                                                                                     ^\n\u003cconsole\u003e:168: error: value psOnlineLearnerAndGeneratorWithModelLoad is not a member of object hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGeneratorWithModelLoad\n           val topK \u003d PSOnlineLearnerAndTopKGeneratorWithModelLoad.psOnlineLearnerAndGeneratorWithModelLoad(parsedModel)(\n                                                                   ^\n\u003cconsole\u003e:170: error: not found: value learningRate\n               learningRate \u003d 0.35,\n               ^\n\u003cconsole\u003e:171: error: not found: value negativeSampleRate\n               negativeSampleRate \u003d 4)\n               ^\n"
           }
         ]
       },
@@ -99,15 +259,15 @@
       "jobName": "paragraph_1503658858161_2036511437",
       "id": "20170825-130058_1429453150",
       "dateCreated": "Aug 25, 2017 1:00:58 PM",
-      "dateStarted": "Aug 25, 2017 4:04:07 PM",
-      "dateFinished": "Aug 25, 2017 4:04:08 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 26, 2017 12:19:51 AM",
+      "dateFinished": "Aug 26, 2017 12:19:51 AM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "/**\n * Evaluates a model online without learning\n * @param   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef OnlineEvaluate(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n    \n    val topK \u003d PSTopKGeneratorWithLEMP.psTopKGenerator(ratings, parsedModel)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, output, 86400, false)\n    \n    senv execute s\"Online evaluation of model $model without learning\"\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 5:18:17 PM",
+      "dateUpdated": "Aug 26, 2017 12:19:56 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -123,11 +283,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "evaluateWithoutLearning: (input: String, model: String, output: String)Unit\n"
+            "data": "\u003cconsole\u003e:165: error: not found: value startTimestamp\n           val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n                                                                                     ^\n\u003cconsole\u003e:168: error: not enough arguments for method psTopKGenerator: (data: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating], model: org.apache.flink.streaming.api.scala.DataStream[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]], rangeMin: Double, rangeMax: Double, numFactors: Int, workerK: Int, bucketSize: Int, K: Int, pullLimit: Int, workerParallelism: Int, psParallelism: Int, iterationWaitTime: Int)org.apache.flink.streaming.api.scala.DataStream[(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, Long, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])].\nUnspecified value parameters rangeMin, rangeMax, numFactors, ...\n           val topK \u003d PSTopKGeneratorWithLEMP.psTopKGenerator(ratings, parsedModel)\n                                                             ^\n\u003cconsole\u003e:170: error: overloaded method value nDCGPeriodsToCsv with alternatives:\n  (topK: org.apache.flink.streaming.api.scala.DataStream[(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, Long, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])],fileName: String,periodLength: Int)Unit \u003cand\u003e\n  (topK: org.apache.flink.streaming.api.scala.DataStream[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, Long, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])],fileName: String,periodLength: Int)(implicit d: DummyImplicit)Unit\n cannot be applied to (\u003cerror\u003e, String, Int, Boolean)\n           nDCGSink.nDCGPeriodsToCsv(topK, output, 86400, false)\n                    ^\n"
           }
         ]
       },
@@ -135,9 +295,9 @@
       "jobName": "paragraph_1503658842147_1074608539",
       "id": "20170825-130042_1736661737",
       "dateCreated": "Aug 25, 2017 1:00:42 PM",
-      "dateStarted": "Aug 25, 2017 2:05:22 PM",
-      "dateFinished": "Aug 25, 2017 2:05:23 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 26, 2017 12:19:56 AM",
+      "dateFinished": "Aug 26, 2017 12:19:56 AM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -1301,29 +1461,32 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "flink_batch_learn_online_eval",
+  "name": "Flink batch and online training",
   "id": "2CP4H8SUT",
   "angularObjects": {
-    "2CQ5CHCVK:shared_process": [],
-    "2CQA8ANBF:shared_process": [],
-    "2CPUWTNP5:shared_process": [],
-    "2CS666EJY:shared_process": [],
-    "2CQ1SYMWR:shared_process": [],
-    "2CRX78HZ4:shared_process": [],
-    "2CSE5JPER:shared_process": [],
-    "2CPEJRKEY:shared_process": [],
-    "2CR9VJ4VU:shared_process": [],
-    "2CQ144JX5:shared_process": [],
-    "2CNWA3851:shared_process": [],
-    "2CRTAP1ZV:shared_process": [],
-    "2CQVGSGZX:shared_process": [],
-    "2CRQ2EJN1:shared_process": [],
-    "2CNU9Q44Q:shared_process": [],
-    "2CS38SHJX:shared_process": [],
-    "2CSK5B72V:shared_process": [],
-    "2CRPWHNGP:shared_process": [],
-    "2CS7NTJ4W:shared_process": []
+    "2CQWNXBEY:shared_process": [],
+    "2CSJQQJ95:shared_process": [],
+    "2CTUNZE3G:shared_process": [],
+    "2CR5RQUS7:shared_process": [],
+    "2CQS16XH5:shared_process": [],
+    "2CS2GXSX5:shared_process": [],
+    "2CQYKYY8D:shared_process": [],
+    "2CT4ZCVQZ:shared_process": [],
+    "2CTZWMRUG:shared_process": [],
+    "2CTVHC8J2:shared_process": [],
+    "2CQFQ7ENM:shared_process": [],
+    "2CQG8P7FY:shared_process": [],
+    "2CSVSZGBK:shared_process": [],
+    "2CU2J9DMS:shared_process": [],
+    "2CRSB3U4X:shared_process": [],
+    "2CU1B4MPR:shared_process": [],
+    "2CTNFC8WU:shared_process": [],
+    "2CS5MUQWK:shared_process": [],
+    "2CRTAY5F7:shared_process": []
   },
-  "config": {},
+  "config": {
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
   "info": {}
 }
