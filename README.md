@@ -44,8 +44,8 @@ A preview of the introductory slides are now [available](https://github.com/rpal
 - 3 Flink parameter server based streaming SGD notebook
 
 <p align="center">
-  <img src="./figs/streamline.png" height=100 alt="zeppelin"/>
-  <img hspace=20>
-  <img src="https://info.ilab.sztaki.hu/~rpalovics/sztaki_logo_angol_kek.png" height=100 alt="alpenglow"/> 
+  <img src="./figs/streamline.png" height=50 alt="zeppelin"/>
+  <img hspace=10>
+  <img src="https://info.ilab.sztaki.hu/~rpalovics/sztaki_logo_angol_kek.png" height=50 alt="alpenglow"/> 
 </p>
 
