@@ -190,11 +190,84 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "// Online learning\n\nval ratings \u003d ImplicitDataToRatingParser.parse(senv, inputPath+\"_all\", \",\", 1, 2, 0, startTimestamp)\n\nval topK \u003d PSOnlineLearnerAndTopKGenerator.psOnlineLearnerAndGenerator(\n        ratings,\n        learningRate \u003d 0.4,\n        negativeSampleRate \u003d 99)\n    \nnDCGSink.nDCGPeriodsToCsv(topK, outputPathNoLearn+\"all\", 86400)\n\nsenv execute s\"Online evaluation with learning\"\n",
+      "user": "anonymous",
+      "dateUpdated": "Aug 26, 2017 12:26:51 AM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "ratings: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@6d170cb5\ntopK: org.apache.flink.streaming.api.scala.DataStream[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, Long, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@7ff96f94\nres5: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@2f64c2a9\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503322068919_1316307051",
+      "id": "20170821-152748_1223995053",
+      "dateCreated": "Aug 21, 2017 3:27:48 PM",
+      "dateStarted": "Aug 25, 2017 4:39:46 PM",
+      "dateFinished": "Aug 25, 2017 4:47:15 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "/**\n * Evaluates a model with online learning\n * @oaram   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef OnlineLearnAndEvaluate(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n    \n    val topK \u003d PSOnlineLearnerAndTopKGeneratorWithModelLoad.psOnlineLearnerAndGeneratorWithModelLoad(parsedModel)(\n        ratings,\n        learningRate \u003d 0.35,\n        negativeSampleRate \u003d 4)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, output, 86400)\n    \n    senv execute s\"Online evaluation of model $model with learning\"\n}",
+      "user": "anonymous",
+      "dateUpdated": "Aug 26, 2017 12:26:46 AM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cconsole\u003e:165: error: not found: value startTimestamp\n           val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n                                                                                     ^\n\u003cconsole\u003e:168: error: value psOnlineLearnerAndGeneratorWithModelLoad is not a member of object hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGeneratorWithModelLoad\n           val topK \u003d PSOnlineLearnerAndTopKGeneratorWithModelLoad.psOnlineLearnerAndGeneratorWithModelLoad(parsedModel)(\n                                                                   ^\n\u003cconsole\u003e:170: error: not found: value learningRate\n               learningRate \u003d 0.35,\n               ^\n\u003cconsole\u003e:171: error: not found: value negativeSampleRate\n               negativeSampleRate \u003d 4)\n               ^\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503658858161_2036511437",
+      "id": "20170825-130058_1429453150",
+      "dateCreated": "Aug 25, 2017 1:00:58 PM",
+      "dateStarted": "Aug 26, 2017 12:19:51 AM",
+      "dateFinished": "Aug 26, 2017 12:19:51 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "/**\n * Learning in batch\n * @param   inputs  an array containing the names of input files\n * @param   output  the name of the output file\n */\ndef BatchLearn(inputs: Array[String], output: String) {\n    val data \u003d ImplicitDataToRatingParser.parseAll(senv, inputs, \",\", 1, 2, 0, startTimestamp)\n    \n    val factorModel \u003d PSOfflineMatrixFactorization.psOfflineMF(\n      data,\n      learningRate \u003d 0.15,\n      negativeSampleRate \u003d 19,\n      iterations \u003d 4)\n      \n    factorModel.addSink(new VectorModelToFileSink(output))\n    \n    senv execute s\"generating model $output from $inputs\"\n\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:19:49 AM",
+      "dateUpdated": "Aug 26, 2017 12:25:38 AM",
       "config": {
-        "colWidth": 4.0,
+        "colWidth": 3.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
@@ -228,48 +301,11 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "/**\n * Evaluates a model with online learning\n * @oaram   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef OnlineLearnAndEvaluate(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n    \n    val topK \u003d PSOnlineLearnerAndTopKGeneratorWithModelLoad.psOnlineLearnerAndGeneratorWithModelLoad(parsedModel)(\n        ratings,\n        learningRate \u003d 0.35,\n        negativeSampleRate \u003d 4)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, output, 86400)\n    \n    senv execute s\"Online evaluation of model $model with learning\"\n}",
-      "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:19:51 AM",
-      "config": {
-        "colWidth": 4.0,
-        "enabled": true,
-        "results": {},
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false
-        },
-        "editorMode": "ace/mode/scala",
-        "tableHide": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "ERROR",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "\u003cconsole\u003e:165: error: not found: value startTimestamp\n           val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n                                                                                     ^\n\u003cconsole\u003e:168: error: value psOnlineLearnerAndGeneratorWithModelLoad is not a member of object hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGeneratorWithModelLoad\n           val topK \u003d PSOnlineLearnerAndTopKGeneratorWithModelLoad.psOnlineLearnerAndGeneratorWithModelLoad(parsedModel)(\n                                                                   ^\n\u003cconsole\u003e:170: error: not found: value learningRate\n               learningRate \u003d 0.35,\n               ^\n\u003cconsole\u003e:171: error: not found: value negativeSampleRate\n               negativeSampleRate \u003d 4)\n               ^\n"
-          }
-        ]
-      },
-      "apps": [],
-      "jobName": "paragraph_1503658858161_2036511437",
-      "id": "20170825-130058_1429453150",
-      "dateCreated": "Aug 25, 2017 1:00:58 PM",
-      "dateStarted": "Aug 26, 2017 12:19:51 AM",
-      "dateFinished": "Aug 26, 2017 12:19:51 AM",
-      "status": "ERROR",
-      "progressUpdateIntervalMs": 500
-    },
-    {
       "text": "/**\n * Evaluates a model online without learning\n * @param   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef OnlineEvaluate(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n    \n    val topK \u003d PSTopKGeneratorWithLEMP.psTopKGenerator(ratings, parsedModel)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, output, 86400, false)\n    \n    senv execute s\"Online evaluation of model $model without learning\"\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:19:56 AM",
+      "dateUpdated": "Aug 26, 2017 12:25:46 AM",
       "config": {
-        "colWidth": 4.0,
+        "colWidth": 3.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
@@ -330,42 +366,6 @@
       "dateCreated": "Aug 16, 2017 11:57:01 AM",
       "dateStarted": "Aug 25, 2017 1:26:07 PM",
       "dateFinished": "Aug 25, 2017 1:26:07 PM",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "// Online learning\n\nval ratings \u003d ImplicitDataToRatingParser.parse(senv, inputPath+\"_all\", \",\", 1, 2, 0, startTimestamp)\n\nval topK \u003d PSOnlineLearnerAndTopKGenerator.psOnlineLearnerAndGenerator(\n        ratings,\n        learningRate \u003d 0.4,\n        negativeSampleRate \u003d 99)\n    \nnDCGSink.nDCGPeriodsToCsv(topK, outputPathNoLearn+\"all\", 86400)\n\nsenv execute s\"Online evaluation with learning\"\n",
-      "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:39:46 PM",
-      "config": {
-        "colWidth": 12.0,
-        "enabled": true,
-        "results": {},
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false
-        },
-        "editorMode": "ace/mode/scala"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "ratings: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@6d170cb5\ntopK: org.apache.flink.streaming.api.scala.DataStream[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, Long, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@7ff96f94\nres5: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@2f64c2a9\n"
-          }
-        ]
-      },
-      "apps": [],
-      "jobName": "paragraph_1503322068919_1316307051",
-      "id": "20170821-152748_1223995053",
-      "dateCreated": "Aug 21, 2017 3:27:48 PM",
-      "dateStarted": "Aug 25, 2017 4:39:46 PM",
-      "dateFinished": "Aug 25, 2017 4:47:15 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
