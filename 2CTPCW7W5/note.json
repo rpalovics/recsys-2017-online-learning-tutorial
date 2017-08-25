@@ -247,7 +247,7 @@
     {
       "text": "%flink\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\r\n\r\nsenv.setParallelism(4)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:21:20 PM",
+      "dateUpdated": "Aug 26, 2017 12:44:13 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -276,8 +276,8 @@
       "jobName": "paragraph_1503043992138_-1755346101",
       "id": "20170818-101312_1674360328",
       "dateCreated": "Aug 18, 2017 10:13:12 AM",
-      "dateStarted": "Aug 25, 2017 11:21:20 PM",
-      "dateFinished": "Aug 25, 2017 11:21:23 PM",
+      "dateStarted": "Aug 26, 2017 12:44:13 AM",
+      "dateFinished": "Aug 26, 2017 12:44:15 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -393,7 +393,7 @@
     {
       "text": "%flink\nval trainDataPath \u003d \"train_batch\"\nval testDataPath \u003d \"test_batch\"\nval model \u003d \"model\"\nval topKOut \u003d \"topK.out\"\n\nval trainData \u003d ImplicitDataToRatingParser.parse(senv,trainDataPath,\",\",1,2)",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:23:22 PM",
+      "dateUpdated": "Aug 26, 2017 12:44:33 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -414,7 +414,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "trainDataPath: String \u003d train_batch\ntestDataPath: String \u003d test_batch\nmodel: String \u003d model\ntopKOut: String \u003d topK.out\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@7080ffdc\n"
+            "data": "trainDataPath: String \u003d train_batch\ntestDataPath: String \u003d test_batch\nmodel: String \u003d model\ntopKOut: String \u003d topK.out\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@4cf55f28\n"
           }
         ]
       },
@@ -422,8 +422,8 @@
       "jobName": "paragraph_1503044083369_929721239",
       "id": "20170818-101443_42483437",
       "dateCreated": "Aug 18, 2017 10:14:43 AM",
-      "dateStarted": "Aug 22, 2017 6:23:22 PM",
-      "dateFinished": "Aug 22, 2017 6:23:26 PM",
+      "dateStarted": "Aug 26, 2017 12:44:33 AM",
+      "dateFinished": "Aug 26, 2017 12:44:35 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -537,9 +537,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\npsOfflineMF(\n        trainData,\n        numFactors \u003d 20,\n        rangeMin \u003d -0.01,\n        rangeMax \u003d 0.01,\n        learningRate \u003d 0.05,\n        negativeSampleRate \u003d 9,\n        userMemory \u003d 16,\n        iterations \u003d 4,\n        pullLimit \u003d 2000,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000)\n    .addSink(new VectorModelToFileSink(model))\n    .setParallelism(1)\n\nsenv.execute()",
+      "text": "%flink\npsOfflineMF(\n        trainData,\n        learningRate \u003d 0.05,\n        negativeSampleRate \u003d 9,\n        iterations \u003d 4)\n    .addSink(new VectorModelToFileSink(model))\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:23:31 PM",
+      "dateUpdated": "Aug 26, 2017 12:45:17 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -560,7 +560,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "res3: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@71927d5a\nres4: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@20600299\n"
+            "data": "res39: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@28d87c6b\nres40: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@27e0eb15\n"
           }
         ]
       },
@@ -568,8 +568,8 @@
       "jobName": "paragraph_1503044504674_-241408440",
       "id": "20170818-102144_2001725201",
       "dateCreated": "Aug 18, 2017 10:21:44 AM",
-      "dateStarted": "Aug 22, 2017 6:23:31 PM",
-      "dateFinished": "Aug 22, 2017 6:27:16 PM",
+      "dateStarted": "Aug 26, 2017 12:45:17 AM",
+      "dateFinished": "Aug 26, 2017 12:48:25 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -678,9 +678,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\nval users \u003d senv.readTextFile(\"train_test_users.csv\")\nval usersForToplist \u003d users.map((x:String) \u003d\u003e Rating(x.toInt,0,0,0))\nval modelStream \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 20)\n\npsTopKGenerator(\n        usersForToplist,\n        model \u003d modelStream,\n        userMemory \u003d 16,\n        workerK \u003d 35,\n        bucketSize \u003d 100,\n        K \u003d 100,\n        pullLimit \u003d 1600,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000\n    )\n    .addSink(new TopKToFileSink(topKOut))\n    .setParallelism(1)\n\nsenv.execute()",
+      "text": "%flink\nval users \u003d senv.readTextFile(\"train_test_users.csv\")\nval usersForToplist \u003d users.map((x:String) \u003d\u003e Rating(x.toInt,0,0,0))\nval modelStream \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n\npsTopKGenerator(\n        usersForToplist,\n        model \u003d modelStream)\n    .addSink(new TopKToFileSink(topKOut))\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:27:30 PM",
+      "dateUpdated": "Aug 26, 2017 12:48:53 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -709,7 +709,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "users: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@31c80a6c\nusersForToplist: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d org.apache.flink.streaming.api.scala.DataStream@2cac43e4\nmodelStream: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@16b96091\nres6: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@3c04d363\nres7: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@450fd5be\n"
+            "data": "users: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@4cf22178\nusersForToplist: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d org.apache.flink.streaming.api.scala.DataStream@4043b9dd\nmodelStream: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@161177db\nres42: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@38691924\nres43: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@7ae158a3\n"
           }
         ]
       },
@@ -717,8 +717,8 @@
       "jobName": "paragraph_1503045322137_1221583666",
       "id": "20170818-103522_275665771",
       "dateCreated": "Aug 18, 2017 10:35:22 AM",
-      "dateStarted": "Aug 22, 2017 6:27:30 PM",
-      "dateFinished": "Aug 22, 2017 6:28:42 PM",
+      "dateStarted": "Aug 26, 2017 12:48:53 AM",
+      "dateFinished": "Aug 26, 2017 12:49:32 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -824,25 +824,25 @@
   "name": "Batch comparison",
   "id": "2CTPCW7W5",
   "angularObjects": {
-    "2CQWNXBEY:shared_process": [],
-    "2CSJQQJ95:shared_process": [],
-    "2CTUNZE3G:shared_process": [],
-    "2CR5RQUS7:shared_process": [],
-    "2CQS16XH5:shared_process": [],
-    "2CS2GXSX5:shared_process": [],
-    "2CQYKYY8D:shared_process": [],
-    "2CT4ZCVQZ:shared_process": [],
-    "2CTZWMRUG:shared_process": [],
-    "2CTVHC8J2:shared_process": [],
-    "2CQFQ7ENM:shared_process": [],
-    "2CQG8P7FY:shared_process": [],
-    "2CSVSZGBK:shared_process": [],
-    "2CU2J9DMS:shared_process": [],
-    "2CRSB3U4X:shared_process": [],
-    "2CU1B4MPR:shared_process": [],
-    "2CTNFC8WU:shared_process": [],
-    "2CS5MUQWK:shared_process": [],
-    "2CRTAY5F7:shared_process": []
+    "2CQ5CHCVK:shared_process": [],
+    "2CQA8ANBF:shared_process": [],
+    "2CPUWTNP5:shared_process": [],
+    "2CS666EJY:shared_process": [],
+    "2CQ1SYMWR:shared_process": [],
+    "2CRX78HZ4:shared_process": [],
+    "2CSE5JPER:shared_process": [],
+    "2CPEJRKEY:shared_process": [],
+    "2CR9VJ4VU:shared_process": [],
+    "2CQ144JX5:shared_process": [],
+    "2CNWA3851:shared_process": [],
+    "2CRTAP1ZV:shared_process": [],
+    "2CQVGSGZX:shared_process": [],
+    "2CRQ2EJN1:shared_process": [],
+    "2CS38SHJX:shared_process": [],
+    "2CNU9Q44Q:shared_process": [],
+    "2CSK5B72V:shared_process": [],
+    "2CRPWHNGP:shared_process": [],
+    "2CS7NTJ4W:shared_process": []
   },
   "config": {},
   "info": {}
