@@ -25,18 +25,27 @@ Participants must register for the tutorial via this [form](https://goo.gl/forms
   <img src="https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/online%20reco.png?raw=true" height=100 alt="flink"/>
 </p>
 
+## Outline
+
+#### Lecture A
+
+- Installation
+- Introduction to time-aware evaluation and learning
+- Notebook 1: Alpenglow notebook
+
+#### Coffee break
+
+#### Lecture B
+
+- Spark and Flink introduction
+- Notebook 2: Comparing batch learning in Alpenglow, Flink, and Spark
+- Notebook 3: Online stream based learning in Flink
+
+A preview of the introductory slides are now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/intro.pdf).
 
 ## Installation
 
 Check the [wiki page](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/wiki) for the detailed installation guide.
-
-## Theoretical background
-
-A brief summary of the tutorial's theoretical background is now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/summary.pdf).
-
-Participants should check out the summary before attending to the tutorial, as during the event there will be less emphasis on the theoretical background.
-
-A preview of the introductory slides are now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/intro.pdf).
 
 ## Dataset
 
@@ -47,6 +56,13 @@ Download the tutorial data from [here](https://drive.google.com/open?id=0B_3Dz2J
 - 1 [Alpenglow online ranking notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy8zNTk0NmUzMTQwNTU0NTc1YmIzNGIyODJhNjhjNzA5MS9ub3RlLmpzb24)
 - 2 Alpenglow/Flink/Spark batch notebook
 - 3 Flink parameter server based streaming SGD notebook
+
+## Theoretical background
+
+A brief summary of the tutorial's theoretical background is now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/summary.pdf).
+
+
+
 
 <p align="center">
   <img src="./figs/streamline.png" height=50 alt="zeppelin"/>
