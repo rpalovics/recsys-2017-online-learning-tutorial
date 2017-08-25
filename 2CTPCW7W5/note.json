@@ -1,18 +1,19 @@
 {
   "paragraphs": [
     {
-      "text": "import pandas as pd\nimport numpy as np\nimport heapq\nimport glob\nimport os\nimport shutil\nimport math\nfrom collections import defaultdict\nimport pyarrow.parquet as pq\nimport alpenglow as ag\nfrom alpenglow.offline.models import FactorModel\nfrom alpenglow.offline.evaluation import NdcgScore",
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw\u003dtrue\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\n# Alpenglow\n\nAlpenglow is a free and open source C++ based Python recommender framework. We are going to be using it train a matrix factorization model using stochastic gradient descent (SGD) and evaluate the trained model using the normalized discounted cumulative gain (NDCG) metric.",
       "user": "anonymous",
-      "dateUpdated": "Aug 23, 2017 5:26:17 PM",
+      "dateUpdated": "Aug 25, 2017 5:28:32 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "text",
-          "editOnDblClick": false
+          "language": "markdown",
+          "editOnDblClick": true
         },
-        "editorMode": "ace/mode/text",
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
         "tableHide": false
       },
       "settings": {
@@ -20,27 +21,135 @@
         "forms": {}
       },
       "results": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "msg": [
           {
-            "type": "TEXT",
-            "data": "\n\n\n\u003cconsole\u003e:1: error: \u0027.\u0027 expected but identifier found.\nimport pandas as pd\n              ^\n"
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw\u003dtrue\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eAlpenglow\u003c/h1\u003e\n\u003cp\u003eAlpenglow is a free and open source C++ based Python recommender framework. We are going to be using it train a matrix factorization model using stochastic gradient descent (SGD) and evaluate the trained model using the normalized discounted cumulative gain (NDCG) metric.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503672133599_-412433475",
+      "id": "20170825-164213_1438235605",
+      "dateCreated": "Aug 25, 2017 4:42:13 PM",
+      "dateStarted": "Aug 25, 2017 5:28:32 PM",
+      "dateFinished": "Aug 25, 2017 5:28:32 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\" style\u003d\"max-height: 200px\" alt\u003d\"flink\"/\u003e\n\u003c/p\u003e\n\n# Apache Flink \n\nFlink is an open-source stream processing framework. We are going to use a factor model trained by asynchronous SGD, available as a pull request for Flink.\n\nThe notebook uses scala to implement the experiment.",
+      "user": "anonymous",
+      "dateUpdated": "Aug 25, 2017 5:11:42 PM",
+      "config": {
+        "colWidth": 4.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\" style\u003d\"max-height: 200px\" alt\u003d\"flink\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eApache Flink\u003c/h1\u003e\n\u003cp\u003eFlink is an open-source stream processing framework. We are going to use a factor model trained by asynchronous SGD, available as a pull request for Flink.\u003c/p\u003e\n\u003cp\u003eThe notebook uses scala to implement the experiment.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503672146847_-1747360561",
+      "id": "20170825-164226_1601073299",
+      "dateCreated": "Aug 25, 2017 4:42:26 PM",
+      "dateStarted": "Aug 25, 2017 5:11:42 PM",
+      "dateFinished": "Aug 25, 2017 5:11:47 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://spark.apache.org/images/spark-logo-trademark.png\" alt\u003d\"spark\"/\u003e\n\u003c/p\u003e\n# Apache Spark\nSpark is an open-source engine for large-scale data processing. We are going to be using the iALS implementation from Spark\u0027s ML library, provide ranking recommendations by reading the trained model in python.\n\nThe experiment is implemented in Spark\u0027s Python API, pyspark.",
+      "user": "anonymous",
+      "dateUpdated": "Aug 25, 2017 5:17:08 PM",
+      "config": {
+        "colWidth": 4.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://spark.apache.org/images/spark-logo-trademark.png\" alt\u003d\"spark\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eApache Spark\u003c/h1\u003e\n\u003cp\u003eSpark is an open-source engine for large-scale data processing. We are going to be using the iALS implementation from Spark\u0026rsquo;s ML library, provide ranking recommendations by reading the trained model in python.\u003c/p\u003e\n\u003cp\u003eThe experiment is implemented in Spark\u0026rsquo;s Python API, pyspark.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503672148797_1264484477",
+      "id": "20170825-164228_48531251",
+      "dateCreated": "Aug 25, 2017 4:42:28 PM",
+      "dateStarted": "Aug 25, 2017 5:17:08 PM",
+      "dateFinished": "Aug 25, 2017 5:17:13 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import pandas as pd\nimport numpy as np\nimport alpenglow as ag\nfrom alpenglow.offline.models import FactorModel\nfrom alpenglow.offline.evaluation import NdcgScore",
+      "user": "anonymous",
+      "dateUpdated": "Aug 25, 2017 5:13:46 PM",
+      "config": {
+        "colWidth": 4.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/python",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
       },
       "apps": [],
       "jobName": "paragraph_1503043976596_1345513851",
       "id": "20170818-101256_1862447283",
       "dateCreated": "Aug 18, 2017 10:12:56 AM",
-      "dateStarted": "Aug 23, 2017 5:26:17 PM",
-      "dateFinished": "Aug 23, 2017 5:26:17 PM",
-      "status": "ERROR",
+      "dateStarted": "Aug 25, 2017 5:13:47 PM",
+      "dateFinished": "Aug 25, 2017 5:14:06 PM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\r\n\r\nsenv.setParallelism(4)",
+      "text": "%flink\r\n\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\r\n\r\nsenv.setParallelism(4)",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:21:50 PM",
+      "dateUpdated": "Aug 25, 2017 5:13:49 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -69,15 +178,15 @@
       "jobName": "paragraph_1503043992138_-1755346101",
       "id": "20170818-101312_1674360328",
       "dateCreated": "Aug 18, 2017 10:13:12 AM",
-      "dateStarted": "Aug 22, 2017 6:21:50 PM",
-      "dateFinished": "Aug 22, 2017 6:22:18 PM",
+      "dateStarted": "Aug 25, 2017 5:13:50 PM",
+      "dateFinished": "Aug 25, 2017 5:14:41 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\nfrom pyspark.mllib.recommendation import ALS, MatrixFactorizationModel, Rating\nimport pandas as pd\nimport os\nimport shutil\nimport heapq\nimport math\nfrom collections import defaultdict\nimport pyarrow.parquet as pq",
+      "text": "%spark.pyspark\n\nfrom pyspark.mllib.recommendation import ALS, MatrixFactorizationModel, Rating\nimport pandas as pd\nimport shutil\nimport pyarrow.parquet as pq",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 4:54:15 PM",
+      "dateUpdated": "Aug 25, 2017 5:13:50 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -101,8 +210,8 @@
       "jobName": "paragraph_1503044018011_1384250897",
       "id": "20170818-101338_623641606",
       "dateCreated": "Aug 18, 2017 10:13:38 AM",
-      "dateStarted": "Aug 22, 2017 4:54:15 PM",
-      "dateFinished": "Aug 22, 2017 4:54:41 PM",
+      "dateStarted": "Aug 25, 2017 5:13:52 PM",
+      "dateFinished": "Aug 25, 2017 5:14:53 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -149,7 +258,7 @@
     {
       "text": "train_batch \u003d pd.read_csv(\n    \u0027train_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:10:52 PM",
+      "dateUpdated": "Aug 25, 2017 5:14:56 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -173,15 +282,15 @@
       "jobName": "paragraph_1503044042861_-1196062407",
       "id": "20170818-101402_497732565",
       "dateCreated": "Aug 18, 2017 10:14:02 AM",
-      "dateStarted": "Aug 22, 2017 6:10:52 PM",
-      "dateFinished": "Aug 22, 2017 6:10:52 PM",
+      "dateStarted": "Aug 25, 2017 5:14:56 PM",
+      "dateFinished": "Aug 25, 2017 5:14:56 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\nval trainDataPath \u003d \"train_batch\"\nval testDataPath \u003d \"test_batch\"\nval model \u003d \"model\"\nval topKOut \u003d \"topK.out\"\n\nval trainData \u003d ImplicitDataToRatingParser.parse(senv,trainDataPath,\",\",1,2)",
+      "text": "%flink\n\nval trainData \u003d ImplicitDataToRatingParser.parse(senv,\"train_batch\",\",\",1,2)",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:23:22 PM",
+      "dateUpdated": "Aug 25, 2017 5:14:59 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -202,7 +311,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "trainDataPath: String \u003d train_batch\ntestDataPath: String \u003d test_batch\nmodel: String \u003d model\ntopKOut: String \u003d topK.out\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@7080ffdc\n"
+            "data": "trainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@2ec1b817\n"
           }
         ]
       },
@@ -210,15 +319,15 @@
       "jobName": "paragraph_1503044083369_929721239",
       "id": "20170818-101443_42483437",
       "dateCreated": "Aug 18, 2017 10:14:43 AM",
-      "dateStarted": "Aug 22, 2017 6:23:22 PM",
-      "dateFinished": "Aug 22, 2017 6:23:26 PM",
+      "dateStarted": "Aug 25, 2017 5:14:59 PM",
+      "dateFinished": "Aug 25, 2017 5:15:01 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\n\ntrain \u003d sc.textFile(\"train_batch\").map(lambda l: l.split(\u0027,\u0027))\\\n    .map(lambda l: Rating(int(l[1]), int(l[2]), 1.0))\n    \ntrain_batch \u003d pd.read_csv(\n    \u0027train_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\n",
+      "text": "%spark.pyspark\n\ntrain \u003d sc.textFile(\"train_batch\").map(lambda l: l.split(\u0027,\u0027))\\\n    .map(lambda l: Rating(int(l[1]), int(l[2]), 1.0))",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 4:54:17 PM",
+      "dateUpdated": "Aug 25, 2017 5:20:12 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -242,8 +351,8 @@
       "jobName": "paragraph_1503044383850_-1498583956",
       "id": "20170818-101943_1275364393",
       "dateCreated": "Aug 18, 2017 10:19:43 AM",
-      "dateStarted": "Aug 22, 2017 4:54:17 PM",
-      "dateFinished": "Aug 22, 2017 4:54:42 PM",
+      "dateStarted": "Aug 25, 2017 5:15:03 PM",
+      "dateFinished": "Aug 25, 2017 5:15:03 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -290,7 +399,7 @@
     {
       "text": "model \u003d FactorModel(\n    dimension\u003d20,\n    learning_rate\u003d0.05,\n    negative_rate\u003d9,\n    number_of_iterations\u003d4,\n)\nmodel.fit(train_batch)",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 1:23:18 PM",
+      "dateUpdated": "Aug 25, 2017 5:15:06 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -308,26 +417,21 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "Beginning of \n1th iteration.\n\n\nEnd of 1th iteration.\nBeginning of 2th iteration.\n\n\nEnd of 2th iteration.\nBeginning of 3th iteration.\n\n\nEnd of 3th iteration.\nBeginning of 4th iteration.\n\nEnd of 4th iteration.\n"
-          }
-        ]
+        "msg": []
       },
       "apps": [],
       "jobName": "paragraph_1503044488882_-1534781001",
       "id": "20170818-102128_494115451",
       "dateCreated": "Aug 18, 2017 10:21:28 AM",
-      "dateStarted": "Aug 21, 2017 1:23:18 PM",
-      "dateFinished": "Aug 21, 2017 1:24:27 PM",
+      "dateStarted": "Aug 25, 2017 5:15:06 PM",
+      "dateFinished": "Aug 25, 2017 5:15:26 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\npsOfflineMF(\n        trainData,\n        numFactors \u003d 20,\n        rangeMin \u003d -0.01,\n        rangeMax \u003d 0.01,\n        learningRate \u003d 0.05,\n        negativeSampleRate \u003d 9,\n        userMemory \u003d 16,\n        iterations \u003d 4,\n        pullLimit \u003d 2000,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000)\n    .addSink(new VectorModelToFileSink(model))\n    .setParallelism(1)\n\nsenv.execute()",
+      "text": "%flink\n\npsOfflineMF(\n        trainData,\n        numFactors \u003d 20,\n        rangeMin \u003d -0.01,\n        rangeMax \u003d 0.01,\n        learningRate \u003d 0.05,\n        negativeSampleRate \u003d 9,\n        userMemory \u003d 16,\n        iterations \u003d 4,\n        pullLimit \u003d 2000,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000)\n    .addSink(new VectorModelToFileSink(\"model\"))\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:23:31 PM",
+      "dateUpdated": "Aug 25, 2017 5:15:30 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -348,7 +452,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "res3: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@71927d5a\nres4: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@20600299\n"
+            "data": "res3: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@46184b49\nres4: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@68de26b7\n"
           }
         ]
       },
@@ -356,15 +460,15 @@
       "jobName": "paragraph_1503044504674_-241408440",
       "id": "20170818-102144_2001725201",
       "dateCreated": "Aug 18, 2017 10:21:44 AM",
-      "dateStarted": "Aug 22, 2017 6:23:31 PM",
-      "dateFinished": "Aug 22, 2017 6:27:16 PM",
+      "dateStarted": "Aug 25, 2017 5:15:30 PM",
+      "dateFinished": "Aug 25, 2017 5:18:26 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\nrank \u003d 20\nnumIter \u003d 8\nreg \u003d 0.01\nalpha \u003d 40\n\nmodel \u003d ALS.trainImplicit(train, rank, numIter, reg, alpha)\n",
+      "text": "%spark.pyspark\nrank \u003d 20\nnumIter \u003d 4\nreg \u003d 0.001\nalpha \u003d 20\n\nmodel \u003d ALS.trainImplicit(train, rank, numIter, reg, alpha)\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 4:54:19 PM",
+      "dateUpdated": "Aug 25, 2017 5:24:28 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -388,8 +492,8 @@
       "jobName": "paragraph_1503044524622_-469549214",
       "id": "20170818-102204_1132678300",
       "dateCreated": "Aug 18, 2017 10:22:04 AM",
-      "dateStarted": "Aug 22, 2017 4:54:41 PM",
-      "dateFinished": "Aug 22, 2017 4:55:16 PM",
+      "dateStarted": "Aug 25, 2017 5:24:28 PM",
+      "dateFinished": "Aug 25, 2017 5:24:41 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -436,7 +540,7 @@
     {
       "text": "test_batch \u003d pd.read_csv(\n    \u0027test_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:11:20 PM",
+      "dateUpdated": "Aug 25, 2017 5:19:10 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -460,15 +564,15 @@
       "jobName": "paragraph_1503045269757_1245530043",
       "id": "20170818-103429_1482871678",
       "dateCreated": "Aug 18, 2017 10:34:29 AM",
-      "dateStarted": "Aug 22, 2017 6:11:14 PM",
-      "dateFinished": "Aug 22, 2017 6:11:15 PM",
+      "dateStarted": "Aug 25, 2017 5:19:10 PM",
+      "dateFinished": "Aug 25, 2017 5:20:29 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\nval users \u003d senv.readTextFile(\"train_test_users.csv\")\nval usersForToplist \u003d users.map((x:String) \u003d\u003e Rating(x.toInt,0,0,0))\nval modelStream \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 20)\n\npsTopKGenerator(\n        usersForToplist,\n        model \u003d modelStream,\n        userMemory \u003d 16,\n        workerK \u003d 35,\n        bucketSize \u003d 100,\n        K \u003d 100,\n        pullLimit \u003d 1600,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000\n    )\n    .addSink(new TopKToFileSink(topKOut))\n    .setParallelism(1)\n\nsenv.execute()",
+      "text": "%flink\n\nval users \u003d senv.readTextFile(\"train_test_users.csv\")\nval usersForToplist \u003d users.map((x:String) \u003d\u003e Rating(x.toInt,0,0,0))\nval modelStream \u003d VectorModelFileParser.parse(senv, \"model\", numFactors \u003d 20)\n\npsTopKGenerator(\n        usersForToplist,\n        model \u003d modelStream,\n        userMemory \u003d 16,\n        workerK \u003d 35,\n        bucketSize \u003d 100,\n        K \u003d 100,\n        pullLimit \u003d 1600,\n        workerParallelism \u003d 4,\n        psParallelism \u003d 4,\n        iterationWaitTime \u003d 20000\n    )\n    .addSink(new TopKToFileSink(\"flink_topks.csv\"))\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:27:30 PM",
+      "dateUpdated": "Aug 25, 2017 5:20:31 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -497,7 +601,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "users: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@31c80a6c\nusersForToplist: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d org.apache.flink.streaming.api.scala.DataStream@2cac43e4\nmodelStream: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@16b96091\nres6: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@3c04d363\nres7: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@450fd5be\n"
+            "data": "users: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@787a14f\nusersForToplist: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d org.apache.flink.streaming.api.scala.DataStream@74c2ab11\nmodelStream: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@2a33e6af\nres6: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@2ffcd641\nres7: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@54328d4e\n"
           }
         ]
       },
@@ -505,15 +609,15 @@
       "jobName": "paragraph_1503045322137_1221583666",
       "id": "20170818-103522_275665771",
       "dateCreated": "Aug 18, 2017 10:35:22 AM",
-      "dateStarted": "Aug 22, 2017 6:27:30 PM",
-      "dateFinished": "Aug 22, 2017 6:28:42 PM",
+      "dateStarted": "Aug 25, 2017 5:20:31 PM",
+      "dateFinished": "Aug 25, 2017 5:21:32 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\ntry:    \n    shutil.rmtree(\u0027sparkPrediction\u0027)\nexcept FileNotFoundError:\n    pass\n\nmodel.save(sc, \"sparkPrediction\")\n\nuser_vectors \u003d pq.read_table(\"sparkPrediction/data/user\").to_pandas()\nuser_vectors.columns \u003d [\u0027user\u0027,\u0027factors\u0027]\nuser_vectors \u003d pd.concat([\n    user_vectors[\u0027user\u0027],\n    user_vectors[\u0027factors\u0027].apply(pd.Series)\n], axis\u003d1)\n\nitem_vectors \u003d pq.read_table(\"sparkPrediction/data/product\").to_pandas()\nitem_vectors.columns \u003d [\u0027item\u0027,\u0027factors\u0027]\nitem_vectors \u003d pd.concat([\n    item_vectors[\u0027item\u0027],\n    item_vectors[\u0027factors\u0027].apply(pd.Series)\n], axis\u003d1)\n\nitem_vectors.set_index(\u0027item\u0027, inplace\u003dTrue)\n\n\ntest_batch \u003d pd.read_csv(\n    \u0027test_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\n\nps \u003d None\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\nrelevant_user_vectors \u003d user_vectors[user_vectors.user.isin(set(train_test_users))]\n\nuser_toplists \u003d []\nfor v in relevant_user_vectors.values:\n    user \u003d v[0]\n    user_vec \u003d pd.Series(v[1:])\n    items \u003d item_vectors\\\n        .multiply(user_vec,axis\u003d1)\\\n        .sum(axis\u003d1) \\\n        .nlargest(100)\\\n        .index\n    for item,rank in zip(items, range(1,101)):\n        user_toplists.append((user,item,rank))\n\nspark_topks \u003d pd.DataFrame.from_records(user_toplists, columns\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])",
+      "text": "%spark.pyspark\n\n# saving the model from spark\ntry:    \n    shutil.rmtree(\u0027sparkPrediction\u0027)\nexcept FileNotFoundError:\n    pass\n\nmodel.save(sc, \"sparkPrediction\")\n\n# loading the model to pandas dataframes\ndef read_factors(filename, colname):\n    vectors \u003d pq.read_table(filename).to_pandas()\n    vectors.columns \u003d [colname,\u0027factors\u0027]\n    vectors \u003d pd.concat([\n        vectors[colname],\n        vectors[\u0027factors\u0027].apply(pd.Series)\n    ], axis\u003d1)\n    return vectors\n\nuser_vectors \u003d read_factors(\"sparkPrediction/data/user\", \"user\")\nitem_vectors \u003d read_factors(\"sparkPrediction/data/product\", \"item\")\nitem_vectors.set_index(\u0027item\u0027, inplace\u003dTrue)\n\n# preparing topk generation\ntrain_batch \u003d pd.read_csv(\n    \u0027train_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\n\ntest_batch \u003d pd.read_csv(\n    \u0027test_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\nrelevant_user_vectors \u003d user_vectors[user_vectors.user.isin(set(train_test_users))]\n\n#calculating the toplists\nuser_toplists \u003d []\nfor v in relevant_user_vectors.values:\n    user \u003d v[0]\n    user_vec \u003d pd.Series(v[1:])\n    items \u003d item_vectors\\\n        .multiply(user_vec,axis\u003d1)\\\n        .sum(axis\u003d1) \\\n        .nlargest(100)\\\n        .index\n    for item,rank in zip(items, range(1,101)):\n        user_toplists.append((user,item,rank))\n\n#saving the toplists to csv, to be read by the python kernel\nspark_topks \u003d pd.DataFrame.from_records(user_toplists, columns\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\nspark_topks.to_csv(\u0027spark_topks.csv\u0027, index\u003dFalse)",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 5:11:49 PM",
+      "dateUpdated": "Aug 25, 2017 5:24:30 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -538,16 +642,16 @@
       "jobName": "paragraph_1503045465374_-1369548579",
       "id": "20170818-103745_516122392",
       "dateCreated": "Aug 18, 2017 10:37:45 AM",
-      "dateStarted": "Aug 22, 2017 4:54:42 PM",
-      "dateFinished": "Aug 22, 2017 4:55:23 PM",
+      "dateStarted": "Aug 25, 2017 5:24:31 PM",
+      "dateFinished": "Aug 25, 2017 5:26:15 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "evaluating toplists",
-      "text": "flink_topks \u003d pd.read_csv(\u0027topK.out\u0027, header\u003dNone, names\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\n\ntest_relevant \u003d test_batch[test_batch.user.isin(train_batch.user)]\ntest_relevant[\u0027score\u0027]\u003d1\n\nprint(NdcgScore(test_relevant, alpenglow_topks))\nprint(NdcgScore(test_relevant, flink_topks))\nprint(NdcgScore(test_relevant, spark_topks))",
+      "text": "flink_topks \u003d pd.read_csv(\u0027flink_topks.csv\u0027, header\u003dNone, names\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\nspark_topks \u003d pd.read_csv(\u0027spark_topks.csv\u0027)\n\ntest_relevant \u003d test_batch[test_batch.user.isin(train_batch.user)]\ntest_relevant[\u0027score\u0027]\u003d1\n\nprint(\"Alpenglow NDCG:\", NdcgScore(test_relevant, alpenglow_topks))\nprint(\"Flink NDCG:\", NdcgScore(test_relevant, flink_topks))\nprint(\"Spark NDCG:\", NdcgScore(test_relevant, spark_topks))",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:16:56 PM",
+      "dateUpdated": "Aug 25, 2017 5:26:44 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -565,11 +669,11 @@
         "forms": {}
       },
       "results": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "msg": [
           {
             "type": "TEXT",
-            "data": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 275, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 4, in \u003cmodule\u003e\nNameError: name \u0027NdcgScore\u0027 is not defined\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 282, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 275, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 4, in \u003cmodule\u003e\nNameError: name \u0027NdcgScore\u0027 is not defined\n\n"
+            "data": "Alpenglow NDCG: 0.03877882763052508\nFlink NDCG: 0.03799749528585548\nSpark NDCG: 0.006620773323412396\n"
           }
         ]
       },
@@ -577,9 +681,9 @@
       "jobName": "paragraph_1503046070769_1492675634",
       "id": "20170818-104750_33771494",
       "dateCreated": "Aug 18, 2017 10:47:50 AM",
-      "dateStarted": "Aug 22, 2017 6:16:40 PM",
-      "dateFinished": "Aug 22, 2017 6:16:41 PM",
-      "status": "ERROR",
+      "dateStarted": "Aug 25, 2017 5:26:44 PM",
+      "dateFinished": "Aug 25, 2017 5:26:56 PM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -609,28 +713,28 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "offlineMF\u0026eval-clean",
+  "name": "offlineMF\u0026eval",
   "id": "2CTPCW7W5",
   "angularObjects": {
-    "2CQWNXBEY:shared_process": [],
-    "2CSJQQJ95:shared_process": [],
-    "2CTUNZE3G:shared_process": [],
-    "2CR5RQUS7:shared_process": [],
-    "2CQS16XH5:shared_process": [],
-    "2CS2GXSX5:shared_process": [],
-    "2CQYKYY8D:shared_process": [],
-    "2CT4ZCVQZ:shared_process": [],
-    "2CTZWMRUG:shared_process": [],
-    "2CTVHC8J2:shared_process": [],
-    "2CQFQ7ENM:shared_process": [],
-    "2CQG8P7FY:shared_process": [],
-    "2CSVSZGBK:shared_process": [],
-    "2CU2J9DMS:shared_process": [],
-    "2CRSB3U4X:shared_process": [],
-    "2CU1B4MPR:shared_process": [],
-    "2CTNFC8WU:shared_process": [],
-    "2CS5MUQWK:shared_process": [],
-    "2CRTAY5F7:shared_process": []
+    "2CPSD3JVN:shared_process": [],
+    "2CTHMT1GV:shared_process": [],
+    "2CQGS1G13:shared_process": [],
+    "2CQP25J13:shared_process": [],
+    "2CSVTJ1WD:shared_process": [],
+    "2CRHBZW4J:shared_process": [],
+    "2CS8WBTWM:shared_process": [],
+    "2CSQGA4P2:shared_process": [],
+    "2CR6XVNKE:shared_process": [],
+    "2CRJA5TDS:shared_process": [],
+    "2CPSNXDD5:shared_process": [],
+    "2CRUYH8EQ:shared_process": [],
+    "2CSBVZER4:shared_process": [],
+    "2CS17P5QV:shared_process": [],
+    "2CRMSVU7S:shared_process": [],
+    "2CTEAU6EE:shared_process": [],
+    "2CQ6E7SK9:shared_process": [],
+    "2CRWEWVY4:shared_process": [],
+    "2CT2K3Z5Q:shared_process": []
   },
   "config": {},
   "info": {}
