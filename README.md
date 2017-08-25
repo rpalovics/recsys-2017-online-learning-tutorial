@@ -16,26 +16,40 @@ Participants of the tutorial will be able to experiment with all the three syste
 
 Our final objective is to compare and then blend batch and online methods to build models providing high quality top-k recommendation in non-stationary environments.
 
-The hands-on tutorial running parallel to the workshops is on Sunday, Aug 27, 2017.
+**The hands-on tutorial running parallel to the workshops is on Sunday, Aug 27, 2017.
 Participants may attend the tutorial in two identical sessions starting from either 9:00 or 14:00.
-Both sessions start with installation instructions, which is crucial to participate.
-Participants must register for the tutorial via this [form](https://goo.gl/forms/LcXCjr5mByWx1QUA2).
+Both sessions start with installation instructions, that is crucial to participate.
+Participants must register for the tutorial via this [form](https://goo.gl/forms/LcXCjr5mByWx1QUA2).**
+
+<p align="center">
+  <img src="https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/online%20reco.png?raw=true" height=100 alt="flink"/>
+</p>
+
+## Outline
+
+#### Lecture A
+
+- Installation
+- Introduction to time-aware evaluation and learning
+- Notebook 1: Alpenglow notebook
+
+#### Coffee break
+
+#### Lecture B
+
+- Spark and Flink introduction
+- Notebook 2: Comparing batch learning in Alpenglow, Flink, and Spark
+- Notebook 3: Online stream based learning in Flink
+
+A preview of the introductory slides are now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/intro.pdf).
 
 ## Installation
 
-Check this [Wiki page](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/wiki) for the detailed installation guide.
+Check the [wiki page](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/wiki) for the detailed installation guide.
 
-<p align="center">
-  <img src="https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/online%20reco.png?raw=true" height=200 alt="flink"/>
-</p>
+## Dataset
 
-## Theoretical background
-
-A brief summary of the tutorial's theoretical background is now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/summary.pdf).
-
-Participants should check out the summary before attending to the tutorial, as during the event there will be less emphasis on the theoretical background.
-
-A preview of the introductory slides are now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/intro.pdf).
+Download the tutorial data from [here](https://drive.google.com/open?id=0B_3Dz2J_fhmTaVZyUy12cGFQR0E).
 
 ## Notebooks
 
@@ -43,9 +57,16 @@ A preview of the introductory slides are now [available](https://github.com/rpal
 - 2 Alpenglow/Flink/Spark batch notebook
 - 3 Flink parameter server based streaming SGD notebook
 
+## Theoretical background
+
+A brief summary of the tutorial's theoretical background is now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/summary.pdf).
+
+
+
+
 <p align="center">
-  <img src="https://www.sztaki.hu/sites/default/files/styles/max_1300x1300/public/2016/project/logo/streamline_logo_3%5B1%5D.png?itok=YlwiafED" height=100 alt="zeppelin"/>
-  <img hspace=20>
-  <img src="https://info.ilab.sztaki.hu/~rpalovics/sztaki_logo_angol_kek.png" height=100 alt="alpenglow"/> 
+  <img src="./figs/streamline.png" height=50 alt="zeppelin"/>
+  <img hspace=10>
+  <img src="https://info.ilab.sztaki.hu/~rpalovics/sztaki_logo_angol_kek.png" height=50 alt="alpenglow"/> 
 </p>
 
