@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "import hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization.Vector._\nimport hu.sztaki.ilab.ps.matrix.factorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions\nimport hu.sztaki.ilab.ps.matrix.factorization.pruning._\n\nimport org.apache.flink.streaming.api.scala._\nimport org.apache.flink.api.common.functions.RichFlatMapFunction\nimport org.apache.flink.util.Collector\nimport scala.collection.mutable\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\nimport java.io.PrintWriter\nimport java.io.File\n\nval startTimestamp \u003d {\n    val infile_reader \u003d new java.io.BufferedReader(new java.io.FileReader(\"data_session\"))\n    val s \u003dinfile_reader.readLine().split(\" \")(0).toLong\n    infile_reader.close()\n    s\n}\n\n/**\n * The prefix for filenames for each week.\n * The number of the week is appended to this string\n * All weeks are contained in \"_all\" appended to this string (used for online learning)\n */\nval inputPath \u003d \"data_session\"\n\n/**\n * The prefix for model filenames. The files are created by learn() and evaluated by evaluateWithLearning() and evaluateWithoutLearning()\n */\nval modelPath \u003d \"models/model.\"\n\n/**\n * The output path for batch+online evaluation\n */\nval outputPath \u003d \"ndcg.zeppelin.\"\n\n/**\n * The output path for online evaluation\n */\nval outputPathOnline \u003d \"ndcg.zeppelin.online.\"\n\n/**\n * The output path for batch evaluation\n */\nval outputPathNoLearn \u003d \"ndcg.zeppelin.nolearn.\"",
+      "text": "import hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization.Vector._\nimport hu.sztaki.ilab.ps.matrix.factorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions\nimport hu.sztaki.ilab.ps.matrix.factorization.pruning._\n\nimport org.apache.flink.streaming.api.scala._\nimport org.apache.flink.api.common.functions.RichFlatMapFunction\nimport org.apache.flink.util.Collector\nimport scala.collection.mutable\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\nimport java.io.PrintWriter\nimport java.io.File\n\nval startTimestamp \u003d {\n    val infile_reader \u003d new java.io.BufferedReader(new java.io.FileReader(\"data_session\"))\n    val s \u003dinfile_reader.readLine().split(\" \")(0).toLong\n    infile_reader.close()\n    s\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:48:56 PM",
+      "dateUpdated": "Aug 25, 2017 4:59:43 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -19,15 +19,6 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "import hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization.Vector._\nimport hu.sztaki.ilab.ps.matrix.factorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions\nimport hu.sztaki.ilab.ps.matrix.factorization.pruning._\nimport org.apache.flink.streaming.api.scala._\nimport org.apache.flink.api.common.functions.RichFlatMapFunction\nimport org.apache.flink.util.Collector\nimport scala.collection.mutable\nimport org.apache.flink.streaming.api.functions.sink.RichSinkFunction\nimport java.io.PrintWriter\nimport java.io.File\nstartTimestamp: Long \u003d 1390209860\ninputPath: String \u003d data_session\nmodelPath: String \u003d models/model.\noutputPath: String \u003d ndcg.zeppelin.\noutputPathOnline: String \u003d ndcg.zeppelin.online.\noutputPathNoLearn: String \u003d ndcg.zeppelin.nolearn.\n"
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1503481249441_-1020486862",
       "id": "20170823-114049_825147051",
@@ -35,12 +26,13 @@
       "dateStarted": "Aug 25, 2017 4:48:56 PM",
       "dateFinished": "Aug 25, 2017 4:49:00 PM",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "/**\n * Learning in batch\n * @param   inputs  an array containing the names of input files\n * @param   output  the name of the output file\n */\ndef learn(inputs: Array[String], output: String) {\n    val data \u003d ImplicitDataToRatingParser.parseAll(senv, inputs, \",\", 1, 2, 0, startTimestamp)\n    \n    val factorModel \u003d PSOfflineMatrixFactorization.psOfflineMF(\n      data,\n      learningRate \u003d 0.15,\n      negativeSampleRate \u003d 19,\n      iterations \u003d 4)\n      \n    factorModel.addSink(new VectorModelToFileSink(output))\n    \n    senv execute s\"generating model $output from $inputs\"\n\n}",
+      "text": "/**\n * Learning in batch\n * @param   inputs  an array containing the names of input files\n * @param   output  the name of the output file\n */\ndef BatchLearn(inputs: Array[String], output: String) {\n    val data \u003d ImplicitDataToRatingParser.parseAll(senv, inputs, \",\", 1, 2, 0, startTimestamp)\n    \n    val factorModel \u003d PSOfflineMatrixFactorization.psOfflineMF(\n      data,\n      learningRate \u003d 0.15,\n      negativeSampleRate \u003d 19,\n      iterations \u003d 4)\n      \n    factorModel.addSink(new VectorModelToFileSink(output))\n    \n    senv execute s\"generating model $output from $inputs\"\n\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:48:45 PM",
+      "dateUpdated": "Aug 25, 2017 5:18:27 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -76,9 +68,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "/**\n * Evaluates a model with online learning\n * @oaram   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef evaluateWithLearning(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n    \n    val topK \u003d PSOnlineLearnerAndTopKGeneratorWithModelLoad.psOnlineLearnerAndGeneratorWithModelLoad(parsedModel)(\n        ratings,\n        learningRate \u003d 0.35,\n        negativeSampleRate \u003d 4)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, output, 86400)\n    \n    senv execute s\"Online evaluation of model $model with learning\"\n}",
+      "text": "/**\n * Evaluates a model with online learning\n * @oaram   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef OnlineLearnAndEvaluate(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n    \n    val topK \u003d PSOnlineLearnerAndTopKGeneratorWithModelLoad.psOnlineLearnerAndGeneratorWithModelLoad(parsedModel)(\n        ratings,\n        learningRate \u003d 0.35,\n        negativeSampleRate \u003d 4)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, output, 86400)\n    \n    senv execute s\"Online evaluation of model $model with learning\"\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:48:47 PM",
+      "dateUpdated": "Aug 25, 2017 5:18:07 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -113,9 +105,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "/**\n * Evaluates a model online without learning\n * @param   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef evaluateWithoutLearning(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n    \n    val topK \u003d PSTopKGeneratorWithLEMP.psTopKGenerator(ratings, parsedModel)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, output, 86400, false)\n    \n    senv execute s\"Online evaluation of model $model without learning\"\n}",
+      "text": "/**\n * Evaluates a model online without learning\n * @param   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef OnlineEvaluate(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n    \n    val topK \u003d PSTopKGeneratorWithLEMP.psTopKGenerator(ratings, parsedModel)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, output, 86400, false)\n    \n    senv execute s\"Online evaluation of model $model without learning\"\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 2:05:22 PM",
+      "dateUpdated": "Aug 25, 2017 5:18:17 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -218,9 +210,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 10\n\nlearn(Array.range(0, i).map(inputPath + _), modelPath+i)\n",
+      "text": "val i \u003d 10\n\nBatchLearn(Array.range(0, i).map(inputPath + _), modelPath+i)\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:49:35 PM",
+      "dateUpdated": "Aug 25, 2017 5:18:48 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -264,9 +256,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 10\n\nevaluateWithLearning(inputPath+i, modelPath+i, outputPath+i)",
+      "text": "val i \u003d 10\n\nOnlineLearnAndEvaluate(inputPath+i, modelPath+i, outputPath+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:49:38 PM",
+      "dateUpdated": "Aug 25, 2017 5:19:23 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -309,9 +301,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 10\n\nevaluateWithoutLearning(inputPath+i, modelPath+i, outputPathNoLearn+i)",
+      "text": "val i \u003d 10\n\nOnlineEvaluate(inputPath+i, modelPath+i, outputPathNoLearn+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:49:39 PM",
+      "dateUpdated": "Aug 25, 2017 5:20:33 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -356,7 +348,7 @@
     {
       "text": "%python\ni \u003d \u002710\u0027\nplot(outputPath+i, outputPathNoLearn+i, outputPathOnline+\u0027all\u0027)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:47:48 PM",
+      "dateUpdated": "Aug 25, 2017 5:21:03 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -365,7 +357,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -390,9 +383,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 11\n\nlearn(Array.range(0, i).map(inputPath + _), modelPath+i)",
+      "text": "val i \u003d 11\n\nBatchLearn(Array.range(0, i).map(inputPath + _), modelPath+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:49:46 PM",
+      "dateUpdated": "Aug 25, 2017 5:18:52 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -435,9 +428,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 11\n\nevaluateWithLearning(inputPath+i, modelPath+i, outputPath+i)",
+      "text": "val i \u003d 11\n\nOnlineLearnAndEvaluate(inputPath+i, modelPath+i, outputPath+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:49:49 PM",
+      "dateUpdated": "Aug 25, 2017 5:19:31 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -472,9 +465,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 11\n\nevaluateWithoutLearning(inputPath+i, modelPath+i, outputPathNoLearn+i)",
+      "text": "val i \u003d 11\n\nOnlineEvaluate(inputPath+i, modelPath+i, outputPathNoLearn+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:49:51 PM",
+      "dateUpdated": "Aug 25, 2017 5:20:36 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -519,7 +512,7 @@
     {
       "text": "%python\ni \u003d \u002711\u0027\nplot(outputPath+i, outputPathNoLearn+i, outputPathOnline+\u0027all\u0027)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:47:52 PM",
+      "dateUpdated": "Aug 25, 2017 5:21:19 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -528,7 +521,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -553,9 +547,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 12\n\nlearn(Array.range(0, i).map(inputPath + _), modelPath + i)",
+      "text": "val i \u003d 12\n\nBatchLearn(Array.range(0, i).map(inputPath + _), modelPath + i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:39 PM",
+      "dateUpdated": "Aug 25, 2017 5:18:55 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -598,9 +592,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 12\n\nevaluateWithLearning(inputPath+i, modelPath+i, outputPath+i)",
+      "text": "val i \u003d 12\n\nOnlineLearnAndEvaluate(inputPath+i, modelPath+i, outputPath+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:37 PM",
+      "dateUpdated": "Aug 25, 2017 5:19:34 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -643,9 +637,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 12\n\nevaluateWithoutLearning(inputPath+i, modelPath+i, outputPathNoLearn+i)",
+      "text": "val i \u003d 12\n\nOnlineEvaluate(inputPath+i, modelPath+i, outputPathNoLearn+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:35 PM",
+      "dateUpdated": "Aug 25, 2017 5:20:38 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -690,7 +684,7 @@
     {
       "text": "%python\ni \u003d \u002712\u0027\nplot(outputPath+i, outputPathNoLearn+i, outputPathOnline+\u0027all\u0027)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:47:54 PM",
+      "dateUpdated": "Aug 25, 2017 5:21:16 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -699,7 +693,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -724,9 +719,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 13\n\nlearn(Array.range(0, i).map(inputPath + _), modelPath + i)",
+      "text": "val i \u003d 13\n\nBatchLearn(Array.range(0, i).map(inputPath + _), modelPath + i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:43 PM",
+      "dateUpdated": "Aug 25, 2017 5:18:59 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -762,9 +757,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 13\n\nevaluateWithLearning(inputPath+i, modelPath+i, outputPath+i)",
+      "text": "val i \u003d 13\n\nOnlineLearnAndEvaluate(inputPath+i, modelPath+i, outputPath+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:45 PM",
+      "dateUpdated": "Aug 25, 2017 5:19:37 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -800,9 +795,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 13\n\nevaluateWithoutLearning(inputPath+i, modelPath+i, outputPathNoLearn+i)",
+      "text": "val i \u003d 13\n\nOnlineEvaluate(inputPath+i, modelPath+i, outputPathNoLearn+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:47 PM",
+      "dateUpdated": "Aug 25, 2017 5:20:40 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -840,7 +835,7 @@
     {
       "text": "%python\ni \u003d \u002713\u0027\nplot(outputPath+i, outputPathNoLearn+i, outputPathOnline+\u0027all\u0027)\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:47:59 PM",
+      "dateUpdated": "Aug 25, 2017 5:21:14 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -849,7 +844,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -874,9 +870,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 14\n\nlearn(Array.range(0, i).map(inputPath + _), modelPath + i)",
+      "text": "val i \u003d 14\n\nBatchLearn(Array.range(0, i).map(inputPath + _), modelPath + i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:50 PM",
+      "dateUpdated": "Aug 25, 2017 5:19:02 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -912,9 +908,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 14\n\nevaluateWithLearning(inputPath+i, modelPath+i, outputPath+i)",
+      "text": "val i \u003d 14\n\nOnlineLearnAndEvaluate(inputPath+i, modelPath+i, outputPath+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:51 PM",
+      "dateUpdated": "Aug 25, 2017 5:19:40 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -950,9 +946,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 14\n\nevaluateWithoutLearning(inputPath+i, modelPath+i, outputPathNoLearn+i)",
+      "text": "val i \u003d 14\n\nOnlineEvaluate(inputPath+i, modelPath+i, outputPathNoLearn+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:53 PM",
+      "dateUpdated": "Aug 25, 2017 5:20:42 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -990,7 +986,7 @@
     {
       "text": "%python\ni \u003d \u002714\u0027\nplot(outputPath+i, outputPathNoLearn+i, outputPathOnline+\u0027all\u0027)\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:48:03 PM",
+      "dateUpdated": "Aug 25, 2017 5:21:12 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -999,7 +995,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -1024,9 +1021,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 15\n\nlearn(Array.range(0, i).map(inputPath + _), modelPath + i)",
+      "text": "val i \u003d 15\n\nBatchLearn(Array.range(0, i).map(inputPath + _), modelPath + i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:56 PM",
+      "dateUpdated": "Aug 25, 2017 5:19:13 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -1062,9 +1059,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 15\n\nevaluateWithLearning(inputPath+i, modelPath+i, outputPath+i)",
+      "text": "val i \u003d 15\n\nOnlineLearnAndEvaluate(inputPath+i, modelPath+i, outputPath+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:57 PM",
+      "dateUpdated": "Aug 25, 2017 5:19:46 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -1100,9 +1097,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val i \u003d 15\n\nevaluateWithoutLearning(inputPath+i, modelPath+i, outputPathNoLearn+i)",
+      "text": "val i \u003d 15\n\nOnlineEvaluate(inputPath+i, modelPath+i, outputPathNoLearn+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:50:59 PM",
+      "dateUpdated": "Aug 25, 2017 5:20:53 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -1140,7 +1137,7 @@
     {
       "text": "%python\ni \u003d \u002715\u0027\nplot(outputPath+i, outputPathNoLearn+i, outputPathOnline+\u0027all\u0027)",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 4:48:08 PM",
+      "dateUpdated": "Aug 25, 2017 5:21:09 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -1149,7 +1146,8 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -1306,25 +1304,25 @@
   "name": "flink_batch_learn_online_eval",
   "id": "2CP4H8SUT",
   "angularObjects": {
-    "2CSHZBPGQ:shared_process": [],
-    "2CP4XT1QX:shared_process": [],
-    "2CRVTB39U:shared_process": [],
-    "2CPZRX6Q1:shared_process": [],
-    "2CRK8VUS1:shared_process": [],
-    "2CSXE2NNW:shared_process": [],
-    "2CRJWU2MB:shared_process": [],
-    "2CRXJDA83:shared_process": [],
-    "2CQNM5BNZ:shared_process": [],
-    "2CSFSUNWV:shared_process": [],
-    "2CS7S73J3:shared_process": [],
-    "2CQZB77TV:shared_process": [],
-    "2CPH1QPYS:shared_process": [],
-    "2CRF184DK:shared_process": [],
-    "2CRXV73KM:shared_process": [],
-    "2CRGU6BSC:shared_process": [],
-    "2CPC784ZU:shared_process": [],
-    "2CPAS9QKR:shared_process": [],
-    "2CRN22ASG:shared_process": []
+    "2CQ5CHCVK:shared_process": [],
+    "2CQA8ANBF:shared_process": [],
+    "2CPUWTNP5:shared_process": [],
+    "2CS666EJY:shared_process": [],
+    "2CQ1SYMWR:shared_process": [],
+    "2CRX78HZ4:shared_process": [],
+    "2CSE5JPER:shared_process": [],
+    "2CPEJRKEY:shared_process": [],
+    "2CR9VJ4VU:shared_process": [],
+    "2CQ144JX5:shared_process": [],
+    "2CNWA3851:shared_process": [],
+    "2CRTAP1ZV:shared_process": [],
+    "2CQVGSGZX:shared_process": [],
+    "2CRQ2EJN1:shared_process": [],
+    "2CNU9Q44Q:shared_process": [],
+    "2CS38SHJX:shared_process": [],
+    "2CSK5B72V:shared_process": [],
+    "2CRPWHNGP:shared_process": [],
+    "2CS7NTJ4W:shared_process": []
   },
   "config": {},
   "info": {}
