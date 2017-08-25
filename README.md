@@ -16,10 +16,10 @@ Participants of the tutorial will be able to experiment with all the three syste
 
 Our final objective is to compare and then blend batch and online methods to build models providing high quality top-k recommendation in non-stationary environments.
 
-The hands-on tutorial running parallel to the workshops is on Sunday, Aug 27, 2017.
+**The hands-on tutorial running parallel to the workshops is on Sunday, Aug 27, 2017.
 Participants may attend the tutorial in two identical sessions starting from either 9:00 or 14:00.
-Both sessions start with installation instructions, which is crucial to participate.
-Participants must register for the tutorial via this [form](https://goo.gl/forms/LcXCjr5mByWx1QUA2).
+Both sessions start with installation instructions, that is crucial to participate.
+Participants must register for the tutorial via this [form](https://goo.gl/forms/LcXCjr5mByWx1QUA2).**
 
 ## Installation
 
