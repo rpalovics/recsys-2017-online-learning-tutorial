@@ -23,7 +23,7 @@ Participants must register for the tutorial via this [form](https://goo.gl/forms
 
 ## Installation
 
-Check this [Wiki page](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/wiki) for the detailed installation guide.
+Check the [wiki page](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/wiki) for the detailed installation guide.
 
 <p align="center">
   <img src="https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/online%20reco.png?raw=true" height=200 alt="flink"/>
