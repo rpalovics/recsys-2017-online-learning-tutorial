@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/batch.png?raw\u003dtrue\" width\u003d768 alt\u003d\"time-aware batch\"/\u003e\n\u003c/p\u003e",
+      "text": "%md\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/batch.png?raw\u003dtrue\" style\u003d\"max-height:250px\" alt\u003d\"time-aware batch\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:18:46 AM",
+      "dateUpdated": "Aug 26, 2017 8:47:56 AM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -33,7 +33,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/batch.png?raw\u003dtrue\" width\u003d768 alt\u003d\"time-aware batch\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/batch.png?raw\u003dtrue\" style\u003d\"max-height:250px\" alt\u003d\"time-aware batch\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -41,15 +41,15 @@
       "jobName": "paragraph_1503696541121_368202089",
       "id": "20170825-232901_1378667887",
       "dateCreated": "Aug 25, 2017 11:29:01 PM",
-      "dateStarted": "Aug 26, 2017 12:18:46 AM",
-      "dateFinished": "Aug 26, 2017 12:18:46 AM",
+      "dateStarted": "Aug 26, 2017 8:47:56 AM",
+      "dateFinished": "Aug 26, 2017 8:47:56 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/mf.png?raw\u003dtrue\" alt\u003d\"mf\"/\u003e\n\u003c/p\u003e",
+      "text": "%md\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/mf.png?raw\u003dtrue\" style\u003d\"max-height:250px\" alt\u003d\"mf\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:42:20 PM",
+      "dateUpdated": "Aug 26, 2017 8:48:07 AM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -79,7 +79,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/mf.png?raw\u003dtrue\" alt\u003d\"mf\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/mf.png?raw\u003dtrue\" style\u003d\"max-height:250px\" alt\u003d\"mf\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -87,16 +87,16 @@
       "jobName": "paragraph_1503697309960_235563886",
       "id": "20170825-234149_1906417647",
       "dateCreated": "Aug 25, 2017 11:41:49 PM",
-      "dateStarted": "Aug 25, 2017 11:42:07 PM",
-      "dateFinished": "Aug 25, 2017 11:42:07 PM",
+      "dateStarted": "Aug 26, 2017 8:48:07 AM",
+      "dateFinished": "Aug 26, 2017 8:48:07 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "title": "Alpenglow",
-      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw\u003dtrue\" width\u003d400 alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e",
+      "title": "",
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw\u003dtrue\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\n# Alpenglow\nAlpenglow is a free and open source C++ based Python recommender framework. We are going to use it train a matrix factorization model using stochastic gradient descent (SGD) and evaluate the trained model using the normalized discounted cumulative gain (NDCG) metric.\n\nThis experiment is impemented in Python",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:27:49 PM",
+      "dateUpdated": "Aug 26, 2017 8:28:52 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -108,7 +108,7 @@
         "editorMode": "ace/mode/markdown",
         "editorHide": true,
         "tableHide": false,
-        "title": true
+        "title": false
       },
       "settings": {
         "params": {},
@@ -119,7 +119,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw\u003dtrue\" width\u003d400 alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw\u003dtrue\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eAlpenglow\u003c/h1\u003e\n\u003cp\u003eAlpenglow is a free and open source C++ based Python recommender framework. We are going to use it train a matrix factorization model using stochastic gradient descent (SGD) and evaluate the trained model using the normalized discounted cumulative gain (NDCG) metric.\u003c/p\u003e\n\u003cp\u003eThis experiment is impemented in Python\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -127,16 +127,16 @@
       "jobName": "paragraph_1503696140017_1964390646",
       "id": "20170825-232220_1564867282",
       "dateCreated": "Aug 25, 2017 11:22:20 PM",
-      "dateStarted": "Aug 25, 2017 11:27:49 PM",
-      "dateFinished": "Aug 25, 2017 11:27:49 PM",
+      "dateStarted": "Aug 26, 2017 8:28:52 AM",
+      "dateFinished": "Aug 26, 2017 8:28:52 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Flink",
-      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  width\u003d90 alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e",
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\n# Apache Flink\n\nFlink is an open-source stream processing framework. We are going to use a factor model trained by asynchronous SGD, available as a pull request for Flink. The implementations uses a paramtere-server architecture for storing and accessing the model.\n\nThis experiment is implemented in Scala.",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:18:51 AM",
+      "dateUpdated": "Aug 26, 2017 8:18:21 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -146,7 +146,7 @@
           "editOnDblClick": true
         },
         "editorMode": "ace/mode/markdown",
-        "title": true,
+        "title": false,
         "editorHide": true,
         "tableHide": false
       },
@@ -159,7 +159,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  width\u003d90 alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eApache Flink\u003c/h1\u003e\n\u003cp\u003eFlink is an open-source stream processing framework. We are going to use a factor model trained by asynchronous SGD, available as a pull request for Flink. The implementations uses a paramtere-server architecture for storing and accessing the model.\u003c/p\u003e\n\u003cp\u003eThis experiment is implemented in Scala.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -167,16 +167,16 @@
       "jobName": "paragraph_1503696147689_-999714880",
       "id": "20170825-232227_1562535417",
       "dateCreated": "Aug 25, 2017 11:22:27 PM",
-      "dateStarted": "Aug 26, 2017 12:18:51 AM",
-      "dateFinished": "Aug 26, 2017 12:18:51 AM",
+      "dateStarted": "Aug 26, 2017 8:18:13 AM",
+      "dateFinished": "Aug 26, 2017 8:18:13 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Spark",
-      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://spark.apache.org/images/spark-logo-trademark.png\" width\u003d170 alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e",
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://spark.apache.org/images/spark-logo-trademark.png\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\n# Apache Spark\n\nSpark is an open-source engine for large-scale data processing. We are going to use the iALS implementation from Spark’s ML library, and provide ranking recommendations by reading the trained factor model to pandas.\n\nThe experiment is implemented in Spark’s Python API, PySpark.",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:28:31 PM",
+      "dateUpdated": "Aug 26, 2017 8:29:12 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -188,7 +188,7 @@
         "editorMode": "ace/mode/markdown",
         "editorHide": true,
         "tableHide": false,
-        "title": true
+        "title": false
       },
       "settings": {
         "params": {},
@@ -199,7 +199,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://spark.apache.org/images/spark-logo-trademark.png\" width\u003d170 alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://spark.apache.org/images/spark-logo-trademark.png\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eApache Spark\u003c/h1\u003e\n\u003cp\u003eSpark is an open-source engine for large-scale data processing. We are going to use the iALS implementation from Spark’s ML library, and provide ranking recommendations by reading the trained factor model to pandas.\u003c/p\u003e\n\u003cp\u003eThe experiment is implemented in Spark’s Python API, PySpark.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -207,15 +207,53 @@
       "jobName": "paragraph_1503696149644_-175967485",
       "id": "20170825-232229_1489721128",
       "dateCreated": "Aug 25, 2017 11:22:29 PM",
-      "dateStarted": "Aug 25, 2017 11:28:31 PM",
-      "dateFinished": "Aug 25, 2017 11:28:31 PM",
+      "dateStarted": "Aug 26, 2017 8:29:12 AM",
+      "dateFinished": "Aug 26, 2017 8:29:12 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%python\nimport pandas as pd\nimport numpy as np\nimport heapq\nimport glob\nimport os\nimport shutil\nimport math\nfrom collections import defaultdict\nimport pyarrow.parquet as pq\nimport alpenglow as ag\nfrom alpenglow.offline.models import FactorModel\nfrom alpenglow.offline.evaluation import NdcgScore",
+      "text": "%md \n\n### Warning!\n\nRunning all three kernels simultaneously requires quite a bit of system memory.\n\n* If you have at least 16GB, you should be good to go.\n* With 8GB, you should still be fine, but monitor your memory usage closely.\n* Under 8GB, try running the notebook one kernel at a time.",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:21:18 PM",
+      "dateUpdated": "Aug 26, 2017 8:32:31 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWarning!\u003c/h3\u003e\n\u003cp\u003eRunning all three kernels simultaneously requires quite a bit of system memory.\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eIf you have at least 16GB, you should be good to go.\u003c/li\u003e\n  \u003cli\u003eWith 8GB, you should still be fine, but monitor your memory usage closely.\u003c/li\u003e\n  \u003cli\u003eUnder 8GB, try running the notebook one kernel at a time.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503727832783_1142779595",
+      "id": "20170826-081032_1315768024",
+      "dateCreated": "Aug 26, 2017 8:10:32 AM",
+      "dateStarted": "Aug 26, 2017 8:32:31 AM",
+      "dateFinished": "Aug 26, 2017 8:32:31 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%python\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib\nimport matplotlib.pyplot as plt\nimport alpenglow as ag\nfrom alpenglow.offline.models import FactorModel\nfrom alpenglow.offline.evaluation import NdcgScore",
+      "user": "anonymous",
+      "dateUpdated": "Aug 26, 2017 9:04:17 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -239,15 +277,15 @@
       "jobName": "paragraph_1503043976596_1345513851",
       "id": "20170818-101256_1862447283",
       "dateCreated": "Aug 18, 2017 10:12:56 AM",
-      "dateStarted": "Aug 25, 2017 11:21:18 PM",
-      "dateFinished": "Aug 25, 2017 11:21:18 PM",
+      "dateStarted": "Aug 26, 2017 9:04:17 AM",
+      "dateFinished": "Aug 26, 2017 9:04:22 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\r\n\r\nsenv.setParallelism(4)",
+      "text": "%flink\r\n\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\r\n\r\nsenv.setParallelism(4)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:44:13 AM",
+      "dateUpdated": "Aug 26, 2017 9:04:18 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -276,15 +314,15 @@
       "jobName": "paragraph_1503043992138_-1755346101",
       "id": "20170818-101312_1674360328",
       "dateCreated": "Aug 18, 2017 10:13:12 AM",
-      "dateStarted": "Aug 26, 2017 12:44:13 AM",
-      "dateFinished": "Aug 26, 2017 12:44:15 AM",
+      "dateStarted": "Aug 26, 2017 9:04:19 AM",
+      "dateFinished": "Aug 26, 2017 9:04:24 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\nfrom pyspark.mllib.recommendation import ALS, MatrixFactorizationModel, Rating\nimport pandas as pd\nimport os\nimport shutil\nimport heapq\nimport math\nfrom collections import defaultdict\nimport pyarrow.parquet as pq",
+      "text": "%spark.pyspark\n\nfrom pyspark.mllib.recommendation import ALS, MatrixFactorizationModel, Rating\nimport pandas as pd\nimport shutil\nimport pyarrow.parquet as pq",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:33:29 PM",
+      "dateUpdated": "Aug 26, 2017 9:04:20 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -301,21 +339,16 @@
         "forms": {}
       },
       "results": {
-        "code": "ERROR",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "pyspark is not responding"
-          }
-        ]
+        "code": "SUCCESS",
+        "msg": []
       },
       "apps": [],
       "jobName": "paragraph_1503044018011_1384250897",
       "id": "20170818-101338_623641606",
       "dateCreated": "Aug 18, 2017 10:13:38 AM",
-      "dateStarted": "Aug 25, 2017 11:33:29 PM",
-      "dateFinished": "Aug 25, 2017 11:33:39 PM",
-      "status": "ERROR",
+      "dateStarted": "Aug 26, 2017 9:04:20 AM",
+      "dateFinished": "Aug 26, 2017 9:05:22 AM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -359,9 +392,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "train_batch \u003d pd.read_csv(\n    \u0027train_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)",
+      "text": "%python\n\ntrain_batch \u003d pd.read_csv(\n    \u0027train_batch.csv\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:10:52 PM",
+      "dateUpdated": "Aug 26, 2017 9:04:25 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -385,15 +418,15 @@
       "jobName": "paragraph_1503044042861_-1196062407",
       "id": "20170818-101402_497732565",
       "dateCreated": "Aug 18, 2017 10:14:02 AM",
-      "dateStarted": "Aug 22, 2017 6:10:52 PM",
-      "dateFinished": "Aug 22, 2017 6:10:52 PM",
+      "dateStarted": "Aug 26, 2017 9:04:26 AM",
+      "dateFinished": "Aug 26, 2017 9:04:26 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\nval trainDataPath \u003d \"train_batch\"\nval testDataPath \u003d \"test_batch\"\nval model \u003d \"model\"\nval topKOut \u003d \"topK.out\"\n\nval trainData \u003d ImplicitDataToRatingParser.parse(senv,trainDataPath,\",\",1,2)",
+      "text": "%flink\n\nval trainFile \u003d \"train_batch.csv\"\nval testFile \u003d \"test_batch.csv\"\nval modelFile \u003d \"flink_model\"\n\nval trainData \u003d ImplicitDataToRatingParser.parse(senv,trainFile,\",\",1,2)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:44:33 AM",
+      "dateUpdated": "Aug 26, 2017 9:04:27 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -414,7 +447,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "trainDataPath: String \u003d train_batch\ntestDataPath: String \u003d test_batch\nmodel: String \u003d model\ntopKOut: String \u003d topK.out\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@4cf55f28\n"
+            "data": "trainFile: String \u003d train_batch.csv\ntestFile: String \u003d test_batch.csv\nmodelFile: String \u003d flink_model\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@6458f99f\n"
           }
         ]
       },
@@ -422,15 +455,15 @@
       "jobName": "paragraph_1503044083369_929721239",
       "id": "20170818-101443_42483437",
       "dateCreated": "Aug 18, 2017 10:14:43 AM",
-      "dateStarted": "Aug 26, 2017 12:44:33 AM",
-      "dateFinished": "Aug 26, 2017 12:44:35 AM",
+      "dateStarted": "Aug 26, 2017 9:04:27 AM",
+      "dateFinished": "Aug 26, 2017 9:04:33 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\n\ntrain \u003d sc.textFile(\"train_batch\").map(lambda l: l.split(\u0027,\u0027))\\\n    .map(lambda l: Rating(int(l[1]), int(l[2]), 1.0))\n",
+      "text": "%spark.pyspark\n\ntrain \u003d sc.textFile(\"train_batch.csv\")\\\n    .map(lambda l: l.split(\u0027,\u0027))\\\n    .map(lambda l: Rating(int(l[1]), int(l[2]), 1.0))\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:33:55 PM",
+      "dateUpdated": "Aug 26, 2017 9:04:28 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -454,8 +487,8 @@
       "jobName": "paragraph_1503044383850_-1498583956",
       "id": "20170818-101943_1275364393",
       "dateCreated": "Aug 18, 2017 10:19:43 AM",
-      "dateStarted": "Aug 22, 2017 4:54:17 PM",
-      "dateFinished": "Aug 22, 2017 4:54:42 PM",
+      "dateStarted": "Aug 26, 2017 9:04:29 AM",
+      "dateFinished": "Aug 26, 2017 9:05:23 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -500,9 +533,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "model \u003d FactorModel(\n    dimension\u003d20,\n    learning_rate\u003d0.05,\n    negative_rate\u003d9,\n    number_of_iterations\u003d4,\n)\nmodel.fit(train_batch)",
+      "text": "%python\n\nmodel \u003d FactorModel(\n    dimension\u003d20,\n    learning_rate\u003d0.05,\n    negative_rate\u003d9,\n    number_of_iterations\u003d4,\n)\nmodel.fit(train_batch)",
       "user": "anonymous",
-      "dateUpdated": "Aug 21, 2017 1:23:18 PM",
+      "dateUpdated": "Aug 26, 2017 9:04:31 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -520,26 +553,21 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "Beginning of \n1th iteration.\n\n\nEnd of 1th iteration.\nBeginning of 2th iteration.\n\n\nEnd of 2th iteration.\nBeginning of 3th iteration.\n\n\nEnd of 3th iteration.\nBeginning of 4th iteration.\n\nEnd of 4th iteration.\n"
-          }
-        ]
+        "msg": []
       },
       "apps": [],
       "jobName": "paragraph_1503044488882_-1534781001",
       "id": "20170818-102128_494115451",
       "dateCreated": "Aug 18, 2017 10:21:28 AM",
-      "dateStarted": "Aug 21, 2017 1:23:18 PM",
-      "dateFinished": "Aug 21, 2017 1:24:27 PM",
+      "dateStarted": "Aug 26, 2017 9:04:31 AM",
+      "dateFinished": "Aug 26, 2017 9:05:25 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\npsOfflineMF(\n        trainData,\n        learningRate \u003d 0.05,\n        negativeSampleRate \u003d 9,\n        iterations \u003d 4)\n    .addSink(new VectorModelToFileSink(model))\n    .setParallelism(1)\n\nsenv.execute()",
+      "text": "%flink\n\npsOfflineMF(\n        trainData,\n        learningRate \u003d 0.05,\n        negativeSampleRate \u003d 9,\n        iterations \u003d 4)\n    .addSink(new VectorModelToFileSink(modelFile))\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:45:17 AM",
+      "dateUpdated": "Aug 26, 2017 9:04:32 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -560,7 +588,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "res39: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@28d87c6b\nres40: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@27e0eb15\n"
+            "data": "res3: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@4d4a901\nres4: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@fcfbd18\n"
           }
         ]
       },
@@ -568,15 +596,15 @@
       "jobName": "paragraph_1503044504674_-241408440",
       "id": "20170818-102144_2001725201",
       "dateCreated": "Aug 18, 2017 10:21:44 AM",
-      "dateStarted": "Aug 26, 2017 12:45:17 AM",
-      "dateFinished": "Aug 26, 2017 12:48:25 AM",
+      "dateStarted": "Aug 26, 2017 9:04:33 AM",
+      "dateFinished": "Aug 26, 2017 9:08:44 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\nrank \u003d 20\nnumIter \u003d 8\nreg \u003d 0.01\nalpha \u003d 40\n\nmodel \u003d ALS.trainImplicit(train, rank, numIter, reg, alpha)\n",
+      "text": "%spark.pyspark\n\nrank \u003d 20\nnumIter \u003d 8\nreg \u003d 0.01\nalpha \u003d 40\n\nmodel \u003d ALS.trainImplicit(train, rank, numIter, reg, alpha)\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 4:54:19 PM",
+      "dateUpdated": "Aug 26, 2017 9:04:35 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -600,8 +628,8 @@
       "jobName": "paragraph_1503044524622_-469549214",
       "id": "20170818-102204_1132678300",
       "dateCreated": "Aug 18, 2017 10:22:04 AM",
-      "dateStarted": "Aug 22, 2017 4:54:41 PM",
-      "dateFinished": "Aug 22, 2017 4:55:16 PM",
+      "dateStarted": "Aug 26, 2017 9:05:22 AM",
+      "dateFinished": "Aug 26, 2017 9:06:30 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -609,7 +637,7 @@
       "title": "calculating toplists",
       "text": "%md\n## Calculating toplists",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 5:12:30 PM",
+      "dateUpdated": "Aug 26, 2017 8:35:08 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -640,15 +668,15 @@
       "jobName": "paragraph_1503044546878_-1809214236",
       "id": "20170818-102226_25200775",
       "dateCreated": "Aug 18, 2017 10:22:26 AM",
-      "dateStarted": "Aug 22, 2017 5:12:25 PM",
-      "dateFinished": "Aug 22, 2017 5:12:26 PM",
+      "dateStarted": "Aug 26, 2017 8:35:08 AM",
+      "dateFinished": "Aug 26, 2017 8:35:08 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "test_batch \u003d pd.read_csv(\n    \u0027test_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)",
+      "text": "%python\n\ntest_batch \u003d pd.read_csv(\n    \u0027test_batch.csv\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:11:20 PM",
+      "dateUpdated": "Aug 26, 2017 9:08:49 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -672,15 +700,15 @@
       "jobName": "paragraph_1503045269757_1245530043",
       "id": "20170818-103429_1482871678",
       "dateCreated": "Aug 18, 2017 10:34:29 AM",
-      "dateStarted": "Aug 22, 2017 6:11:14 PM",
-      "dateFinished": "Aug 22, 2017 6:11:15 PM",
+      "dateStarted": "Aug 26, 2017 9:08:49 AM",
+      "dateFinished": "Aug 26, 2017 9:10:00 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\nval users \u003d senv.readTextFile(\"train_test_users.csv\")\nval usersForToplist \u003d users.map((x:String) \u003d\u003e Rating(x.toInt,0,0,0))\nval modelStream \u003d VectorModelFileParser.parse(senv, model, numFactors \u003d 10)\n\npsTopKGenerator(\n        usersForToplist,\n        model \u003d modelStream)\n    .addSink(new TopKToFileSink(topKOut))\n    .setParallelism(1)\n\nsenv.execute()",
+      "text": "%flink\n\nval users \u003d senv.readTextFile(\"train_test_users.csv\")\nval usersForToplist \u003d users.map((x:String) \u003d\u003e Rating(x.toInt,0,0,0))\nval modelStream \u003d VectorModelFileParser.parse(senv, modelFile, numFactors \u003d 10)\n\npsTopKGenerator(\n        usersForToplist,\n        model \u003d modelStream)\n    .addSink(new TopKToFileSink(\"flink_topks.csv\"))\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:48:53 AM",
+      "dateUpdated": "Aug 26, 2017 9:10:04 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -709,7 +737,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "users: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@4cf22178\nusersForToplist: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d org.apache.flink.streaming.api.scala.DataStream@4043b9dd\nmodelStream: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@161177db\nres42: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@38691924\nres43: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@7ae158a3\n"
+            "data": "users: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@32b07e0c\nusersForToplist: org.apache.flink.streaming.api.scala.DataStream[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d org.apache.flink.streaming.api.scala.DataStream@3835e8e3\nmodelStream: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.LengthAndVector)]] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@5896540e\nres6: org.apache.flink.streaming.api.datastream.DataStreamSink[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@46254ad\nres7: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@d10f6f1\n"
           }
         ]
       },
@@ -717,15 +745,15 @@
       "jobName": "paragraph_1503045322137_1221583666",
       "id": "20170818-103522_275665771",
       "dateCreated": "Aug 18, 2017 10:35:22 AM",
-      "dateStarted": "Aug 26, 2017 12:48:53 AM",
-      "dateFinished": "Aug 26, 2017 12:49:32 AM",
+      "dateStarted": "Aug 26, 2017 9:10:04 AM",
+      "dateFinished": "Aug 26, 2017 9:10:49 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\ntry:    \n    shutil.rmtree(\u0027sparkPrediction\u0027)\nexcept FileNotFoundError:\n    pass\n\nmodel.save(sc, \"sparkPrediction\")\n\nuser_vectors \u003d pq.read_table(\"sparkPrediction/data/user\").to_pandas()\nuser_vectors.columns \u003d [\u0027user\u0027,\u0027factors\u0027]\nuser_vectors \u003d pd.concat([\n    user_vectors[\u0027user\u0027],\n    user_vectors[\u0027factors\u0027].apply(pd.Series)\n], axis\u003d1)\n\nitem_vectors \u003d pq.read_table(\"sparkPrediction/data/product\").to_pandas()\nitem_vectors.columns \u003d [\u0027item\u0027,\u0027factors\u0027]\nitem_vectors \u003d pd.concat([\n    item_vectors[\u0027item\u0027],\n    item_vectors[\u0027factors\u0027].apply(pd.Series)\n], axis\u003d1)\n\nitem_vectors.set_index(\u0027item\u0027, inplace\u003dTrue)\n\n\ntest_batch \u003d pd.read_csv(\n    \u0027test_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\n\nps \u003d None\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\nrelevant_user_vectors \u003d user_vectors[user_vectors.user.isin(set(train_test_users))]\n\nuser_toplists \u003d []\nfor v in relevant_user_vectors.values:\n    user \u003d v[0]\n    user_vec \u003d pd.Series(v[1:])\n    items \u003d item_vectors\\\n        .multiply(user_vec,axis\u003d1)\\\n        .sum(axis\u003d1) \\\n        .nlargest(100)\\\n        .index\n    for item,rank in zip(items, range(1,101)):\n        user_toplists.append((user,item,rank))\n\nspark_topks \u003d pd.DataFrame.from_records(user_toplists, columns\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])",
+      "text": "%spark.pyspark\n\n# saving the model from spark\n\ntry:\n    shutil.rmtree(\u0027spark_model\u0027)\nexcept FileNotFoundError:\n    pass\nmodel.save(sc, \"spark_model\")\n\n# loading the model to pandas dataframes\n\ndef read_factors(filename, colname):\n    vectors \u003d pq.read_table(filename).to_pandas()\n    vectors.columns \u003d [colname,\u0027factors\u0027]\n    vectors \u003d pd.concat([ vectors[colname], vectors[\u0027factors\u0027].apply(pd.Series) ], axis\u003d1) \n    return vectors\n\nuser_vectors \u003d read_factors(\"spark_model/data/user\", \"user\")\nitem_vectors \u003d read_factors(\"spark_model/data/product\", \"item\")\nitem_vectors.set_index(\u0027item\u0027, inplace\u003dTrue)\n\n# preparing topk generation\n\ntrain_batch \u003d pd.read_csv(\u0027train_batch.csv\u0027, header\u003dNone, names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027])\ntest_batch \u003d pd.read_csv(\u0027test_batch.csv\u0027, header\u003dNone, names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027])\ntrain_test_users \u003d set(train_batch.user) \u0026 set(test_batch.user)\nrelevant_user_vectors \u003d user_vectors[user_vectors.user.isin(train_test_users)]\n\n#calculating the toplists using pandas\n\nuser_toplists \u003d []\n\nfor v in relevant_user_vectors.values:\n    user \u003d v[0]\n    user_vec \u003d pd.Series(v[1:])\n    items \u003d item_vectors\\\n        .multiply(user_vec,axis\u003d1)\\\n        .sum(axis\u003d1)\\\n        .nlargest(100)\\\n        .index\n\n    for item,rank in zip(items, range(1,101)):\n    \tuser_toplists.append((user,item,rank))\n\n#saving the toplists to csv, to be read by the python kernel\n\nspark_topks \u003d pd.DataFrame.from_records(user_toplists, columns\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\nspark_topks.to_csv(\u0027spark_topks.csv\u0027, index\u003dFalse)",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 5:11:49 PM",
+      "dateUpdated": "Aug 26, 2017 9:10:52 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -750,16 +778,54 @@
       "jobName": "paragraph_1503045465374_-1369548579",
       "id": "20170818-103745_516122392",
       "dateCreated": "Aug 18, 2017 10:37:45 AM",
-      "dateStarted": "Aug 22, 2017 4:54:42 PM",
-      "dateFinished": "Aug 22, 2017 4:55:23 PM",
+      "dateStarted": "Aug 26, 2017 9:10:52 AM",
+      "dateFinished": "Aug 26, 2017 9:12:35 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "title": "evaluating toplists",
-      "text": "flink_topks \u003d pd.read_csv(\u0027topK.out\u0027, header\u003dNone, names\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\n\ntest_relevant \u003d test_batch[test_batch.user.isin(train_batch.user)]\ntest_relevant[\u0027score\u0027]\u003d1\n\nprint(NdcgScore(test_relevant, alpenglow_topks))\nprint(NdcgScore(test_relevant, flink_topks))\nprint(NdcgScore(test_relevant, spark_topks))",
+      "text": "%md\n\n# Evaluating toplists using Alpenglow",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 6:16:56 PM",
+      "dateUpdated": "Aug 26, 2017 8:36:05 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eEvaluating toplists using Alpenglow\u003c/h1\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1503729326185_1950281049",
+      "id": "20170826-083526_943791449",
+      "dateCreated": "Aug 26, 2017 8:35:26 AM",
+      "dateStarted": "Aug 26, 2017 8:36:05 AM",
+      "dateFinished": "Aug 26, 2017 8:36:05 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "evaluating toplists using Alpenglow",
+      "text": "%python\n\nflink_topks \u003d pd.read_csv(\u0027flink_topks.csv\u0027, header\u003dNone, names\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\nspark_topks \u003d pd.read_csv(\u0027spark_topks.csv\u0027)\n\ntest_relevant \u003d test_batch[test_batch.user.isin(train_batch.user)]\ntest_relevant[\u0027score\u0027]\u003d1\n\nscores \u003d [NdcgScore(test_relevant, topks) for topks in [alpenglow_topks, flink_topks, spark_topks]]\nx\u003d[1,2,3]\nplt.bar(x, scores)\nplt.title(\u0027Experiment scores\u0027)\nplt.ylabel(\u0027Average NDCG\u0027)\nplt.xticks(x, [\u0027Alpenglow\u0027,\u0027Flink\u0027,\u0027Spark\u0027])\nplt.show()",
+      "user": "anonymous",
+      "dateUpdated": "Aug 26, 2017 9:13:09 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -769,7 +835,7 @@
           "editOnDblClick": false
         },
         "editorMode": "ace/mode/python",
-        "title": true,
+        "title": false,
         "tableHide": false
       },
       "settings": {
@@ -777,11 +843,11 @@
         "forms": {}
       },
       "results": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "msg": [
           {
-            "type": "TEXT",
-            "data": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 275, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 4, in \u003cmodule\u003e\nNameError: name \u0027NdcgScore\u0027 is not defined\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 282, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_python-1145988153383270072.py\", line 275, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 4, in \u003cmodule\u003e\nNameError: name \u0027NdcgScore\u0027 is not defined\n\n"
+            "type": "HTML",
+            "data": "\u003cdiv style\u003d\u0027width:auto;height:auto\u0027\u003e\u003cimg src\u003ddata:image/png;base64,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asSIEXrsscf83T0AAEDABexVOS+//LIeeOAB2Ww2/eAHP1BmZmagugYAAAgovwesDRs26Gc/+5kiIiL04IMP6pJLLvF3lwAAAD3K7wHrmmuuUWxsrIYNG6YlS5ZoyZIlXbY///zz/h4CAABAQPk9YG3evNnfXQAAAAQVvwesSZMm+bsLAACAoOL3dxECAAD0NQQsAAAAiwU8YB06dCjQXQIAAARUwALWq6++qtGjR2vkyJGSpDfeeEPf//73A9U9AABAwAQsYM2fP19/+tOfNGzYMEnSueeee9z3FAIAAJyMAnqJMC4urstySEjICbWrqqpScnKyHA6HioqKum03xmju3LlyOBxKTU3Vjh07JEkNDQ2aPHmyRo8erZSUFD3yyCO+Nvv371dmZqaSkpKUmZmptra2bzAzAACA/y9gASsuLk6vvvqqbDabOjs79ctf/lKjRo06bjuv16vCwkJVVlaqrq5OpaWlqqur61JTWVkpj8cjj8ejkpISFRQUSJJCQ0P1q1/9SnV1daqurtayZct8bYuKijRlyhR5PB5NmTLlmMENAADg6whYwCouLtayZcvU1NQku92u2tpaLVu27Ljtampq5HA4lJiYqLCwMGVnZ6u8vLxLTXl5uWbPni2bzaaMjAy1t7erublZMTExOv/88yVJp512mkaNGqWmpiZfm5ycHElSTk6O1q1bZ/GMAQBAXxWwlz0PHz5cTz/99Fdu19TU1OXSYmxsrLZv337cmqamJsXExPjW1dfXa+fOnRo/frwkqaWlxbd9xIgRamlp+cpjAwAAOJaABay5c+d2WxcRESGn06np06f7te8DBw5oxowZevjhhzV48OBu2202m2w22zHblpSUqKSkRJLU2trq13ECAIDeIWCXCI8cOaLa2lolJSUpKSlJu3btUmNjo1asWKE777zzC9vZ7XY1NDT4lhsbG2W320+4prOzUzNmzNBNN92k66+/3lcTHR2t5uZmSVJzc7OioqKO2X9eXp7cbrfcbrciIyO/+sQBAECfE7CAtWvXLm3evFl33HGH7rjjDr300kt65513tHbtWr344otf2C49PV0ej0d79uxRR0eHysrK5HK5utS4XC6tWbNGxhhVV1crIiJCMTExMsbo1ltv1ahRo3TXXXd1a7N69WpJ0urVq/1+Fg0AAPQdAbtE2NbWpgMHDigiIkKSdPDg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vKKJEyf66dNBTzh8+LDv8uB111133Prm5mZt3bpV69ev18KFC7tse/XVV5Wfn6/y8nKdffbZ/hoygtgVV1yhhoYGnXPOOfr+97+v//3f//Vti4iI0Jtvvqnbb79dd955pyTpkksuUXV1tXbu3Kns7GwtWbLEV19XV6eXXnpJpaWlvnVr165VUVGRKioqNHx4X3vmPf4dlwjRRWlpqebNmydJys7OVmlpabf7CjIzMzVs2DBJ0vXXX6+tW7cqNDRUr7/+utLT0yV99kvx86fjh4WF+e5/GTdunDZu3Cjps1P1n79k+zvf+Y7uueeebuPZunWr7rjjDknSyJEjFR8fr927d2vChAl69NFHddZZZ2natGnauHGjDh06pD179ig5OdnqjwU96FiXCL/Mtddeq379+mn06NFd3jH617/+VXl5eXrxxRd1xhln+GOoOAkMGjRIr7/+ul555RVt3rxZN954o+8evm9/+9u+/86fP1/SZ28AufHGG9Xc3KyOjg6dddZZvn25XC4NGDDAt7xp0ya53W69+OKLGjx4cABnhWBEwILP/v37tWnTJr355puy2Wzyer2y2WwqLCzsUvef72202WwyxignJ0c///nPu+33lFNO8bUJCQmx5H6F9PR0ud1uJSYmKjMzU/v27dPjjz+ucePGfeN94+T2+aUfSfr3p9DExMToyJEj2rlzJwGrjwsJCdGll16qSy+9VGPHjvW91ePf/237/Oc77rhDd911l1wul7Zs2aJFixb5agYOHNhlv2effbbef/997d692/L31uLkwyVC+PzhD3/QrFmztHfvXtXX16uhoUFnnXVWl/c5StLGjRu1f/9+HT58WOvWrdPFF1+sKVOm6A9/+IM++OADSZ+Ftb17935pfxkZGXruueck6Zj3e0nShAkTfJcad+/erb///e9KTk5WWFiY4uLi9Oyzz+rCCy/UhAkT9Mtf/pLLg/hCQ4YM0YYNG/Tf//3f2rJlS08PBz3k3Xfflcfj8S3X1tYqPj5ekvT73//e998LL7xQkvThhx/63mH7eRD7IvHx8Xruuec0e/Zsvf322/4YPk4iBCz4lJaWdrvHZcaMGd3OSl1wwQWaMWOGUlNTNWPGDDmdTo0ePVoPPvigrrjiCqWmpiozM1PNzc1f2t/DDz+sX//610pNTdV7772niIiIbjXf//739emnn2rs2LG68cYbtWrVKt8ZigkTJigqKkoDBgzQhAkT1NjYqAkTJnzDTwG9WXR0tNavX6/CwkJLvpqPk8+BAweUk5Oj0aNHKzU1VXV1db6zUm1tbUpNTdUjjzyi3/zmN5I+u5n9hhtu0Lhx407onqqRI0fq6aef1g033MAXKfo4nuSOr2TVqlVyu91aunTpN97XoUOHNGDAANlsNpWVlam0tFTl5eUWjBIAvpqEhAS53W5uTIdluAcLPeb111/X7bffLmOMhgwZot/+9rc9PSQAACzBGSwAAACLcQ8WAACAxQhYAAAAFiNgAQAAWIyABQAAYDECFgAAgMUIWAAAABYjYAEAAFiMgAUAAGAxAhYAAIDFCFgAAAAWI2ABAABYjIAFAABgMQIWAACAxQhYAAAAFiNgAQAAWIyABQAAYDECFgAAgMUIWAAAABYjYAEAAFiMgAUAAGAxAhYAAIDFCFgAAAAWI2ABAABYjIAFAABgMQIWAACAxQhYAAAAFvt/cV9NLwRuVNQAAAAASUVORK5CYII\u003d style\u003d\u0027width\u003dauto;height:auto\u0027\u003e\u003cdiv\u003e\n"
           }
         ]
       },
@@ -789,9 +855,9 @@
       "jobName": "paragraph_1503046070769_1492675634",
       "id": "20170818-104750_33771494",
       "dateCreated": "Aug 18, 2017 10:47:50 AM",
-      "dateStarted": "Aug 22, 2017 6:16:40 PM",
-      "dateFinished": "Aug 22, 2017 6:16:41 PM",
-      "status": "ERROR",
+      "dateStarted": "Aug 26, 2017 9:13:09 AM",
+      "dateFinished": "Aug 26, 2017 9:13:24 AM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -824,25 +890,25 @@
   "name": "Batch comparison",
   "id": "2CTPCW7W5",
   "angularObjects": {
-    "2CQ5CHCVK:shared_process": [],
-    "2CQA8ANBF:shared_process": [],
-    "2CPUWTNP5:shared_process": [],
-    "2CS666EJY:shared_process": [],
-    "2CQ1SYMWR:shared_process": [],
-    "2CRX78HZ4:shared_process": [],
-    "2CSE5JPER:shared_process": [],
-    "2CPEJRKEY:shared_process": [],
-    "2CR9VJ4VU:shared_process": [],
-    "2CQ144JX5:shared_process": [],
-    "2CNWA3851:shared_process": [],
-    "2CRTAP1ZV:shared_process": [],
-    "2CQVGSGZX:shared_process": [],
-    "2CRQ2EJN1:shared_process": [],
-    "2CS38SHJX:shared_process": [],
-    "2CNU9Q44Q:shared_process": [],
-    "2CSK5B72V:shared_process": [],
-    "2CRPWHNGP:shared_process": [],
-    "2CS7NTJ4W:shared_process": []
+    "2CPSD3JVN:shared_process": [],
+    "2CTHMT1GV:shared_process": [],
+    "2CQGS1G13:shared_process": [],
+    "2CQP25J13:shared_process": [],
+    "2CSVTJ1WD:shared_process": [],
+    "2CRHBZW4J:shared_process": [],
+    "2CS8WBTWM:shared_process": [],
+    "2CSQGA4P2:shared_process": [],
+    "2CR6XVNKE:shared_process": [],
+    "2CRJA5TDS:shared_process": [],
+    "2CPSNXDD5:shared_process": [],
+    "2CRUYH8EQ:shared_process": [],
+    "2CSBVZER4:shared_process": [],
+    "2CS17P5QV:shared_process": [],
+    "2CRMSVU7S:shared_process": [],
+    "2CTEAU6EE:shared_process": [],
+    "2CQ6E7SK9:shared_process": [],
+    "2CRWEWVY4:shared_process": [],
+    "2CT2K3Z5Q:shared_process": []
   },
   "config": {},
   "info": {}
