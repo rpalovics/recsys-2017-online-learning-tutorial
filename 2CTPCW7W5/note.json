@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/batch.png?raw\u003dtrue\" width\u003d768 alt\u003d\"time-aware batch\"/\u003e\n\u003c/p\u003e",
+      "text": "%md\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/batch.png?raw\u003dtrue\" style\u003d\"max-height:250px\" alt\u003d\"time-aware batch\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:18:46 AM",
+      "dateUpdated": "Aug 26, 2017 8:47:56 AM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -33,7 +33,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/batch.png?raw\u003dtrue\" width\u003d768 alt\u003d\"time-aware batch\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/batch.png?raw\u003dtrue\" style\u003d\"max-height:250px\" alt\u003d\"time-aware batch\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -41,15 +41,15 @@
       "jobName": "paragraph_1503696541121_368202089",
       "id": "20170825-232901_1378667887",
       "dateCreated": "Aug 25, 2017 11:29:01 PM",
-      "dateStarted": "Aug 26, 2017 12:18:46 AM",
-      "dateFinished": "Aug 26, 2017 12:18:46 AM",
+      "dateStarted": "Aug 26, 2017 8:47:56 AM",
+      "dateFinished": "Aug 26, 2017 8:47:56 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/mf.png?raw\u003dtrue\" alt\u003d\"mf\"/\u003e\n\u003c/p\u003e",
+      "text": "%md\n\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/mf.png?raw\u003dtrue\" style\u003d\"max-height:250px\" alt\u003d\"mf\"/\u003e\n\u003c/p\u003e",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:42:20 PM",
+      "dateUpdated": "Aug 26, 2017 8:48:07 AM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -79,7 +79,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/mf.png?raw\u003dtrue\" alt\u003d\"mf\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/recsys-2017-online-learning-tutorial/blob/master/figs/mf.png?raw\u003dtrue\" style\u003d\"max-height:250px\" alt\u003d\"mf\"/\u003e\n\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -87,8 +87,8 @@
       "jobName": "paragraph_1503697309960_235563886",
       "id": "20170825-234149_1906417647",
       "dateCreated": "Aug 25, 2017 11:41:49 PM",
-      "dateStarted": "Aug 25, 2017 11:42:07 PM",
-      "dateFinished": "Aug 25, 2017 11:42:07 PM",
+      "dateStarted": "Aug 26, 2017 8:48:07 AM",
+      "dateFinished": "Aug 26, 2017 8:48:07 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
