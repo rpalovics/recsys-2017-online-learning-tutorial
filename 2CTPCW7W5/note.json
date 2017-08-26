@@ -253,7 +253,7 @@
     {
       "text": "%python\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib\nimport matplotlib.pyplot as plt\nimport alpenglow as ag\nfrom alpenglow.offline.models import FactorModel\nfrom alpenglow.offline.evaluation import NdcgScore",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:14:25 PM",
+      "dateUpdated": "Aug 26, 2017 10:02:20 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -277,15 +277,15 @@
       "jobName": "paragraph_1503043976596_1345513851",
       "id": "20170818-101256_1862447283",
       "dateCreated": "Aug 18, 2017 10:12:56 AM",
-      "dateStarted": "Aug 26, 2017 12:14:25 PM",
-      "dateFinished": "Aug 26, 2017 12:14:26 PM",
+      "dateStarted": "Aug 26, 2017 10:02:21 PM",
+      "dateFinished": "Aug 26, 2017 10:02:23 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%flink\r\n\r\nimport hu.sztaki.ilab.ps.matrix.factorization.Utils._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\r\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMPForTutorial._\r\n\r\nsenv.setParallelism(4)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:04:18 AM",
+      "dateUpdated": "Aug 26, 2017 10:03:57 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -314,19 +314,27 @@
       "jobName": "paragraph_1503043992138_-1755346101",
       "id": "20170818-101312_1674360328",
       "dateCreated": "Aug 18, 2017 10:13:12 AM",
-      "dateStarted": "Aug 26, 2017 9:04:19 AM",
-      "dateFinished": "Aug 26, 2017 9:04:24 AM",
+      "dateStarted": "Aug 26, 2017 10:03:57 PM",
+      "dateFinished": "Aug 26, 2017 10:04:13 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark.pyspark\n\nfrom pyspark.mllib.recommendation import ALS, MatrixFactorizationModel, Rating\nimport pandas as pd\nimport shutil\nimport pyarrow.parquet as pq",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:04:20 AM",
+      "dateUpdated": "Aug 26, 2017 9:50:37 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
-        "results": {},
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 84.0,
+              "optionOpen": false
+            }
+          }
+        },
         "editorSetting": {
           "language": "python",
           "editOnDblClick": false
@@ -339,23 +347,36 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
-        "msg": []
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\n\n\n\n\n\n\n\n\n\n\n\n\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-4214402422750862188.py\", line 22, in \u003cmodule\u003e\n    from pyspark.conf import SparkConf\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 961, in _find_and_load\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 950, in _find_and_load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 646, in _load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 616, in _load_backward_compatible\n  File \"/home/rpalovics/zeppelin-0.7.2-bin-all/interpreter/spark/pyspark/pyspark.zip/pyspark/__init__.py\", line 44, in \u003cmodule\u003e\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 961, in _find_and_load\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 950, in _find_and_load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 646, in _load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 616, in _load_backward_compatible\n  File \"/home/rpalovics/zeppelin-0.7.2-bin-all/interpreter/spark/pyspark/pyspark.zip/pyspark/context.py\", line 40, in \u003cmodule\u003e\n  File \"\u003cfrozen importlib._bootstra\n\n\n\n\n\n\n\n\n\n\n\np\u003e\", line 961, in _find_and_load\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 950, in _find_and_load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 646, in _load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 616, in _load_backward_compatible\n  File \"/home/rpalovics/zeppelin-0.7.2-bin-all/interpreter/spark/pyspark/pyspark.zip/pyspark/rdd.py\", line 47, in \u003cmodule\u003e\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 961, in _find_and_load\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 950, in _find_and_load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 646, in _load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 616, in _load_backward_compatible\n  File \"/home/rpalovics/zeppelin-0.7.2-bin-all/interpreter/spark/pyspark/pyspark.zip/pyspark/statcounter.py\", line 24, in \u003cmodule\u003e\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/__init__.py\", line 142, in \u003cmodule\u003e\n    from . import add_newdocs\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/a\n\n\n\n\n\n\n\n\n\n\n\n\n\ndd_newdocs.py\", line 13, in \u003cmodule\u003e\n    from numpy.lib import add_newdoc\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/lib/__init__.py\", line 8, in \u003cmodule\u003e\n    from .type_check import *\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/lib/type_check.py\", line 11, in \u003cmodule\u003e\n    import numpy.core.numeric as _nx\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/core/__init__.py\", line 74, in \u003cmodule\u003e\n    from numpy.testing.nosetester import _numpy_tester\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/testing/__init__.py\", line 10, in \u003cmodule\u003e\n    from unittest import TestCase\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/unittest/__init__.py\", line 58, in \u003cmodule\u003e\n    from .result import TestResult\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/unittest/result.py\", line 7, in \u003cmodule\u003e\n    from . import util\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/unittest/u\n\n\n\ntil.py\", line 119, in \u003cmodule\u003e\n    _Mismatch \u003d namedtuple(\u0027Mismatch\u0027, \u0027actual expected value\u0027)\n  File \"/home/rpalovics/zeppelin-0.7.2-bin-all/interpreter/spark/pyspark/pyspark.zip/pyspark/serializers.py\", line 393, in namedtuple\nTypeError: namedtuple() missing 3 required keyword-only arguments: \u0027verbose\u0027, \u0027rename\u0027, and \u0027module\u0027\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "\n\n\n\n\n\n\n\n\n\n\n\n\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-4214402422750862188.py\", line 22, in \u003cmodule\u003e\n    from pyspark.conf import SparkConf\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 961, in _find_and_load\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 950, in _find_and_load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 646, in _load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 616, in _load_backward_compatible\n  File \"/home/rpalovics/zeppelin-0.7.2-bin-all/interpreter/spark/pyspark/pyspark.zip/pyspark/__init__.py\", line 44, in \u003cmodule\u003e\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 961, in _find_and_load\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 950, in _find_and_load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 646, in _load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 616, in _load_backward_compatible\n  File \"/home/rpalovics/zeppelin-0.7.2-bin-all/interpreter/spark/pyspark/pyspark.zip/pyspark/context.py\", line 40, in \u003cmodule\u003e\n  File \"\u003cfrozen importlib._bootstra\n\n\n\n\n\n\n\n\n\n\n\np\u003e\", line 961, in _find_and_load\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 950, in _find_and_load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 646, in _load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 616, in _load_backward_compatible\n  File \"/home/rpalovics/zeppelin-0.7.2-bin-all/interpreter/spark/pyspark/pyspark.zip/pyspark/rdd.py\", line 47, in \u003cmodule\u003e\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 961, in _find_and_load\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 950, in _find_and_load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 646, in _load_unlocked\n  File \"\u003cfrozen importlib._bootstrap\u003e\", line 616, in _load_backward_compatible\n  File \"/home/rpalovics/zeppelin-0.7.2-bin-all/interpreter/spark/pyspark/pyspark.zip/pyspark/statcounter.py\", line 24, in \u003cmodule\u003e\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/__init__.py\", line 142, in \u003cmodule\u003e\n    from . import add_newdocs\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/a\n\n\n\n\n\n\n\n\n\n\n\n\n\ndd_newdocs.py\", line 13, in \u003cmodule\u003e\n    from numpy.lib import add_newdoc\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/lib/__init__.py\", line 8, in \u003cmodule\u003e\n    from .type_check import *\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/lib/type_check.py\", line 11, in \u003cmodule\u003e\n    import numpy.core.numeric as _nx\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/core/__init__.py\", line 74, in \u003cmodule\u003e\n    from numpy.testing.nosetester import _numpy_tester\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/site-packages/numpy/testing/__init__.py\", line 10, in \u003cmodule\u003e\n    from unittest import TestCase\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/unittest/__init__.py\", line 58, in \u003cmodule\u003e\n    from .result import TestResult\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/unittest/result.py\", line 7, in \u003cmodule\u003e\n    from . import util\n  File \"/home/rpalovics/Programs/anaconda3/lib/python3.6/unittest/u\n\n\n\ntil.py\", line 119, in \u003cmodule\u003e\n    _Mismatch \u003d namedtuple(\u0027Mismatch\u0027, \u0027actual expected value\u0027)\n  File \"/home/rpalovics/zeppelin-0.7.2-bin-all/interpreter/spark/pyspark/pyspark.zip/pyspark/serializers.py\", line 393, in namedtuple\nTypeError: namedtuple() missing 3 required keyword-only arguments: \u0027verbose\u0027, \u0027rename\u0027, and \u0027module\u0027\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "pyspark is not responding"
+          }
+        ]
       },
       "apps": [],
       "jobName": "paragraph_1503044018011_1384250897",
       "id": "20170818-101338_623641606",
       "dateCreated": "Aug 18, 2017 10:13:38 AM",
-      "dateStarted": "Aug 26, 2017 9:04:20 AM",
-      "dateFinished": "Aug 26, 2017 9:05:22 AM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 26, 2017 9:49:49 PM",
+      "dateFinished": "Aug 26, 2017 9:50:19 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "reading data",
-      "text": "%md\n## Reading the data",
+      "text": "%md\n## Reading the data\n\n* In python, we use pandas to read the csv file into a dataframe.\n* In Flink, we use the ImplicitDataParser class to read the file into a datastream of Rating objects.\n* In Spark, we use Spark\u0027s textFile function to read the data as raw text, and parse the csv format into an RDD of Rating objects using maps.",
       "user": "anonymous",
-      "dateUpdated": "Aug 25, 2017 11:22:08 PM",
+      "dateUpdated": "Aug 26, 2017 9:35:13 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -378,7 +399,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eReading the data\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eReading the data\u003c/h2\u003e\n\u003cul\u003e\n  \u003cli\u003eIn python, we use pandas to read the csv file into a dataframe.\u003c/li\u003e\n  \u003cli\u003eIn Flink, we use the ImplicitDataParser class to read the file into a datastream of Rating objects.\u003c/li\u003e\n  \u003cli\u003eIn Spark, we use Spark\u0026rsquo;s textFile function to read the data as raw text, and parse the csv format into an RDD of Rating objects using maps.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -386,15 +407,15 @@
       "jobName": "paragraph_1503044468987_248899576",
       "id": "20170818-102108_1984320246",
       "dateCreated": "Aug 18, 2017 10:21:08 AM",
-      "dateStarted": "Aug 25, 2017 11:22:08 PM",
-      "dateFinished": "Aug 25, 2017 11:22:08 PM",
+      "dateStarted": "Aug 26, 2017 9:35:13 PM",
+      "dateFinished": "Aug 26, 2017 9:35:13 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%python\n\ntrain_batch \u003d pd.read_csv(\n    \u0027train_batch.csv\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)",
+      "text": "%python\n\ntrain_batch \u003d pd.read_csv(\n    \u0027recsys-2017-tutorial/train_batch.csv\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:14:27 PM",
+      "dateUpdated": "Aug 26, 2017 10:02:29 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -418,15 +439,15 @@
       "jobName": "paragraph_1503044042861_-1196062407",
       "id": "20170818-101402_497732565",
       "dateCreated": "Aug 18, 2017 10:14:02 AM",
-      "dateStarted": "Aug 26, 2017 12:14:27 PM",
-      "dateFinished": "Aug 26, 2017 12:14:27 PM",
+      "dateStarted": "Aug 26, 2017 10:02:29 PM",
+      "dateFinished": "Aug 26, 2017 10:02:29 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flink\n\nval trainFile \u003d \"train_batch.csv\"\nval testFile \u003d \"test_batch.csv\"\nval modelFile \u003d \"flink_model\"\n\nval trainData \u003d ImplicitDataToRatingParser.parse(senv,trainFile,\",\",1,2)",
+      "text": "%flink\n\nval trainFile \u003d \"recsys-2017-tutorial/train_batch.csv\"\nval testFile \u003d \"recsys-2017-tutorial/test_batch.csv\"\nval modelFile \u003d \"flink_model\"\n\nval trainData \u003d ImplicitDataToRatingParser.parse(senv,trainFile,\",\",1,2)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:04:27 AM",
+      "dateUpdated": "Aug 26, 2017 10:04:18 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -447,7 +468,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "trainFile: String \u003d train_batch.csv\ntestFile: String \u003d test_batch.csv\nmodelFile: String \u003d flink_model\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@6458f99f\n"
+            "data": "trainFile: String \u003d recsys-2017-tutorial/train_batch.csv\ntestFile: String \u003d recsys-2017-tutorial/test_batch.csv\nmodelFile: String \u003d flink_model\ntrainData: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@784a204b\n"
           }
         ]
       },
@@ -455,15 +476,15 @@
       "jobName": "paragraph_1503044083369_929721239",
       "id": "20170818-101443_42483437",
       "dateCreated": "Aug 18, 2017 10:14:43 AM",
-      "dateStarted": "Aug 26, 2017 9:04:27 AM",
-      "dateFinished": "Aug 26, 2017 9:04:33 AM",
+      "dateStarted": "Aug 26, 2017 10:04:18 PM",
+      "dateFinished": "Aug 26, 2017 10:04:21 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\n\ntrain \u003d sc.textFile(\"train_batch.csv\")\\\n    .map(lambda l: l.split(\u0027,\u0027))\\\n    .map(lambda l: Rating(int(l[1]), int(l[2]), 1.0))\n",
+      "text": "%spark.pyspark\n\ntrain \u003d sc.textFile(\"recsys-2017-tutorial/train_batch.csv\")\\\n    .map(lambda l: l.split(\u0027,\u0027))\\\n    .map(lambda l: Rating(int(l[1]), int(l[2]), 1.0))\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:04:28 AM",
+      "dateUpdated": "Aug 26, 2017 9:49:33 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -494,9 +515,9 @@
     },
     {
       "title": "training models",
-      "text": "%md\n## Training models",
+      "text": "%md\n## Training models\n\n* Creating a factor model in Alpenglow is pretty straightforward. We set the number of latent dimensions is 10, the learning rate of the SGD process is 0.05 and we iterate over the data 4 times. To handle implicit data, we generate 9 negative samples after each positive sample.\n* Flink\u0027s parameter server based offline matrix factorization model is set up similarly to Alpenglow\u0027s model. We need to add a sink to write the model to disk.\n* In Spark we train the matrix factor model using a iALS instead of SGD; the parameters are thus somewhat different.",
       "user": "anonymous",
-      "dateUpdated": "Aug 22, 2017 5:13:03 PM",
+      "dateUpdated": "Aug 26, 2017 10:54:28 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -519,7 +540,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eTraining models\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eTraining models\u003c/h2\u003e\n\u003cul\u003e\n  \u003cli\u003eCreating a factor model in Alpenglow is pretty straightforward. We set the number of latent dimensions is 10, the learning rate of the SGD process is 0.05 and we iterate over the data 4 times. To handle implicit data, we generate 9 negative samples after each positive sample.\u003c/li\u003e\n  \u003cli\u003eFlink\u0026rsquo;s parameter server based offline matrix factorization model is set up similarly to Alpenglow\u0026rsquo;s model. We need to add a sink to write the model to disk.\u003c/li\u003e\n  \u003cli\u003eIn Spark we train the matrix factor model using a iALS instead of SGD; the parameters are thus somewhat different.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -527,15 +548,15 @@
       "jobName": "paragraph_1503044296819_857543332",
       "id": "20170818-101816_1155782585",
       "dateCreated": "Aug 18, 2017 10:18:16 AM",
-      "dateStarted": "Aug 22, 2017 5:12:57 PM",
-      "dateFinished": "Aug 22, 2017 5:12:57 PM",
+      "dateStarted": "Aug 26, 2017 10:54:28 PM",
+      "dateFinished": "Aug 26, 2017 10:54:29 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%python\n\nmodel \u003d FactorModel(\n    dimension\u003d20,\n    learning_rate\u003d0.05,\n    negative_rate\u003d9,\n    number_of_iterations\u003d4,\n)\nmodel.fit(train_batch)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:14:30 PM",
+      "dateUpdated": "Aug 26, 2017 10:02:33 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -553,21 +574,26 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": []
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nBeginning of 1th iteration.\n\n\nEnd of 1th iteration.\nBeginning of 2th iteration.\n\n\nEnd of 2th iteration.\nBeginning of 3th iteration.\n\n\nEnd of 3th iteration.\nBeginning of 4th iteration.\n\nEnd of 4th iteration.\n"
+          }
+        ]
       },
       "apps": [],
       "jobName": "paragraph_1503044488882_-1534781001",
       "id": "20170818-102128_494115451",
       "dateCreated": "Aug 18, 2017 10:21:28 AM",
-      "dateStarted": "Aug 26, 2017 12:14:30 PM",
-      "dateFinished": "Aug 26, 2017 12:14:45 PM",
+      "dateStarted": "Aug 26, 2017 10:02:34 PM",
+      "dateFinished": "Aug 26, 2017 10:02:48 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%flink\n\npsOfflineMF(\n        trainData,\n        learningRate \u003d 0.05,\n        negativeSampleRate \u003d 9,\n        iterations \u003d 4)\n    .addSink(new VectorModelToFileSink(modelFile))\n    .setParallelism(1)\n\nsenv.execute()",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:04:32 AM",
+      "dateUpdated": "Aug 26, 2017 10:04:24 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -584,11 +610,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "res3: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@4d4a901\nres4: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@fcfbd18\n"
+            "data": "res3: org.apache.flink.streaming.api.datastream.DataStreamSink[Either[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector),(hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, hu.sztaki.ilab.ps.matrix.factorization.Vector.Vector)]] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@27614317\norg.apache.flink.client.program.ProgramInvocationException: The program execution failed: Job execution failed.\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:409)\n  at org.apache.flink.client.program.StandaloneClusterClient.submitJob(StandaloneClusterClient.java:95)\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:382)\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:374)\n  at org.apache.flink.streaming.api.environment.RemoteStreamEnvironment.executeRemotely(RemoteStreamEnvironment.java:209)\n  at org.apache.flink.api.java.ScalaShellRemoteStreamEnvironment.executeRemotely(ScalaShellRemoteStreamEnvironment.java:87)\n  at org.apache.flink.streaming.api.environment.RemoteStreamEnvironment.execute(RemoteStreamEnvironment.java:173)\n  at org.apache.flink.streaming.api.environment.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.java:1429)\n  at org.apache.flink.streaming.api.scala.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.scala:576)\n  ... 36 elided\nCaused by: org.apache.flink.runtime.client.JobExecutionException: Job execution failed.\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply$mcV$sp(JobManager.scala:822)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply(JobManager.scala:768)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply(JobManager.scala:768)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)\n  at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)\n  at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:401)\n  at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)\n  at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.pollAndExecAll(ForkJoinPool.java:1253)\n  at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1346)\n  at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)\n  at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)\nCaused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Not enough free slots available to run the job. You can decrease the operator parallelism or increase the number of slots per TaskManager in the configuration. Task to schedule: \u003c Attempt #0 (IterationSource-11 (2/4)) @ (unassigned) - [SCHEDULED] \u003e with groupID \u003c f37c86be43d289048d26d89a53735a68 \u003e in sharing group \u003c SlotSharingGroup [9644451f44edc2709e5f6a4aaacdd354, 5bee29e1515c23b6a7661ec911f511bd, ce42e97b06f8524cb2d23deead187aef, 2ca0ca3d08e477eabbd855bed0cf5943, 9b0d3f2f18bca7bfc649a0c7f5f21c40, dc924e2b0702c68d0429261b29b75975, a9074083030c548f09a7ae4b0455c9ea, c0cfa2338c26fe6f4f8d64b4d5dcad94, 8cfb0b28362c5d1b54c202f2d3264db7, 9ee3dc4b121880695b86b4b66700bde1] \u003e. Resources available to scheduler: Number of instances\u003d1, total number of slots\u003d1, available slots\u003d0\n  at org.apache.flink.runtime.jobmanager.scheduler.Scheduler.scheduleTask(Scheduler.java:256)\n  at org.apache.flink.runtime.jobmanager.scheduler.Scheduler.scheduleImmediately(Scheduler.java:131)\n  at org.apache.flink.runtime.executiongraph.Execution.scheduleForExecution(Execution.java:306)\n  at org.apache.flink.runtime.executiongraph.ExecutionVertex.scheduleForExecution(ExecutionVertex.java:454)\n  at org.apache.flink.runtime.executiongraph.ExecutionJobVertex.scheduleAll(ExecutionJobVertex.java:326)\n  at org.apache.flink.runtime.executiongraph.ExecutionGraph.scheduleForExecution(ExecutionGraph.java:756)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply$mcV$sp(JobManager.scala:1332)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply(JobManager.scala:1291)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply(JobManager.scala:1291)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)\n  at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)\n  at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:401)\n  at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)\n  at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)\n  ... 2 more\n"
           }
         ]
       },
@@ -596,9 +622,9 @@
       "jobName": "paragraph_1503044504674_-241408440",
       "id": "20170818-102144_2001725201",
       "dateCreated": "Aug 18, 2017 10:21:44 AM",
-      "dateStarted": "Aug 26, 2017 9:04:33 AM",
-      "dateFinished": "Aug 26, 2017 9:08:44 AM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 26, 2017 10:04:25 PM",
+      "dateFinished": "Aug 26, 2017 10:04:28 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -635,9 +661,9 @@
     },
     {
       "title": "calculating toplists",
-      "text": "%md\n## Calculating toplists",
+      "text": "%md\n## Calculating toplists\n\nAlpenglow\u0027s and Flink\u0027s matrix factor model implementations provide utilities to compute top-k predictions using LEMP algorithm, which can speed up the recommendation process. To create toplists based on Spark\u0027s model, we read the factors into Pandas and calculate the toplists by brute-force.",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 8:35:08 AM",
+      "dateUpdated": "Aug 26, 2017 9:46:13 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -660,7 +686,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eCalculating toplists\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eCalculating toplists\u003c/h2\u003e\n\u003cp\u003eAlpenglow\u0026rsquo;s and Flink\u0026rsquo;s matrix factor model implementations provide utilities to compute top-k predictions using LEMP algorithm, which can speed up the recommendation process. To create toplists based on Spark\u0026rsquo;s model, we read the factors into Pandas and calculate the toplists by brute-force.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -668,15 +694,15 @@
       "jobName": "paragraph_1503044546878_-1809214236",
       "id": "20170818-102226_25200775",
       "dateCreated": "Aug 18, 2017 10:22:26 AM",
-      "dateStarted": "Aug 26, 2017 8:35:08 AM",
-      "dateFinished": "Aug 26, 2017 8:35:08 AM",
+      "dateStarted": "Aug 26, 2017 9:46:13 PM",
+      "dateFinished": "Aug 26, 2017 9:46:13 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%python\n\ntest_batch \u003d pd.read_csv(\n    \u0027test_batch.csv\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)\nalpenglow_topks.to_csv(\u0027alpenglow_topks.csv\u0027, index\u003dFalse)",
+      "text": "%python\n\ntrain_test_users \u003d pd.read_csv(\u0027train_test_users.csv\u0027).values[:,0]\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)\nalpenglow_topks.to_csv(\u0027alpenglow_topks.csv\u0027, index\u003dFalse)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:16:07 PM",
+      "dateUpdated": "Aug 26, 2017 10:02:50 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -700,8 +726,8 @@
       "jobName": "paragraph_1503045269757_1245530043",
       "id": "20170818-103429_1482871678",
       "dateCreated": "Aug 18, 2017 10:34:29 AM",
-      "dateStarted": "Aug 26, 2017 12:16:07 PM",
-      "dateFinished": "Aug 26, 2017 12:17:04 PM",
+      "dateStarted": "Aug 26, 2017 10:02:50 PM",
+      "dateFinished": "Aug 26, 2017 10:03:45 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -751,9 +777,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\n\n# saving the model from spark\n\ntry:\n    shutil.rmtree(\u0027spark_model\u0027)\nexcept FileNotFoundError:\n    pass\nmodel.save(sc, \"spark_model\")\n\n# loading the model to pandas dataframes\n\ndef read_factors(filename, colname):\n    vectors \u003d pq.read_table(filename).to_pandas()\n    vectors.columns \u003d [colname,\u0027factors\u0027]\n    vectors \u003d pd.concat([ vectors[colname], vectors[\u0027factors\u0027].apply(pd.Series) ], axis\u003d1) \n    return vectors\n\nuser_vectors \u003d read_factors(\"spark_model/data/user\", \"user\")\nitem_vectors \u003d read_factors(\"spark_model/data/product\", \"item\")\nitem_vectors.set_index(\u0027item\u0027, inplace\u003dTrue)\n\n# preparing topk generation\n\ntrain_batch \u003d pd.read_csv(\u0027train_batch.csv\u0027, header\u003dNone, names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027])\ntest_batch \u003d pd.read_csv(\u0027test_batch.csv\u0027, header\u003dNone, names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027])\ntrain_test_users \u003d set(train_batch.user) \u0026 set(test_batch.user)\nrelevant_user_vectors \u003d user_vectors[user_vectors.user.isin(train_test_users)]\n\n#calculating the toplists using pandas\n\nuser_toplists \u003d []\n\nfor v in relevant_user_vectors.values:\n    user \u003d v[0]\n    user_vec \u003d pd.Series(v[1:])\n    items \u003d item_vectors\\\n        .multiply(user_vec,axis\u003d1)\\\n        .sum(axis\u003d1)\\\n        .nlargest(100)\\\n        .index\n\n    for item,rank in zip(items, range(1,101)):\n    \tuser_toplists.append((user,item,rank))\n\n#saving the toplists to csv, to be read by the python kernel\n\nspark_topks \u003d pd.DataFrame.from_records(user_toplists, columns\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\nspark_topks.to_csv(\u0027spark_topks.csv\u0027, index\u003dFalse)",
+      "text": "%spark.pyspark\n\n# saving the model from spark\n\ntry:\n    shutil.rmtree(\u0027spark_model\u0027)\nexcept FileNotFoundError:\n    pass\nmodel.save(sc, \"spark_model\")\n\n# loading the model to pandas dataframes\n\ndef read_factors(filename, colname):\n    vectors \u003d pq.read_table(filename).to_pandas()\n    vectors.columns \u003d [colname,\u0027factors\u0027]\n    vectors \u003d pd.concat([ vectors[colname], vectors[\u0027factors\u0027].apply(pd.Series) ], axis\u003d1) \n    return vectors\n\nuser_vectors \u003d read_factors(\"spark_model/data/user\", \"user\")\nitem_vectors \u003d read_factors(\"spark_model/data/product\", \"item\")\nitem_vectors.set_index(\u0027item\u0027, inplace\u003dTrue)\n\n# preparing topk generation\ntrain_test_users \u003d pd.read_csv(\u0027recsys-2017-tutorial/train_test_users.csv\u0027)\nrelevant_user_vectors \u003d user_vectors[user_vectors.user.isin(train_test_users)]\n\n#calculating the toplists using pandas\n\nuser_toplists \u003d []\n\nfor v in relevant_user_vectors.values:\n    user \u003d v[0]\n    user_vec \u003d pd.Series(v[1:])\n    items \u003d item_vectors\\\n        .multiply(user_vec,axis\u003d1)\\\n        .sum(axis\u003d1)\\\n        .nlargest(100)\\\n        .index\n\n    for item,rank in zip(items, range(1,101)):\n    \tuser_toplists.append((user,item,rank))\n\n#saving the toplists to csv, to be read by the python kernel\n\nspark_topks \u003d pd.DataFrame.from_records(user_toplists, columns\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\nspark_topks.to_csv(\u0027spark_topks.csv\u0027, index\u003dFalse)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:10:52 AM",
+      "dateUpdated": "Aug 26, 2017 9:54:25 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -890,25 +916,25 @@
   "name": "Batch comparison",
   "id": "2CTPCW7W5",
   "angularObjects": {
-    "2CPSD3JVN:shared_process": [],
-    "2CTHMT1GV:shared_process": [],
-    "2CQGS1G13:shared_process": [],
-    "2CQP25J13:shared_process": [],
-    "2CSVTJ1WD:shared_process": [],
-    "2CRHBZW4J:shared_process": [],
-    "2CS8WBTWM:shared_process": [],
-    "2CSQGA4P2:shared_process": [],
-    "2CR6XVNKE:shared_process": [],
-    "2CRJA5TDS:shared_process": [],
-    "2CPSNXDD5:shared_process": [],
-    "2CRUYH8EQ:shared_process": [],
-    "2CSBVZER4:shared_process": [],
-    "2CS17P5QV:shared_process": [],
-    "2CRMSVU7S:shared_process": [],
-    "2CTEAU6EE:shared_process": [],
-    "2CQ6E7SK9:shared_process": [],
-    "2CRWEWVY4:shared_process": [],
-    "2CT2K3Z5Q:shared_process": []
+    "2CQWNXBEY:shared_process": [],
+    "2CSJQQJ95:shared_process": [],
+    "2CTUNZE3G:shared_process": [],
+    "2CR5RQUS7:shared_process": [],
+    "2CQS16XH5:shared_process": [],
+    "2CS2GXSX5:shared_process": [],
+    "2CQYKYY8D:shared_process": [],
+    "2CT4ZCVQZ:shared_process": [],
+    "2CTZWMRUG:shared_process": [],
+    "2CTVHC8J2:shared_process": [],
+    "2CQFQ7ENM:shared_process": [],
+    "2CQG8P7FY:shared_process": [],
+    "2CSVSZGBK:shared_process": [],
+    "2CU2J9DMS:shared_process": [],
+    "2CRSB3U4X:shared_process": [],
+    "2CU1B4MPR:shared_process": [],
+    "2CTNFC8WU:shared_process": [],
+    "2CS5MUQWK:shared_process": [],
+    "2CRTAY5F7:shared_process": []
   },
   "config": {},
   "info": {}

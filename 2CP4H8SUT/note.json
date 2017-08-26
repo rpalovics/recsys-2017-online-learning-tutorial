@@ -153,9 +153,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "import hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGenerator._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGeneratorWithModelLoad._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._ \nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMP._ \n\nimport org.apache.flink.streaming.api.scala._\nimport java.io.PrintWriter\nimport java.io.File",
+      "text": "import hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGenerator._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGeneratorWithModelLoad._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._ \nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMP._ \n\nimport org.apache.flink.streaming.api.scala._\nimport java.io.PrintWriter\nimport java.io.File\n\nsenv.setParallelism(1)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 11:14:34 AM",
+      "dateUpdated": "Aug 26, 2017 9:28:03 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -176,7 +176,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "import hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGenerator._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGeneratorWithModelLoad._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMP._\nimport org.apache.flink.streaming.api.scala._\nimport java.io.PrintWriter\nimport java.io.File\nstartTimestamp: Long \u003d 1390209860\ninputPath: String \u003d data_session\noutputPathNoLearn: String \u003d ndcg.online.out\nmodelPath: String \u003d model\n"
+            "data": "import hu.sztaki.ilab.ps.matrix.factorization.Utils._\nimport hu.sztaki.ilab.ps.matrix.factorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.sinks._\nimport hu.sztaki.ilab.ps.matrix.factorization.data.parsers._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGenerator._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOnlineLearnerAndTopKGeneratorWithModelLoad._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSOfflineMatrixFactorization._\nimport hu.sztaki.ilab.ps.matrix.factorization.PSTopKGeneratorWithLEMP._\nimport org.apache.flink.streaming.api.scala._\nimport java.io.PrintWriter\nimport java.io.File\n"
           }
         ]
       },
@@ -184,16 +184,16 @@
       "jobName": "paragraph_1503481249441_-1020486862",
       "id": "20170823-114049_825147051",
       "dateCreated": "Aug 23, 2017 11:40:49 AM",
-      "dateStarted": "Aug 26, 2017 10:49:26 AM",
-      "dateFinished": "Aug 26, 2017 10:49:32 AM",
+      "dateStarted": "Aug 26, 2017 9:28:03 PM",
+      "dateFinished": "Aug 26, 2017 9:28:07 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Input and output file names",
-      "text": "val folder \u003d \"flinkData/\"\n\nval startTimestamp \u003d {\n    val infile_reader \u003d new java.io.BufferedReader(new java.io.FileReader(folder + \"data.csv\"))\n    val s \u003dinfile_reader.readLine().split(\",\")(0).toLong\n    infile_reader.close()\n    s\n}\n\nval inputPath \u003d \"week_\"\nval outputPathNoLearn \u003d \"ndcg.no.learn.out\"\nval outputOnline \u003d \"ndcg.online.out\"\nval outputPath \u003d \"ndcg.out\"\nval modelPath \u003d \"model\"\nval dayInSec \u003d 86400",
+      "text": "val folder \u003d \"/home/rpalovics/recsys-2017-tutorial/\"\n\nval startTimestamp \u003d {\n    val infile_reader \u003d new java.io.BufferedReader(new java.io.FileReader(folder + \"data.csv\"))\n    val s \u003dinfile_reader.readLine().split(\",\")(0).toLong\n    infile_reader.close()\n    s\n}\n\nval inputPath \u003d \"week_\"\nval outputPathNoLearn \u003d \"ndcg.no.learn.out\"\nval outputOnline \u003d \"ndcg.online.out\"\nval outputPath \u003d \"ndcg.out\"\nval modelPath \u003d \"model\"\nval dayInSec \u003d 86400",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:22:38 PM",
+      "dateUpdated": "Aug 26, 2017 9:28:12 PM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -215,7 +215,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "folder: String \u003d flinkData/\nstartTimestamp: Long \u003d 1390209860\ninputPath: String \u003d week_\noutputPathNoLearn: String \u003d ndcg.no.learn.out\noutputOnline: String \u003d ndcg.online.out\noutputPath: String \u003d ndcg.out\nmodelPath: String \u003d model\ndayInSec: Int \u003d 86400\n"
+            "data": "folder: String \u003d /home/rpalovics/recsys-2017-tutorial/\nstartTimestamp: Long \u003d 1390209860\ninputPath: String \u003d week_\noutputPathNoLearn: String \u003d ndcg.no.learn.out\noutputOnline: String \u003d ndcg.online.out\noutputPath: String \u003d ndcg.out\nmodelPath: String \u003d model\ndayInSec: Int \u003d 86400\n"
           }
         ]
       },
@@ -223,16 +223,16 @@
       "jobName": "paragraph_1503738868331_-1553777211",
       "id": "20170826-111428_1622517952",
       "dateCreated": "Aug 26, 2017 11:14:28 AM",
-      "dateStarted": "Aug 26, 2017 12:22:38 PM",
-      "dateFinished": "Aug 26, 2017 12:22:40 PM",
+      "dateStarted": "Aug 26, 2017 9:28:12 PM",
+      "dateFinished": "Aug 26, 2017 9:28:17 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Slicing data",
-      "text": "%python\nimport pandas as pd\n\nweek \u003d 604800\n\nfolder \u003d \"flinkData/\"\n\ndata \u003d pd.read_csv(folder + \"data.csv\", names\u003d[\"time\",\"user\",\"item\"],sep\u003d\",\")\n\nstart_time \u003d data.time[0]\n\nfor i in range(15):\n    data[(data.time \u003e (start_time + i*week)) \u0026 (data.time \u003c\u003d (start_time + (i+1)*week))].to_csv(folder + \u0027week_\u0027+str(i+1), index\u003dFalse, header\u003dFalse)\n\n\ndata[data.time \u003c (start_time + 15 * week)].to_csv(folder + \"week_all\", index\u003dFalse, header\u003dFalse)",
+      "text": "%python\nimport pandas as pd\n\nweek \u003d 604800\n\nfolder \u003d \"/home/rpalovics/recsys-2017-tutorial/\"\n\ndata \u003d pd.read_csv(folder + \"data.csv\", names\u003d[\"time\",\"user\",\"item\"],sep\u003d\",\")\n\nstart_time \u003d data.time[0]\n\nfor i in range(15):\n    data[(data.time \u003e (start_time + i*week)) \u0026 (data.time \u003c\u003d (start_time + (i+1)*week))].to_csv(folder + \u0027week_\u0027+str(i+1), index\u003dFalse, header\u003dFalse)\n\n\ndata[data.time \u003c (start_time + 15 * week)].to_csv(folder + \"week_all\", index\u003dFalse, header\u003dFalse)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:22:28 PM",
+      "dateUpdated": "Aug 26, 2017 9:22:34 PM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -257,15 +257,15 @@
       "jobName": "paragraph_1503738370776_-1131440055",
       "id": "20170826-110610_524604246",
       "dateCreated": "Aug 26, 2017 11:06:10 AM",
-      "dateStarted": "Aug 26, 2017 12:22:28 PM",
-      "dateFinished": "Aug 26, 2017 12:22:29 PM",
+      "dateStarted": "Aug 26, 2017 9:22:34 PM",
+      "dateFinished": "Aug 26, 2017 9:22:38 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "// Online learning\n\nval ratings \u003d ImplicitDataToRatingParser.parse(senv, folder +  inputPath+\"all\", \",\", 1, 2, 0, startTimestamp)\n\nval topK \u003d psOnlineLearnerAndGenerator(\n        ratings,\n        learningRate \u003d 0.4,\n        negativeSampleRate \u003d 9)\n    \nnDCGSink.nDCGPeriodsToCsv(topK, folder + outputPath+\"all\", dayInSec)\n\nsenv execute s\"Online evaluation with learning\"\n",
+      "text": "// Online learning\n\nval ratings \u003d ImplicitDataToRatingParser.parse(senv, folder +  inputPath+\"all\", \",\", 1, 2, 0, startTimestamp)\n\nval topK \u003d psOnlineLearnerAndGenerator(\n        ratings,\n        learningRate \u003d 0.4,\n        negativeSampleRate \u003d 9)\n\nnDCGSink.nDCGPeriodsToCsv(topK, folder + outputPath+\"all\", dayInSec)\n\nsenv execute s\"Online evaluation with learning\"\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:24:13 PM",
+      "dateUpdated": "Aug 26, 2017 9:28:18 PM",
       "config": {
         "colWidth": 3.0,
         "enabled": true,
@@ -282,11 +282,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "ratings: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@2e98bb20\ntopK: org.apache.flink.streaming.api.scala.DataStream[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, Long, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@256e5908\nres71: org.apache.flink.api.common.JobExecutionResult \u003d org.apache.flink.api.common.JobExecutionResult@1cb2fb5d\n"
+            "data": "ratings: hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions[hu.sztaki.ilab.ps.matrix.factorization.Utils.Rating] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@6fd548f8\ntopK: org.apache.flink.streaming.api.scala.DataStream[(hu.sztaki.ilab.ps.matrix.factorization.Utils.UserId, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId, Long, List[(Double, hu.sztaki.ilab.ps.matrix.factorization.Utils.ItemId)])] \u003d hu.sztaki.ilab.ps.utils.DataStreamWithNameableFunctions@1b048113\norg.apache.flink.client.program.ProgramInvocationException: The program execution failed: Job execution failed.\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:409)\n  at org.apache.flink.client.program.StandaloneClusterClient.submitJob(StandaloneClusterClient.java:95)\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:382)\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:374)\n  at org.apache.flink.streaming.api.environment.RemoteStreamEnvironment.executeRemotely(RemoteStreamEnvironment.java:209)\n  at org.apache.flink.api.java.ScalaShellRemoteStreamEnvironment.executeRemotely(ScalaShellRemoteStreamEnvironment.java:87)\n  at org.apache.flink.streaming.api.environment.RemoteStreamEnvironment.execute(RemoteStreamEnvironment.java:173)\n  at org.apache.flink.streaming.api.scala.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.scala:585)\n  ... 36 elided\nCaused by: org.apache.flink.runtime.client.JobExecutionException: Job execution failed.\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply$mcV$sp(JobManager.scala:822)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply(JobManager.scala:768)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply(JobManager.scala:768)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)\n  at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)\n  at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:401)\n  at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)\n  at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)\n  at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)\n  at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)\nCaused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Not enough free slots available to run the job. You can decrease the operator parallelism or increase the number of slots per TaskManager in the configuration. Task to schedule: \u003c Attempt #0 (IterationSource-8 (2/4)) @ (unassigned) - [SCHEDULED] \u003e with groupID \u003c 3e7780df992c5868f535fcec602cf267 \u003e in sharing group \u003c SlotSharingGroup [9644451f44edc2709e5f6a4aaacdd354, d6085a73a9ead496a0024d8945542752, 6130d7ed4cb86c28b9656326ed630542, 70c0e45340cee761be109aadcb18ec76, 6c7d0f8b934f71e6eca46113b6ee7806, 405c071dc79bc3e80623200068fca981, d93843430e76767b4ed9ee1f2512a54a, 9ee3dc4b121880695b86b4b66700bde1] \u003e. Resources available to scheduler: Number of instances\u003d1, total number of slots\u003d1, available slots\u003d0\n  at org.apache.flink.runtime.jobmanager.scheduler.Scheduler.scheduleTask(Scheduler.java:256)\n  at org.apache.flink.runtime.jobmanager.scheduler.Scheduler.scheduleImmediately(Scheduler.java:131)\n  at org.apache.flink.runtime.executiongraph.Execution.scheduleForExecution(Execution.java:306)\n  at org.apache.flink.runtime.executiongraph.ExecutionVertex.scheduleForExecution(ExecutionVertex.java:454)\n  at org.apache.flink.runtime.executiongraph.ExecutionJobVertex.scheduleAll(ExecutionJobVertex.java:326)\n  at org.apache.flink.runtime.executiongraph.ExecutionGraph.scheduleForExecution(ExecutionGraph.java:756)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply$mcV$sp(JobManager.scala:1332)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply(JobManager.scala:1291)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply(JobManager.scala:1291)\n  ... 8 more\n"
           }
         ]
       },
@@ -294,15 +294,15 @@
       "jobName": "paragraph_1503322068919_1316307051",
       "id": "20170821-152748_1223995053",
       "dateCreated": "Aug 21, 2017 3:27:48 PM",
-      "dateStarted": "Aug 26, 2017 12:24:13 PM",
-      "dateFinished": "Aug 26, 2017 12:29:40 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 26, 2017 9:28:18 PM",
+      "dateFinished": "Aug 26, 2017 9:28:24 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "/**\n * Evaluates a model with online learning\n * @oaram   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef OnlineLearnAndEvaluate(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, folder + input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, folder + model)\n    \n    val topK \u003d psOnlineLearnerAndGeneratorWithModelLoad(parsedModel)(\n        ratings,\n        learningRate \u003d 0.35,\n        negativeSampleRate \u003d 4)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, folder + output, dayInSec)\n    \n    senv execute s\"Online evaluation of model $model with learning\"\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:30:37 PM",
+      "dateUpdated": "Aug 26, 2017 9:09:33 PM",
       "config": {
         "colWidth": 3.0,
         "enabled": true,
@@ -331,15 +331,15 @@
       "jobName": "paragraph_1503658858161_2036511437",
       "id": "20170825-130058_1429453150",
       "dateCreated": "Aug 25, 2017 1:00:58 PM",
-      "dateStarted": "Aug 26, 2017 12:30:37 PM",
-      "dateFinished": "Aug 26, 2017 12:30:38 PM",
+      "dateStarted": "Aug 26, 2017 9:09:33 PM",
+      "dateFinished": "Aug 26, 2017 9:09:35 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "/**\n * Learning in batch\n * @param   inputs  an array containing the names of input files\n * @param   output  the name of the output file\n */\ndef BatchLearn(inputs: Array[String], output: String) {\n    val data \u003d ImplicitDataToRatingParser.parseAll(senv, inputs.map(i \u003d\u003e folder + i), \",\", 1, 2, 0, startTimestamp)\n    \n    val factorModel \u003d psOfflineMF(\n      data,\n      learningRate \u003d 0.15,\n      negativeSampleRate \u003d 19,\n      iterations \u003d 4,\n      pullLimit \u003d 2200)\n      \n    factorModel.addSink(new VectorModelToFileSink(folder + output))\n    \n    senv execute s\"generating model $output from $inputs\"\n\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:31:23 PM",
+      "dateUpdated": "Aug 26, 2017 9:09:36 PM",
       "config": {
         "colWidth": 3.0,
         "enabled": true,
@@ -369,15 +369,15 @@
       "jobName": "paragraph_1503658843733_475169752",
       "id": "20170825-130043_1876990119",
       "dateCreated": "Aug 25, 2017 1:00:43 PM",
-      "dateStarted": "Aug 26, 2017 12:31:19 PM",
-      "dateFinished": "Aug 26, 2017 12:31:20 PM",
+      "dateStarted": "Aug 26, 2017 9:09:36 PM",
+      "dateFinished": "Aug 26, 2017 9:09:37 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "/**\n * Evaluates a model online without learning\n * @param   input   the name of the input test data\n * @param   model   the name of the file containing the model\n * @param   output  the name of the output file\n */\ndef OnlineEvaluate(input: String, model: String, output: String) {\n    val ratings \u003d ImplicitDataToRatingParser.parse(senv, folder + input, \",\", 1, 2, 0, startTimestamp)\n    val parsedModel \u003d VectorModelFileParser.parse(senv, folder + model, numFactors \u003d 10)\n    \n    val topK \u003d psTopKGenerator(ratings, parsedModel)\n        \n    nDCGSink.nDCGPeriodsToCsv(topK, folder + output, dayInSec, false)\n    \n    senv execute s\"Online evaluation of model $model without learning\"\n}",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:30:41 PM",
+      "dateUpdated": "Aug 26, 2017 9:09:39 PM",
       "config": {
         "colWidth": 3.0,
         "enabled": true,
@@ -405,15 +405,15 @@
       "jobName": "paragraph_1503658842147_1074608539",
       "id": "20170825-130042_1736661737",
       "dateCreated": "Aug 25, 2017 1:00:42 PM",
-      "dateStarted": "Aug 26, 2017 12:30:41 PM",
-      "dateFinished": "Aug 26, 2017 12:30:42 PM",
+      "dateStarted": "Aug 26, 2017 9:09:39 PM",
+      "dateFinished": "Aug 26, 2017 9:09:40 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%python\nimport os\nimport time\nimport pandas as pd\nimport matplotlib as mpl\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport matplotlib.cbook as cbook\n\n# File paths (must be same as above)\ninputPath \u003d \"week_\"\nmodelPath \u003d \"model.\"\noutputPath \u003d \"ndcg.out\"\noutputPathOnline \u003d \"ndcg.online.out\"\noutputPathNoLearn \u003d \"ndcg.no.learn.out\"\n\ndef plot(in_learn, in_nolearn, in_online):\n    data \u003d np.loadtxt(in_learn, delimiter\u003d\u0027,\u0027, skiprows\u003d0)\n    data2 \u003d np.loadtxt(in_nolearn, delimiter\u003d\u0027,\u0027, skiprows\u003d0)\n    #datao \u003d np.loadtxt(in_online, delimiter\u003d\u0027,\u0027, skiprows\u003d0)\n    dataa \u003d pd.read_csv(in_online, delimiter\u003d\u0027,\u0027, header\u003dNone)\n    day \u003d data[:,0]\n    firstday \u003d day[0]\n    lastday \u003d day[-1]\n    datab \u003d dataa[dataa[0] \u003e\u003d firstday]\n    data00 \u003d datab[datab[0] \u003c\u003d lastday]\n    inv \u003d data[:,1]\n    nDCG \u003d data[:,2]\n    hit \u003d data[:,3]\n    day2 \u003d data2[:,0]\n    inv2 \u003d data2[:,1]\n    nDCG2 \u003d data2[:,2]\n    hit2 \u003d data2[:,3]\n    #day3 \u003d datao[:,0]\n    #inv3 \u003d datao[:,1]\n    #nDCG3 \u003d datao[:,2]\n    #hit3 \u003d datao[:,3]\n    day3 \u003d data00[0]\n    inv3 \u003d data00[1]\n    nDCG3 \u003d data00[2]\n    fig \u003d plt.figure(figsize\u003d(20, 10))\n    ax \u003d fig.add_subplot(221)\n    #ax2 \u003d fig.add_subplot(222)\n    \n    ax.set_ylabel(\u0027nDCG\u0027)\n    #ax2.set_ylabel(\u0027hit\u0027)\n    \n    fig.subplots_adjust(right\u003d0.75)\n    \n    #ax2.set_frame_on(True)\n    #ax2.patch.set_visible(False)\n    \n    #for i in range(0, min(len(day), len(day2))):\n    #    nDCG2[i] \u003d nDCG2[i] * inv2[i] / inv[i]\n    #    hit2[i] \u003d hit2[i] * inv2[i] / inv[i]\n    \n    ax.plot(day3, nDCG3, marker\u003d\u0027o\u0027, color\u003d\"Green\", label\u003d\"online mf\")\n    ax.plot(day2, nDCG2, marker\u003d\u0027o\u0027, color\u003d\"Red\", label\u003d\"periodic batch mf\")\n    ax.plot(day, nDCG, marker\u003d\u0027o\u0027, color\u003d\"Purple\", label\u003d\"batch then online mf\")\n    ax.tick_params(axis\u003d\u0027y\u0027, colors\u003d\"Black\")\n    \n    ax.legend()\n    #ax2.legend()\n    ax.grid()\n    #ax2.grid\n    plt.ylim(0,0.04)\n    plt.show()",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:03:09 PM",
+      "dateUpdated": "Aug 26, 2017 9:09:47 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -438,15 +438,15 @@
       "jobName": "paragraph_1502877421572_944890577",
       "id": "20170816-115701_704655422",
       "dateCreated": "Aug 16, 2017 11:57:01 AM",
-      "dateStarted": "Aug 26, 2017 12:03:09 PM",
-      "dateFinished": "Aug 26, 2017 12:03:09 PM",
+      "dateStarted": "Aug 26, 2017 9:09:47 PM",
+      "dateFinished": "Aug 26, 2017 9:09:47 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "val i \u003d 10\n\nBatchLearn(Array.range(0, i).map(inputPath + _), modelPath+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:37:19 PM",
+      "dateUpdated": "Aug 26, 2017 9:10:36 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -472,11 +472,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "i: Int \u003d 10\n"
+            "data": "i: Int \u003d 10\norg.apache.flink.client.program.ProgramInvocationException: The program execution failed: Job execution failed.\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:409)\n  at org.apache.flink.client.program.StandaloneClusterClient.submitJob(StandaloneClusterClient.java:95)\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:382)\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:374)\n  at org.apache.flink.streaming.api.environment.RemoteStreamEnvironment.executeRemotely(RemoteStreamEnvironment.java:209)\n  at org.apache.flink.api.java.ScalaShellRemoteStreamEnvironment.executeRemotely(ScalaShellRemoteStreamEnvironment.java:87)\n  at org.apache.flink.streaming.api.environment.RemoteStreamEnvironment.execute(RemoteStreamEnvironment.java:173)\n  at org.apache.flink.streaming.api.scala.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.scala:585)\n  at $$$$79b2515edf74bd80cfc9d8ac1ba563c6$$$.BatchLearn(\u003cconsole\u003e:122)\n  ... 36 elided\nCaused by: org.apache.flink.runtime.client.JobExecutionException: Job execution failed.\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply$mcV$sp(JobManager.scala:822)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply(JobManager.scala:768)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply(JobManager.scala:768)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)\n  at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)\n  at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:401)\n  at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)\n  at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.pollAndExecAll(ForkJoinPool.java:1253)\n  at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1346)\n  at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)\n  at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)\nCaused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Not enough free slots available to run the job. You can decrease the operator parallelism or increase the number of slots per TaskManager in the configuration. Task to schedule: \u003c Attempt #0 (IterationSource-150 (2/4)) @ (unassigned) - [SCHEDULED] \u003e with groupID \u003c a00ede1a050a030b69ac0370df41c72d \u003e in sharing group \u003c SlotSharingGroup [4756ea79ff527d2f8b1e7cf6dcb54835, c42568606dded4d5901a37a0b7f5d363, 03d99d244ba57121968259c9e0bcc7a2, 5fec081f4c41497e98a767122a3f88bb, a1636b5dff3801a0a1faa963c7dcac9f, a1cf7a32d2d32146a3d032037c8eb158, 8f96634b36b41fe2c1a16ee8d179778f, 846909aeea28a25ed8b618ac6a6ca67e, ad6bf33c26e6b670e73f5c136f635bbd, 584401c27feb1b9de9c28737bca21295, 2cfa11f59d86dd87f2e91502371cdc5a, e7c720c4e56cdb77fe5d80beaf34ca06, 68b5b7faa5903c87fffc21caa14044fe, 47acf402ac17dfd7087d63887d0322ad, 90ca0ba2835046fb0b51304f73cbf3b4, ea3e2797c533fe350c50d93e33f635e7, 5d643f6d524e80c916bac6d8e12389aa, 8ea287bbaaa0351a220caa7717429ec1, c6e3f9bca3483a3a2673f5643fcfd485, f1c11ce1ec0de5bc29af86379f17e94d, c0afd6b113cfcff02f998d2bbc48734b, d23beb3120396913521b5cd3aa876c1b, 62f9b0ab160f9bf6549fde8cb5f1d1c2, 2130b18c50c35ec25a0695c22eb198ce, 9ee3dc4b121880695b86b4b66700bde1, 35165757ca8a88ff639aae6550de7b4d, 8749bdd9905979bf6c332d0ee5e50968, 1de2aff5a4103ebe7267b9b637524a2a] \u003e. Resources available to scheduler: Number of instances\u003d1, total number of slots\u003d1, available slots\u003d0\n  at org.apache.flink.runtime.jobmanager.scheduler.Scheduler.scheduleTask(Scheduler.java:256)\n  at org.apache.flink.runtime.jobmanager.scheduler.Scheduler.scheduleImmediately(Scheduler.java:131)\n  at org.apache.flink.runtime.executiongraph.Execution.scheduleForExecution(Execution.java:306)\n  at org.apache.flink.runtime.executiongraph.ExecutionVertex.scheduleForExecution(ExecutionVertex.java:454)\n  at org.apache.flink.runtime.executiongraph.ExecutionJobVertex.scheduleAll(ExecutionJobVertex.java:326)\n  at org.apache.flink.runtime.executiongraph.ExecutionGraph.scheduleForExecution(ExecutionGraph.java:756)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply$mcV$sp(JobManager.scala:1332)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply(JobManager.scala:1291)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply(JobManager.scala:1291)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)\n  at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)\n  at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:401)\n  at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)\n  at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)\n  ... 2 more\n"
           }
         ]
       },
@@ -484,15 +484,15 @@
       "jobName": "paragraph_1502277445797_98406811",
       "id": "20170809-131725_809143146",
       "dateCreated": "Aug 9, 2017 1:17:25 PM",
-      "dateStarted": "Aug 26, 2017 12:31:43 PM",
-      "dateFinished": "Aug 26, 2017 12:33:39 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 26, 2017 9:10:36 PM",
+      "dateFinished": "Aug 26, 2017 9:10:39 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "val i \u003d 10\n\nOnlineLearnAndEvaluate(inputPath+i, modelPath+i, outputPath+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:37:10 PM",
+      "dateUpdated": "Aug 26, 2017 9:10:02 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -517,11 +517,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "i: Int \u003d 10\n"
+            "data": "i: Int \u003d 10\norg.apache.flink.client.program.ProgramInvocationException: The program execution failed: Job execution failed.\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:409)\n  at org.apache.flink.client.program.StandaloneClusterClient.submitJob(StandaloneClusterClient.java:95)\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:382)\n  at org.apache.flink.client.program.ClusterClient.run(ClusterClient.java:374)\n  at org.apache.flink.streaming.api.environment.RemoteStreamEnvironment.executeRemotely(RemoteStreamEnvironment.java:209)\n  at org.apache.flink.api.java.ScalaShellRemoteStreamEnvironment.executeRemotely(ScalaShellRemoteStreamEnvironment.java:87)\n  at org.apache.flink.streaming.api.environment.RemoteStreamEnvironment.execute(RemoteStreamEnvironment.java:173)\n  at org.apache.flink.streaming.api.scala.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.scala:585)\n  at $$$$79b2515edf74bd80cfc9d8ac1ba563c6$$$.OnlineLearnAndEvaluate(\u003cconsole\u003e:123)\n  ... 36 elided\nCaused by: org.apache.flink.runtime.client.JobExecutionException: Job execution failed.\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply$mcV$sp(JobManager.scala:822)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply(JobManager.scala:768)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$handleMessage$1$$anonfun$applyOrElse$7.apply(JobManager.scala:768)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)\n  at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)\n  at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:401)\n  at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)\n  at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.pollAndExecAll(ForkJoinPool.java:1253)\n  at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1346)\n  at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)\n  at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)\nCaused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Not enough free slots available to run the job. You can decrease the operator parallelism or increase the number of slots per TaskManager in the configuration. Task to schedule: \u003c Attempt #0 (IterationSource-84 (2/4)) @ (unassigned) - [SCHEDULED] \u003e with groupID \u003c 6c93c5ff6e004406aedfb4c44003fbfd \u003e in sharing group \u003c SlotSharingGroup [c58fd6551ea6dd0d8d3418e45692f2c0, 9644451f44edc2709e5f6a4aaacdd354, b7260a7e96d419e69f349bc63e703a77, 6811f8a85da73a89a00dcd62b241a010, 5edb4f4de157e993bb4658a06b0193d4, 0bf5c0b73ac67cadbe7a86a9b895e016, da8702d513ac12a3c0f04f339a3cd54b, 961f2d795fa2f116d257c3bfb74ab895, 8f8cfb3c7dc81d2bd8b1196dd0f1b140, 0f43cd67ddc189040ecdf6a152bbd65c, c6e3f9bca3483a3a2673f5643fcfd485, 2d09d461a0aa711f3710e3cbefdb3a0c, 9ee3dc4b121880695b86b4b66700bde1, a9a0807a9243f6d35bb8ead035d110bb, 0d6252a28859b49b6737554f071aab81] \u003e. Resources available to scheduler: Number of instances\u003d1, total number of slots\u003d1, available slots\u003d0\n  at org.apache.flink.runtime.jobmanager.scheduler.Scheduler.scheduleTask(Scheduler.java:256)\n  at org.apache.flink.runtime.jobmanager.scheduler.Scheduler.scheduleImmediately(Scheduler.java:131)\n  at org.apache.flink.runtime.executiongraph.Execution.scheduleForExecution(Execution.java:306)\n  at org.apache.flink.runtime.executiongraph.ExecutionVertex.scheduleForExecution(ExecutionVertex.java:454)\n  at org.apache.flink.runtime.executiongraph.ExecutionJobVertex.scheduleAll(ExecutionJobVertex.java:326)\n  at org.apache.flink.runtime.executiongraph.ExecutionGraph.scheduleForExecution(ExecutionGraph.java:756)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply$mcV$sp(JobManager.scala:1332)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply(JobManager.scala:1291)\n  at org.apache.flink.runtime.jobmanager.JobManager$$anonfun$org$apache$flink$runtime$jobmanager$JobManager$$submitJob$1.apply(JobManager.scala:1291)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)\n  at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)\n  at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)\n  at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:401)\n  at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)\n  at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)\n  ... 2 more\n"
           }
         ]
       },
@@ -529,15 +529,15 @@
       "jobName": "paragraph_1502875863648_-1939990613",
       "id": "20170816-113103_1486406515",
       "dateCreated": "Aug 16, 2017 11:31:03 AM",
-      "dateStarted": "Aug 26, 2017 12:34:47 PM",
-      "dateFinished": "Aug 26, 2017 12:35:27 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 26, 2017 9:10:02 PM",
+      "dateFinished": "Aug 26, 2017 9:10:04 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "val i \u003d 10\n\nOnlineEvaluate(inputPath+i, modelPath+i, outputPathNoLearn+i)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 12:37:14 PM",
+      "dateUpdated": "Aug 26, 2017 9:06:07 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -562,11 +562,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "i: Int \u003d 10\n"
+            "data": "i: Int \u003d 10\n\u003cconsole\u003e:106: error: not found: value OnlineEvaluate\n       OnlineEvaluate(inputPath+i, modelPath+i, outputPathNoLearn+i)\n       ^\n"
           }
         ]
       },
@@ -574,9 +574,9 @@
       "jobName": "paragraph_1502875874645_-90872075",
       "id": "20170816-113114_914520916",
       "dateCreated": "Aug 16, 2017 11:31:14 AM",
-      "dateStarted": "Aug 26, 2017 12:34:50 PM",
-      "dateFinished": "Aug 26, 2017 12:35:51 PM",
-      "status": "FINISHED",
+      "dateStarted": "Aug 26, 2017 9:06:07 PM",
+      "dateFinished": "Aug 26, 2017 9:06:07 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -1538,25 +1538,25 @@
   "name": "Flink batch and online training",
   "id": "2CP4H8SUT",
   "angularObjects": {
-    "2CQ5CHCVK:shared_process": [],
-    "2CQA8ANBF:shared_process": [],
-    "2CPUWTNP5:shared_process": [],
-    "2CS666EJY:shared_process": [],
-    "2CQ1SYMWR:shared_process": [],
-    "2CRX78HZ4:shared_process": [],
-    "2CSE5JPER:shared_process": [],
-    "2CPEJRKEY:shared_process": [],
-    "2CR9VJ4VU:shared_process": [],
-    "2CQ144JX5:shared_process": [],
-    "2CNWA3851:shared_process": [],
-    "2CRTAP1ZV:shared_process": [],
-    "2CQVGSGZX:shared_process": [],
-    "2CRQ2EJN1:shared_process": [],
-    "2CNU9Q44Q:shared_process": [],
-    "2CS38SHJX:shared_process": [],
-    "2CSK5B72V:shared_process": [],
-    "2CRPWHNGP:shared_process": [],
-    "2CS7NTJ4W:shared_process": []
+    "2CQWNXBEY:shared_process": [],
+    "2CSJQQJ95:shared_process": [],
+    "2CTUNZE3G:shared_process": [],
+    "2CR5RQUS7:shared_process": [],
+    "2CQS16XH5:shared_process": [],
+    "2CS2GXSX5:shared_process": [],
+    "2CQYKYY8D:shared_process": [],
+    "2CT4ZCVQZ:shared_process": [],
+    "2CTZWMRUG:shared_process": [],
+    "2CTVHC8J2:shared_process": [],
+    "2CQFQ7ENM:shared_process": [],
+    "2CQG8P7FY:shared_process": [],
+    "2CSVSZGBK:shared_process": [],
+    "2CU2J9DMS:shared_process": [],
+    "2CRSB3U4X:shared_process": [],
+    "2CU1B4MPR:shared_process": [],
+    "2CTNFC8WU:shared_process": [],
+    "2CS5MUQWK:shared_process": [],
+    "2CRTAY5F7:shared_process": []
   },
   "config": {
     "looknfeel": "default",
