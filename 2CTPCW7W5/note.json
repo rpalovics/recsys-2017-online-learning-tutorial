@@ -94,9 +94,9 @@
     },
     {
       "title": "",
-      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw\u003dtrue\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\n# Alpenglow\nAlpenglow is a free and open source C++ based Python recommender framework. We are going to use it train a matrix factorization model using stochastic gradient descent (SGD) and evaluate the trained model using the normalized discounted cumulative gain (NDCG) metric.\n\nThis experiment is impemented in Python",
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw\u003dtrue\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\n# Alpenglow\nAlpenglow is a free and open source C++ based Python recommender framework. We use it train a matrix factorization model using stochastic gradient descent (SGD) and evaluate the trained model using the normalized discounted cumulative gain (NDCG) metric.\n\nThis experiment is impemented in Python",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 8:28:52 AM",
+      "dateUpdated": "Aug 26, 2017 11:52:35 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -119,7 +119,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw\u003dtrue\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eAlpenglow\u003c/h1\u003e\n\u003cp\u003eAlpenglow is a free and open source C++ based Python recommender framework. We are going to use it train a matrix factorization model using stochastic gradient descent (SGD) and evaluate the trained model using the normalized discounted cumulative gain (NDCG) metric.\u003c/p\u003e\n\u003cp\u003eThis experiment is impemented in Python\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://github.com/rpalovics/Alpenglow/blob/master/misc/alpenglow.png?raw\u003dtrue\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eAlpenglow\u003c/h1\u003e\n\u003cp\u003eAlpenglow is a free and open source C++ based Python recommender framework. We use it train a matrix factorization model using stochastic gradient descent (SGD) and evaluate the trained model using the normalized discounted cumulative gain (NDCG) metric.\u003c/p\u003e\n\u003cp\u003eThis experiment is impemented in Python\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -127,16 +127,16 @@
       "jobName": "paragraph_1503696140017_1964390646",
       "id": "20170825-232220_1564867282",
       "dateCreated": "Aug 25, 2017 11:22:20 PM",
-      "dateStarted": "Aug 26, 2017 8:28:52 AM",
-      "dateFinished": "Aug 26, 2017 8:28:52 AM",
+      "dateStarted": "Aug 26, 2017 11:52:35 AM",
+      "dateFinished": "Aug 26, 2017 11:52:35 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Flink",
-      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\n# Apache Flink\n\nFlink is an open-source stream processing framework. We are going to use a factor model trained by asynchronous SGD, available as a pull request for Flink. The implementations uses a paramtere-server architecture for storing and accessing the model.\n\nThis experiment is implemented in Scala.",
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\n# Apache Flink\n\nFlink is an open-source stream processing framework. We use a factor model trained by asynchronous SGD, available as a pull request for Flink. The implementation uses a paramtere-server architecture for storing and accessing the model.\n\nThis experiment is implemented in Scala.",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 8:18:21 AM",
+      "dateUpdated": "Aug 26, 2017 11:52:42 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -159,7 +159,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eApache Flink\u003c/h1\u003e\n\u003cp\u003eFlink is an open-source stream processing framework. We are going to use a factor model trained by asynchronous SGD, available as a pull request for Flink. The implementations uses a paramtere-server architecture for storing and accessing the model.\u003c/p\u003e\n\u003cp\u003eThis experiment is implemented in Scala.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://flink.apache.org/img/logo/png/1000/flink_squirrel_1000.png\"  style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eApache Flink\u003c/h1\u003e\n\u003cp\u003eFlink is an open-source stream processing framework. We use a factor model trained by asynchronous SGD, available as a pull request for Flink. The implementation uses a paramtere-server architecture for storing and accessing the model.\u003c/p\u003e\n\u003cp\u003eThis experiment is implemented in Scala.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -167,16 +167,16 @@
       "jobName": "paragraph_1503696147689_-999714880",
       "id": "20170825-232227_1562535417",
       "dateCreated": "Aug 25, 2017 11:22:27 PM",
-      "dateStarted": "Aug 26, 2017 8:18:13 AM",
-      "dateFinished": "Aug 26, 2017 8:18:13 AM",
+      "dateStarted": "Aug 26, 2017 11:52:42 AM",
+      "dateFinished": "Aug 26, 2017 11:52:42 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Spark",
-      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://spark.apache.org/images/spark-logo-trademark.png\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\n# Apache Spark\n\nSpark is an open-source engine for large-scale data processing. We are going to use the iALS implementation from Spark’s ML library, and provide ranking recommendations by reading the trained factor model to pandas.\n\nThe experiment is implemented in Spark’s Python API, PySpark.",
+      "text": "%md\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://spark.apache.org/images/spark-logo-trademark.png\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\n# Apache Spark\n\nSpark is an open-source engine for large-scale data processing. We use the iALS implementation from Spark’s ML library, and provide ranking recommendations by reading the trained factor model to pandas.\n\nThe experiment is implemented in Spark’s Python API, PySpark.",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 8:29:12 AM",
+      "dateUpdated": "Aug 26, 2017 11:52:52 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -199,7 +199,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://spark.apache.org/images/spark-logo-trademark.png\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eApache Spark\u003c/h1\u003e\n\u003cp\u003eSpark is an open-source engine for large-scale data processing. We are going to use the iALS implementation from Spark’s ML library, and provide ranking recommendations by reading the trained factor model to pandas.\u003c/p\u003e\n\u003cp\u003eThe experiment is implemented in Spark’s Python API, PySpark.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp align\u003d\"center\"\u003e\n  \u003cimg src\u003d\"https://spark.apache.org/images/spark-logo-trademark.png\" style\u003d\"max-height:90px\" alt\u003d\"alpenglow\"/\u003e\n\u003c/p\u003e\n\u003ch1\u003eApache Spark\u003c/h1\u003e\n\u003cp\u003eSpark is an open-source engine for large-scale data processing. We use the iALS implementation from Spark’s ML library, and provide ranking recommendations by reading the trained factor model to pandas.\u003c/p\u003e\n\u003cp\u003eThe experiment is implemented in Spark’s Python API, PySpark.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -207,15 +207,15 @@
       "jobName": "paragraph_1503696149644_-175967485",
       "id": "20170825-232229_1489721128",
       "dateCreated": "Aug 25, 2017 11:22:29 PM",
-      "dateStarted": "Aug 26, 2017 8:29:12 AM",
-      "dateFinished": "Aug 26, 2017 8:29:12 AM",
+      "dateStarted": "Aug 26, 2017 11:52:52 AM",
+      "dateFinished": "Aug 26, 2017 11:52:52 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md \n\n### Warning!\n\nRunning all three kernels simultaneously requires quite a bit of system memory.\n\n* If you have at least 16GB, you should be good to go.\n* With 8GB, you should still be fine, but monitor your memory usage closely.\n* Under 8GB, try running the notebook one kernel at a time.",
+      "text": "%md \n\n### Warning!\n\nRunning all three kernels simultaneously requires quite a bit of system memory.\n\n* If you have at least 16GB, you should be good to go.\n* With 8GB, you should still be fine, but monitor your memory usage closely.\n* Under 8GB, you can try running the notebook one kernel at a time. This can be achieved by restarting the unused kernels in the *interpreter binding* menu (upper right corner, gear button). Make sure to run the evalutaion paragraph last!",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 8:32:31 AM",
+      "dateUpdated": "Aug 26, 2017 12:20:09 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -237,7 +237,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWarning!\u003c/h3\u003e\n\u003cp\u003eRunning all three kernels simultaneously requires quite a bit of system memory.\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eIf you have at least 16GB, you should be good to go.\u003c/li\u003e\n  \u003cli\u003eWith 8GB, you should still be fine, but monitor your memory usage closely.\u003c/li\u003e\n  \u003cli\u003eUnder 8GB, try running the notebook one kernel at a time.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWarning!\u003c/h3\u003e\n\u003cp\u003eRunning all three kernels simultaneously requires quite a bit of system memory.\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eIf you have at least 16GB, you should be good to go.\u003c/li\u003e\n  \u003cli\u003eWith 8GB, you should still be fine, but monitor your memory usage closely.\u003c/li\u003e\n  \u003cli\u003eUnder 8GB, you can try running the notebook one kernel at a time. This can be achieved by restarting the unused kernels in the \u003cem\u003einterpreter binding\u003c/em\u003e menu (upper right corner, gear button). Make sure to run the evalutaion paragraph last!\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -245,15 +245,15 @@
       "jobName": "paragraph_1503727832783_1142779595",
       "id": "20170826-081032_1315768024",
       "dateCreated": "Aug 26, 2017 8:10:32 AM",
-      "dateStarted": "Aug 26, 2017 8:32:31 AM",
-      "dateFinished": "Aug 26, 2017 8:32:31 AM",
+      "dateStarted": "Aug 26, 2017 12:20:09 PM",
+      "dateFinished": "Aug 26, 2017 12:20:09 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%python\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib\nimport matplotlib.pyplot as plt\nimport alpenglow as ag\nfrom alpenglow.offline.models import FactorModel\nfrom alpenglow.offline.evaluation import NdcgScore",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:04:17 AM",
+      "dateUpdated": "Aug 26, 2017 12:14:25 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -277,8 +277,8 @@
       "jobName": "paragraph_1503043976596_1345513851",
       "id": "20170818-101256_1862447283",
       "dateCreated": "Aug 18, 2017 10:12:56 AM",
-      "dateStarted": "Aug 26, 2017 9:04:17 AM",
-      "dateFinished": "Aug 26, 2017 9:04:22 AM",
+      "dateStarted": "Aug 26, 2017 12:14:25 PM",
+      "dateFinished": "Aug 26, 2017 12:14:26 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -394,7 +394,7 @@
     {
       "text": "%python\n\ntrain_batch \u003d pd.read_csv(\n    \u0027train_batch.csv\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:04:25 AM",
+      "dateUpdated": "Aug 26, 2017 12:14:27 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -418,8 +418,8 @@
       "jobName": "paragraph_1503044042861_-1196062407",
       "id": "20170818-101402_497732565",
       "dateCreated": "Aug 18, 2017 10:14:02 AM",
-      "dateStarted": "Aug 26, 2017 9:04:26 AM",
-      "dateFinished": "Aug 26, 2017 9:04:26 AM",
+      "dateStarted": "Aug 26, 2017 12:14:27 PM",
+      "dateFinished": "Aug 26, 2017 12:14:27 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -535,7 +535,7 @@
     {
       "text": "%python\n\nmodel \u003d FactorModel(\n    dimension\u003d20,\n    learning_rate\u003d0.05,\n    negative_rate\u003d9,\n    number_of_iterations\u003d4,\n)\nmodel.fit(train_batch)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:04:31 AM",
+      "dateUpdated": "Aug 26, 2017 12:14:30 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -559,8 +559,8 @@
       "jobName": "paragraph_1503044488882_-1534781001",
       "id": "20170818-102128_494115451",
       "dateCreated": "Aug 18, 2017 10:21:28 AM",
-      "dateStarted": "Aug 26, 2017 9:04:31 AM",
-      "dateFinished": "Aug 26, 2017 9:05:25 AM",
+      "dateStarted": "Aug 26, 2017 12:14:30 PM",
+      "dateFinished": "Aug 26, 2017 12:14:45 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -674,9 +674,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%python\n\ntest_batch \u003d pd.read_csv(\n    \u0027test_batch.csv\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)",
+      "text": "%python\n\ntest_batch \u003d pd.read_csv(\n    \u0027test_batch.csv\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)\nalpenglow_topks.to_csv(\u0027alpenglow_topks.csv\u0027, index\u003dFalse)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:08:49 AM",
+      "dateUpdated": "Aug 26, 2017 12:16:07 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -700,8 +700,8 @@
       "jobName": "paragraph_1503045269757_1245530043",
       "id": "20170818-103429_1482871678",
       "dateCreated": "Aug 18, 2017 10:34:29 AM",
-      "dateStarted": "Aug 26, 2017 9:08:49 AM",
-      "dateFinished": "Aug 26, 2017 9:10:00 AM",
+      "dateStarted": "Aug 26, 2017 12:16:07 PM",
+      "dateFinished": "Aug 26, 2017 12:17:04 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -784,9 +784,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n# Evaluating toplists using Alpenglow",
+      "text": "%md\n\n# Evaluating toplists using Alpenglow\n\nWhen evaluating recommender systems, a standard ranking based metric is discounted cumulative gain @ K (DCG@K),\n$$\n\\mathrm{DCG}@K \u003d  \\sum_{k\u003d1}^{K}\\frac{\\mathrm{rel}(i_k)}{\\log_2(1+k)}\n$$\nwhere rel(i_k) notes the relevance of the i-th item in the list. For the implicit task, the relevance is 1 if the user considered the item in the evaluation set, otherwise it is 0. This value is usually normalized using the highest achievable score, yielding the *normalized* discounted cumulative gain (NDCG).\n\nFor fair evaluation, we use Alpenglow\u0027s NDCG evaluator to evaluate all three systems.",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 8:36:05 AM",
+      "dateUpdated": "Aug 26, 2017 12:16:37 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -808,7 +808,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eEvaluating toplists using Alpenglow\u003c/h1\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eEvaluating toplists using Alpenglow\u003c/h1\u003e\n\u003cp\u003eWhen evaluating recommender systems, a standard ranking based metric is discounted cumulative gain @ K (\u003ca href\u003d\"mailto:\u0026#68;\u0026#x43;\u0026#71;\u0026#x40;K\u0026#41;\"\u003e\u0026#68;\u0026#x43;\u0026#71;\u0026#x40;K\u0026#41;\u003c/a\u003e,\u003cbr/\u003e$$\u003cbr/\u003e\\mathrm{DCG}@K \u003d \\sum_{k\u003d1}^{K}\\frac{\\mathrm{rel}(i_k)}{\\log_2(1+k)}\u003cbr/\u003e$$\u003cbr/\u003ewhere rel(i_k) notes the relevance of the i-th item in the list. For the implicit task, the relevance is 1 if the user considered the item in the evaluation set, otherwise it is 0. This value is usually normalized using the highest achievable score, yielding the \u003cem\u003enormalized\u003c/em\u003e discounted cumulative gain (NDCG).\u003c/p\u003e\n\u003cp\u003eFor fair evaluation, we use Alpenglow\u0026rsquo;s NDCG evaluator to evaluate all three systems.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -816,16 +816,16 @@
       "jobName": "paragraph_1503729326185_1950281049",
       "id": "20170826-083526_943791449",
       "dateCreated": "Aug 26, 2017 8:35:26 AM",
-      "dateStarted": "Aug 26, 2017 8:36:05 AM",
-      "dateFinished": "Aug 26, 2017 8:36:05 AM",
+      "dateStarted": "Aug 26, 2017 12:16:37 PM",
+      "dateFinished": "Aug 26, 2017 12:16:37 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "evaluating toplists using Alpenglow",
-      "text": "%python\n\nflink_topks \u003d pd.read_csv(\u0027flink_topks.csv\u0027, header\u003dNone, names\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\nspark_topks \u003d pd.read_csv(\u0027spark_topks.csv\u0027)\n\ntest_relevant \u003d test_batch[test_batch.user.isin(train_batch.user)]\ntest_relevant[\u0027score\u0027]\u003d1\n\nscores \u003d [NdcgScore(test_relevant, topks) for topks in [alpenglow_topks, flink_topks, spark_topks]]\nx\u003d[1,2,3]\nplt.bar(x, scores)\nplt.title(\u0027Experiment scores\u0027)\nplt.ylabel(\u0027Average NDCG\u0027)\nplt.xticks(x, [\u0027Alpenglow\u0027,\u0027Flink\u0027,\u0027Spark\u0027])\nplt.show()",
+      "text": "%python\n\nflink_topks \u003d pd.read_csv(\u0027flink_topks.csv\u0027, header\u003dNone, names\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\nspark_topks \u003d pd.read_csv(\u0027spark_topks.csv\u0027)\nalpenglow_topks \u003d pd.read_csv(\u0027alpenglow_topks.csv\u0027)\n\ntest_relevant \u003d test_batch[test_batch.user.isin(train_batch.user)]\ntest_relevant[\u0027score\u0027]\u003d1\n\nscores \u003d [NdcgScore(test_relevant, topks) for topks in [alpenglow_topks, flink_topks, spark_topks]]\nx\u003d[1,2,3]\nplt.bar(x, scores)\nplt.title(\u0027Experiment scores\u0027)\nplt.ylabel(\u0027Average NDCG\u0027)\nplt.xticks(x, [\u0027Alpenglow\u0027,\u0027Flink\u0027,\u0027Spark\u0027])\nplt.show()",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 9:13:09 AM",
+      "dateUpdated": "Aug 26, 2017 12:17:08 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -855,8 +855,8 @@
       "jobName": "paragraph_1503046070769_1492675634",
       "id": "20170818-104750_33771494",
       "dateCreated": "Aug 18, 2017 10:47:50 AM",
-      "dateStarted": "Aug 26, 2017 9:13:09 AM",
-      "dateFinished": "Aug 26, 2017 9:13:24 AM",
+      "dateStarted": "Aug 26, 2017 12:17:08 PM",
+      "dateFinished": "Aug 26, 2017 12:17:26 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
