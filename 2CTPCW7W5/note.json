@@ -392,9 +392,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "train_batch \u003d pd.read_csv(\n    \u0027train_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)",
+      "text": "%python\n\ntrain_batch \u003d pd.read_csv(\n    \u0027train_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 7:54:11 AM",
+      "dateUpdated": "Aug 26, 2017 8:37:49 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -418,8 +418,8 @@
       "jobName": "paragraph_1503044042861_-1196062407",
       "id": "20170818-101402_497732565",
       "dateCreated": "Aug 18, 2017 10:14:02 AM",
-      "dateStarted": "Aug 26, 2017 7:54:11 AM",
-      "dateFinished": "Aug 26, 2017 7:54:11 AM",
+      "dateStarted": "Aug 26, 2017 8:37:49 AM",
+      "dateFinished": "Aug 26, 2017 8:37:49 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -533,9 +533,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "model \u003d FactorModel(\n    dimension\u003d20,\n    learning_rate\u003d0.05,\n    negative_rate\u003d9,\n    number_of_iterations\u003d4,\n)\nmodel.fit(train_batch)",
+      "text": "%python\n\nmodel \u003d FactorModel(\n    dimension\u003d20,\n    learning_rate\u003d0.05,\n    negative_rate\u003d9,\n    number_of_iterations\u003d4,\n)\nmodel.fit(train_batch)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 7:55:28 AM",
+      "dateUpdated": "Aug 26, 2017 8:37:53 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -559,8 +559,8 @@
       "jobName": "paragraph_1503044488882_-1534781001",
       "id": "20170818-102128_494115451",
       "dateCreated": "Aug 18, 2017 10:21:28 AM",
-      "dateStarted": "Aug 26, 2017 7:55:28 AM",
-      "dateFinished": "Aug 26, 2017 7:55:48 AM",
+      "dateStarted": "Aug 26, 2017 8:37:53 AM",
+      "dateFinished": "Aug 26, 2017 8:38:09 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -674,9 +674,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "test_batch \u003d pd.read_csv(\n    \u0027test_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)",
+      "text": "%python\n\ntest_batch \u003d pd.read_csv(\n    \u0027test_batch\u0027,\n    header\u003dNone,\n    names\u003d[\u0027time\u0027,\u0027user\u0027,\u0027item\u0027]\n)\ntrain_test_users \u003d list(set(train_batch.user) \u0026 set(test_batch.user))\npd.Series(train_test_users).to_csv(\u0027train_test_users.csv\u0027,index\u003dFalse)\n\nalpenglow_topks \u003d model.recommend(train_test_users, k\u003d100)",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 7:56:07 AM",
+      "dateUpdated": "Aug 26, 2017 8:37:56 AM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -700,8 +700,8 @@
       "jobName": "paragraph_1503045269757_1245530043",
       "id": "20170818-103429_1482871678",
       "dateCreated": "Aug 18, 2017 10:34:29 AM",
-      "dateStarted": "Aug 26, 2017 7:56:07 AM",
-      "dateFinished": "Aug 26, 2017 7:58:00 AM",
+      "dateStarted": "Aug 26, 2017 8:37:57 AM",
+      "dateFinished": "Aug 26, 2017 8:39:10 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -823,9 +823,9 @@
     },
     {
       "title": "evaluating toplists using Alpenglow",
-      "text": "flink_topks \u003d pd.read_csv(\u0027flink_topks.csv\u0027, header\u003dNone, names\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\nspark_topks \u003d pd.read_csv(\u0027spark_topks.csv\u0027)\n\ntest_relevant \u003d test_batch[test_batch.user.isin(train_batch.user)]\ntest_relevant[\u0027score\u0027]\u003d1\n\nscores \u003d [NdcgScore(test_relevant, topks) for topks in [alpenglow_topks, flink_topks, spark_topks]]\nx\u003d[1,2,3]\nplt.bar(x, scores)\nplt.title(\u0027Experiment scores\u0027)\nplt.ylabel(\u0027Average NDCG\u0027)\nplt.xticks(x, [\u0027Alpenglow\u0027,\u0027Flink\u0027,\u0027Spark\u0027])\nplt.show()",
+      "text": "%python\n\nflink_topks \u003d pd.read_csv(\u0027flink_topks.csv\u0027, header\u003dNone, names\u003d[\u0027user\u0027,\u0027item\u0027,\u0027rank\u0027])\nspark_topks \u003d pd.read_csv(\u0027spark_topks.csv\u0027)\n\ntest_relevant \u003d test_batch[test_batch.user.isin(train_batch.user)]\ntest_relevant[\u0027score\u0027]\u003d1\n\nscores \u003d [NdcgScore(test_relevant, topks) for topks in [alpenglow_topks, flink_topks, spark_topks]]\nx\u003d[1,2,3]\nplt.bar(x, scores)\nplt.title(\u0027Experiment scores\u0027)\nplt.ylabel(\u0027Average NDCG\u0027)\nplt.xticks(x, [\u0027Alpenglow\u0027,\u0027Flink\u0027,\u0027Spark\u0027])\nplt.show()",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 8:35:55 AM",
+      "dateUpdated": "Aug 26, 2017 8:38:02 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -855,8 +855,8 @@
       "jobName": "paragraph_1503046070769_1492675634",
       "id": "20170818-104750_33771494",
       "dateCreated": "Aug 18, 2017 10:47:50 AM",
-      "dateStarted": "Aug 26, 2017 8:30:05 AM",
-      "dateFinished": "Aug 26, 2017 8:30:25 AM",
+      "dateStarted": "Aug 26, 2017 8:38:09 AM",
+      "dateFinished": "Aug 26, 2017 8:39:28 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
