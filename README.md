@@ -49,7 +49,7 @@ Check the [wiki page](https://github.com/rpalovics/recsys-2017-online-learning-t
 
 ## Dataset
 
-Download the tutorial data from [here](https://drive.google.com/open?id=0B_3Dz2J_fhmTaVZyUy12cGFQR0E).
+Download the tutorial data from [here](https://drive.google.com/open?id=0B_3Dz2J_fhmTaVZyUy12cGFQR0E). Export the contained folder to your zeppelin root directory.
 
 ## Notebooks
 
