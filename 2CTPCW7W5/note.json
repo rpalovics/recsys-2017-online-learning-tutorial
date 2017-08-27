@@ -502,9 +502,9 @@
     },
     {
       "title": "training models",
-      "text": "%md\n## Training models\n\n* Creating a factor model in Alpenglow is pretty straightforward. We set the number of latent dimensions is 10, the learning rate of the SGD process is 0.05 and we iterate over the data 4 times. To handle implicit data, we generate 9 negative samples after each positive sample.\n* Flink\u0027s parameter server based offline matrix factorization model is set up similarly to Alpenglow\u0027s model. We need to add a sink to write the model to disk.\n* In Spark we train the matrix factor model using a iALS instead of SGD; the parameters are thus somewhat different.",
+      "text": "%md\n## Training models\n\n* Creating a factor model in Alpenglow is pretty straightforward. We set the number of latent dimensions is 10, the learning rate of the SGD process 0.05 and we iterate over the data 4 times. To handle implicit data, we generate 9 negative samples after each positive sample.\n* Flink\u0027s parameter server based offline matrix factorization model is set up similarly to Alpenglow\u0027s model. We need to add a sink to write the model to disk.\n* In Spark we train the matrix factor model using a iALS instead of SGD; the parameters are thus somewhat different.",
       "user": "anonymous",
-      "dateUpdated": "Aug 26, 2017 10:54:28 PM",
+      "dateUpdated": "Aug 27, 2017 5:22:11 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -527,7 +527,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eTraining models\u003c/h2\u003e\n\u003cul\u003e\n  \u003cli\u003eCreating a factor model in Alpenglow is pretty straightforward. We set the number of latent dimensions is 10, the learning rate of the SGD process is 0.05 and we iterate over the data 4 times. To handle implicit data, we generate 9 negative samples after each positive sample.\u003c/li\u003e\n  \u003cli\u003eFlink\u0026rsquo;s parameter server based offline matrix factorization model is set up similarly to Alpenglow\u0026rsquo;s model. We need to add a sink to write the model to disk.\u003c/li\u003e\n  \u003cli\u003eIn Spark we train the matrix factor model using a iALS instead of SGD; the parameters are thus somewhat different.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eTraining models\u003c/h2\u003e\n\u003cul\u003e\n  \u003cli\u003eCreating a factor model in Alpenglow is pretty straightforward. We set the number of latent dimensions is 10, the learning rate of the SGD process 0.05 and we iterate over the data 4 times. To handle implicit data, we generate 9 negative samples after each positive sample.\u003c/li\u003e\n  \u003cli\u003eFlink\u0026rsquo;s parameter server based offline matrix factorization model is set up similarly to Alpenglow\u0026rsquo;s model. We need to add a sink to write the model to disk.\u003c/li\u003e\n  \u003cli\u003eIn Spark we train the matrix factor model using a iALS instead of SGD; the parameters are thus somewhat different.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -535,8 +535,8 @@
       "jobName": "paragraph_1503044296819_857543332",
       "id": "20170818-101816_1155782585",
       "dateCreated": "Aug 18, 2017 10:18:16 AM",
-      "dateStarted": "Aug 26, 2017 10:54:28 PM",
-      "dateFinished": "Aug 26, 2017 10:54:29 PM",
+      "dateStarted": "Aug 27, 2017 5:22:11 AM",
+      "dateFinished": "Aug 27, 2017 5:22:11 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

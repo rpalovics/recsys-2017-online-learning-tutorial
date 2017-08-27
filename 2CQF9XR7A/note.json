@@ -893,9 +893,9 @@
     },
     {
       "title": "Practice problems",
-      "text": "%md\n\na. Try to improve the score of the factor experiment by changing its parameters.\nb. Look up the [nearest neighbor model Alpenglow\u0027s documentation](http://alpenglow.readthedocs.io/en/latest/alpenglow.experiments.html#module-alpenglow.experiments.NearestNeighborExperiment). Create an experiment with the default parameter settings and plot the results. Try changing the parameters (see docs) to improve the score.\nc. Evaluate the [time sensitive popularity model](http://alpenglow.readthedocs.io/en/latest/alpenglow.experiments.html#module-alpenglow.experiments.PopularityTimeframeExperiment). Can it improve the score of the classic popularity model?\nd. Try evaluating the experiments between week 1-15. How do the scores behave?\ne. Examine the resulting ranks from the factor experiment. How does the recommendation performance change on average for a user as she interacts with more and more items?",
+      "text": "%md\n\na. Try to improve the score of the factor experiment by changing its parameters.\nb. Look up the [nearest neighbor model Alpenglow\u0027s documentation](http://alpenglow.readthedocs.io/en/latest/alpenglow.experiments.html#module-alpenglow.experiments.NearestNeighborExperiment). Create an experiment with the default parameter settings and plot the results. Try changing the parameters (see docs) to improve the score.\nc. Evaluate the [time sensitive popularity model](http://alpenglow.readthedocs.io/en/latest/alpenglow.experiments.html#module-alpenglow.experiments.PopularityTimeframeExperiment). Can it improve the score of the classic popularity model?\nd. Try evaluating the experiments between week 1-15. How do the scores behave?\ne. Examine the resulting ranks from the factor experiment. How does the recommendation quality change for a user on average as she interacts with more and more items?",
       "user": "anonymous",
-      "dateUpdated": "Aug 27, 2017 1:34:23 AM",
+      "dateUpdated": "Aug 27, 2017 5:13:35 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -918,7 +918,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ea. Try to improve the score of the factor experiment by changing its parameters.\u003cbr/\u003eb. Look up the \u003ca href\u003d\"http://alpenglow.readthedocs.io/en/latest/alpenglow.experiments.html#module-alpenglow.experiments.NearestNeighborExperiment\"\u003enearest neighbor model Alpenglow\u0026rsquo;s documentation\u003c/a\u003e. Create an experiment with the default parameter settings and plot the results. Try changing the parameters (see docs) to improve the score.\u003cbr/\u003ec. Evaluate the \u003ca href\u003d\"http://alpenglow.readthedocs.io/en/latest/alpenglow.experiments.html#module-alpenglow.experiments.PopularityTimeframeExperiment\"\u003etime sensitive popularity model\u003c/a\u003e. Can it improve the score of the classic popularity model?\u003cbr/\u003ed. Try evaluating the experiments between week 1-15. How do the scores behave?\u003cbr/\u003ee. Examine the resulting ranks from the factor experiment. How does the recommendation performance change on average for a user as she interacts with more and more items?\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ea. Try to improve the score of the factor experiment by changing its parameters.\u003cbr/\u003eb. Look up the \u003ca href\u003d\"http://alpenglow.readthedocs.io/en/latest/alpenglow.experiments.html#module-alpenglow.experiments.NearestNeighborExperiment\"\u003enearest neighbor model Alpenglow\u0026rsquo;s documentation\u003c/a\u003e. Create an experiment with the default parameter settings and plot the results. Try changing the parameters (see docs) to improve the score.\u003cbr/\u003ec. Evaluate the \u003ca href\u003d\"http://alpenglow.readthedocs.io/en/latest/alpenglow.experiments.html#module-alpenglow.experiments.PopularityTimeframeExperiment\"\u003etime sensitive popularity model\u003c/a\u003e. Can it improve the score of the classic popularity model?\u003cbr/\u003ed. Try evaluating the experiments between week 1-15. How do the scores behave?\u003cbr/\u003ee. Examine the resulting ranks from the factor experiment. How does the recommendation quality change for a user on average as she interacts with more and more items?\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -926,8 +926,8 @@
       "jobName": "paragraph_1503480390225_17157375",
       "id": "20170823-112630_627422042",
       "dateCreated": "Aug 23, 2017 11:26:30 AM",
-      "dateStarted": "Aug 27, 2017 1:34:23 AM",
-      "dateFinished": "Aug 27, 2017 1:34:23 AM",
+      "dateStarted": "Aug 27, 2017 5:13:35 AM",
+      "dateFinished": "Aug 27, 2017 5:13:35 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
