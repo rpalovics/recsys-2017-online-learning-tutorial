@@ -41,7 +41,7 @@ Participants must register for the tutorial via this [form](https://goo.gl/forms
 - [Notebook 2: Comparing batch learning in Alpenglow, Flink, and Spark](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy83NzVhYmIxZTlmZTk0ZTYxYTFiMThjNWNmYjNhMzc3Mi9ub3RlLmpzb24)
 - [Notebook 3: Online stream based learning in Flink](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy9lZmRkYjBhYzY5YjM0MWQzOWQyNjkxMmViZDdhZjdiOS9ub3RlLmpzb24)
 
-A preview of the introductory slides are now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/intro.pdf).
+[SLIDES](https://docs.google.com/presentation/d/1dduV5KQUTkPgeIuUPrFr0kMoUjE_uasidoumK51gtuI/edit?usp=sharing).
 
 ## Installation
 
