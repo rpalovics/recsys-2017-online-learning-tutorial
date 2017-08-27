@@ -31,7 +31,7 @@ Participants must register for the tutorial via this [form](https://goo.gl/forms
 
 - Installation
 - Introduction to time-aware evaluation and learning
-- Notebook 1: [Alpenglow notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy80YWMwMDMzOWVlY2Y0ZDkzOTBiNTQ4MDE1ZTAzMjczYi9ub3RlLmpzb24)
+- [Notebook 1: Alpenglow notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy80YWMwMDMzOWVlY2Y0ZDkzOTBiNTQ4MDE1ZTAzMjczYi9ub3RlLmpzb24)
 
 #### Coffee break
 
