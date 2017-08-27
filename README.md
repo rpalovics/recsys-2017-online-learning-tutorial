@@ -31,15 +31,15 @@ Participants must register for the tutorial via this [form](https://goo.gl/forms
 
 - Installation
 - Introduction to time-aware evaluation and learning
-- Notebook 1: Alpenglow notebook
+- Notebook 1: [Alpenglow notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy80YWMwMDMzOWVlY2Y0ZDkzOTBiNTQ4MDE1ZTAzMjczYi9ub3RlLmpzb24)
 
 #### Coffee break
 
 #### Lecture B
 
 - Spark and Flink introduction
-- Notebook 2: Comparing batch learning in Alpenglow, Flink, and Spark
-- Notebook 3: Online stream based learning in Flink
+- [Notebook 2: Comparing batch learning in Alpenglow, Flink, and Spark](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy83NzVhYmIxZTlmZTk0ZTYxYTFiMThjNWNmYjNhMzc3Mi9ub3RlLmpzb24)
+- [Notebook 3: Online stream based learning in Flink](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy9lZmRkYjBhYzY5YjM0MWQzOWQyNjkxMmViZDdhZjdiOS9ub3RlLmpzb24)
 
 A preview of the introductory slides are now [available](https://github.com/rpalovics/recsys-2017-online-learning-tutorial/raw/master/docs/intro.pdf).
 
@@ -53,9 +53,9 @@ Download the tutorial data from [here](https://drive.google.com/open?id=0B_3Dz2J
 
 ## Notebooks
 
-- 1 [Alpenglow online ranking notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy8zNTk0NmUzMTQwNTU0NTc1YmIzNGIyODJhNjhjNzA5MS9ub3RlLmpzb24)
-- 2 Alpenglow/Flink/Spark batch notebook
-- 3 Flink parameter server based streaming SGD notebook
+- 1 [Alpenglow online ranking notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy80YWMwMDMzOWVlY2Y0ZDkzOTBiNTQ4MDE1ZTAzMjczYi9ub3RlLmpzb24)
+- 2 [Alpenglow/Flink/Spark batch notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy83NzVhYmIxZTlmZTk0ZTYxYTFiMThjNWNmYjNhMzc3Mi9ub3RlLmpzb24)
+- 3 [Flink parameter server based streaming SGD notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL3JwYWxvdmljcy9lZmRkYjBhYzY5YjM0MWQzOWQyNjkxMmViZDdhZjdiOS9ub3RlLmpzb24)
 
 ## Theoretical background
 
